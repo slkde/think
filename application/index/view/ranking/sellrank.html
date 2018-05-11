@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>{include file="common@common/common"}</head>
+<body>
+{include file="common@common/head"}
+
+
+<link href="__CSS__/common.css" type="text/css" rel="stylesheet">
+<link href="__CSS__/rank.css" type="text/css" rel="stylesheet">
+<div class="cont-wrapper {$game_name}">
+    <div class="rank-wrapper">
+        <div class="rank-header clearfix">
+            <a class="active fl" href="javascript:;">排行榜</a>
+        </div>
+        <div class="rank-title">
+            <img class="rank-title-img" src="__IMG__/rank_title.png">
+        </div>
+        <div class="rank-box">
+            <ul class="rank-list rank-list-left">
+
+                {for start = '0' end = '10' }
+                <li class="clearfix">
+                <span class="fl num">{$i+1}</span>
+                <img class="fl head-img" src="{$rank[$i]['avatar']}" alt="">
+                <div class="fl name">{$rank[$i]['nickname']}</div>
+                <div class="fl money">{$rank[$i]['amount']}</div>
+                </li>
+                {/for}
+  
+            </ul>
+            <div class="my-ranking">
+                我的排名：<span>{$myRank}</span>
+            </div>
+            <ul class="rank-list rank-list-right">
+                {for start = '10' end = '20' }
+                <li class="clearfix">
+                <span class="fl num">{$i+1}</span>
+                <img class="fl head-img" src="{$rank[$i]['avatar']}" alt="">
+                <div class="fl name">{$rank[$i]['nickname']}</div>
+                <div class="fl money">{$rank[$i]['amount']}</div>
+                </li>
+                {/for}
+
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="__JS__/common.min.js"></script>
+
+
+{include file="common@common/foot"}
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>{include file="common@common/common"}</head>
+<body>
+{include file="common@common/head"}
+<extend name="Base/yx-common"/>
+<block name="body">
+
+    <link href="__CSS__/common.css" type="text/css" rel="stylesheet">
+    <link href="__CSS__/User_backpack.css" type="text/css" rel="stylesheet">
+    <link href="__CSS__/goods_details.css" type="text/css" rel="stylesheet">
+    <link href="__CSS__/lease.css" type="text/css" rel="stylesheet">
+
+    <div class="cont-wrapper {$game_name}">
+        <div class="lease-box clearfix bc">
+            <!-- 详情页 公用头部--start-->
+            {include file="index@lease/details-header"}
+            <!-- 详情页 公用头部--end-->
+            <div class="d-goods-other">
+                <div class="d-goods-title">
+                    <div class="menu-tab-btn">
+                        <a class="backpack-menu-btn" href="/index.php/index/lease/details/info/{$info.goods_id}.html">出租商品</a>
+                        <a class="backpack-menu-btn active" href="javascript:">价格走势</a>
+                        <a class="backpack-menu-btn" href="/index.php/index/lease/history/info/{$info.goods_id}.html">出租历史</a>
+                    </div>
+                </div>
+                <div class="d-goods-trend">
+                    <div class="d-goods-trend-cont" id="d_goods_trend_cont"></div>
+                </div>
+            </div>
+        </div>
+        <!-- 详情页 公用右侧推荐面板--start-->
+        {include file="index@lease/right-panel"}
+        <!-- 详情页 公用右侧推荐面板--end-->
+    </div>
+    </div>
+
+    <!-- ECharts单文件引入 -->
+    <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+    <script type="text/javascript">
+        var data = '{$data}';
+        data = JSON.parse(data);
+
+        // 路径配置
+        require.config({
+            paths: {
+                echarts: 'http://echarts.baidu.com/build/dist'
+            }
+        });
+
+        // 使用
+        require(
+            [
+                'echarts',
+                'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
+            ],
+            function (ec) {
+                // 基于准备好的dom，初始化echarts图表
+                var myChart = ec.init(document.getElementById('d_goods_trend_cont'), 'macarons');
+
+                option = {
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: {
+                            lineStyle: {
+                                color: '#c31f1f'
+                            }
+                        },
+                        textStyle: {
+                            color: '#fff'
+                        }
+                    },
+                    calculable: true,
+                    xAxis: [
+                        {
+                            type: 'category',
+                            boundaryGap: false,
+                            data: data.week,
+                            axisLabel: {
+                                textStyle: {
+                                    show: true,
+                                    fontSize: 14,
+                                    color: '#888'
+                                }
+                            },
+                            axisLine: {
+                                show: false
+                            },
+                            splitLine: {
+                                show: true,
+                                lineStyle: {
+                                    color: '#888',
+                                    width: 1,
+                                    type: 'solid'
+                                }
+                            }
+                        }
+                    ],
+                    yAxis: [
+                        {
+                            type: 'value',
+                            axisLabel: {
+                                textStyle: {
+                                    show: true,
+                                    fontSize: 14,
+                                    color: '#888'
+                                }
+                            },
+                            axisLine: {
+                                show: false
+                            },
+                            splitLine: {
+                                show: true,
+                                lineStyle: {
+                                    color: '#888',
+                                    width: 1,
+                                    type: 'solid'
+                                }
+                            }
+                        }
+                    ],
+                    calculable: false,
+                    series: [
+                        {
+                            name: '交易价格',
+                            type: 'line',
+                            stack: '价格',
+                            data: data.total,
+                            color: '#fff',
+                            itemStyle: {
+                                normal: {
+                                    color: "#c31f1f" //图标颜色
+                                }
+                            },
+                            lineStyle: {
+                                normal: {
+                                    width: 3,  //连线粗细
+                                    color: "#c31f1f"  //连线颜色
+                                }
+                            }
+                        }
+                    ]
+                };
+
+                // 为echarts对象加载数据
+                myChart.setOption(option);
+            }
+        );
+    </script>
+</block>
+{include file="common@common/foot"}
+</body>

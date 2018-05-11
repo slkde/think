@@ -1,0 +1,86 @@
+ <style type="text/css">
+   .tableContent  table  thead tr th{background:#1078C1;color:#fff;}
+   .bjui-pageHeader {padding:0px 5px;}
+   .tableContent  table tr td{ height: 30px; }
+</style>
+
+<script type="text/javascript">
+//查询收起
+$.CurrentNavtab.find('#chaxun').on('click',function () {
+  if($.CurrentNavtab.find(".bjui-moreSearch").css('display')=='block')
+  $.CurrentNavtab.find(".showMoreSearch").trigger('click');
+})
+
+//导出excel
+$.CurrentNavtab.find('#excel').on('click',function () {
+    var url  = $(this).attr('data-url');
+    window.open(url + "?"+ $.CurrentNavtab.find('#pagerForm').serialize() ) ;
+})
+
+ 
+
+</script>
+
+<div class="bjui-pageHeader" >
+
+
+	  <form id="pagerForm" data-toggle="ajaxsearch" action="{:url('order/statistics')}" method="get">
+    <div class="bjui-searchBar" style="margin-top:6px">
+      <label  class="control-label x85">开始时间：</label>
+      <input type="text" name="starttime" value="{$starttime}" data-toggle="datepicker" data-rule="date" size="12">
+      <label  class="control-label x85">结束时间：</label>
+      <input type="text" name="endtime"  value="{$endtime}" data-toggle="datepicker" data-rule="date" size="12">
+
+      <button type="submit" class="btn-default" data-icon="search" id="chaxun">查询</button>&nbsp;
+      <a class="btn btn-orange" href="javascript:;" onclick="$(this).navtab('reloadForm', true);" data-icon="undo">清空查询</a>&nbsp;&nbsp;
+      <a class="btn btn-green"  data-icon="sign-out"  id="excel"  data-url= "{:url('excel/excel/statistics')}" >导出excel</a>&nbsp;
+
+    </div>
+  </form>
+
+</div>
+<div class="bjui-pageContent tableContent" > 
+	<table data-toggle="tablefixed" data-width="100%" data-nowrap="true">
+		<thead>
+		<tr style="height:36px;line-height:36px;">
+
+<!-- 			<th style="background:#1078C1;color:#fff;"  width="10">
+				<input type="checkbox" class="checkboxCtrl" data-group="ids" data-toggle="icheck">
+			</th> -->
+
+      <th  width="20">时间</th>
+      <th  width="20">注册用户</th>
+      <th  width="20">活跃用户</th>
+      <th  width="20">充值金额</th>
+      <th  width="20">提现金额</th>
+      <th  width="20">普通交易量</th>
+      <th  width="20">普通交易额</th>
+      <th  width="20">私密交易量</th>
+      <th  width="20">私密交易额</th>
+      <th  width="20">手续费</th>
+
+		 <!-- 	<th  width="30">操作</th>  -->
+		</tr>
+		</thead>
+		<tbody>
+		   
+			{foreach  name ='statistics' item='v' }
+				<tr >
+					<td>{$v['time']}</td>
+          <td>{$v['register']}</td>
+           <td>{$v['login']}</td>
+          <td>￥{$v['recharge']}</td>
+          <td>￥{$v['withdraw']}</td>
+          <td>{$v['transactionNum']}</td>
+          <td>￥{$v['transactionAmount']}</td>
+          <td>{$v['PtransactionNum']}</td>
+          <td>￥{$v['PtransactionAmount']}</td>
+          <td>￥{$v['service_charge']}</td>
+				</tr>
+			 {/foreach}
+
+		
+		</tbody>
+	</table>
+</div>
+

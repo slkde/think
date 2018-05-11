@@ -1,0 +1,32 @@
+<style type="text/css">
+	label.control-label {
+		width: 80px;
+	}
+    .bjui-pageFooter > ul > li{ display: inline-block;float:none;text-align:center}
+    .bjui-pageFooter > ul{ text-align: center }
+</style>
+
+<div class="bjui-pageContent">
+	<form action="{:url('Group/add')}" method="post" data-toggle="ajaxform" >
+        
+		<table class="table-bordered table-condensed table-hover" width="100%">
+			<tbody>
+				<tr>
+					<td>
+						<label for="j_custom_number" class="control-label x85">
+								用户组名称：
+							</label>
+						<input type="text" name="title"  value="">
+					</td>
+				</tr>
+
+			</tbody>
+		</table>
+</div>
+<div class="bjui-pageFooter">
+	<ul>
+		<li><button type="submit" class="but btn-blue" data-icon="save">保存</button></li>
+		<li><button type="button" class="btn-close" data-icon="close">取消</button></li>
+	</ul>
+</div>
+</form>

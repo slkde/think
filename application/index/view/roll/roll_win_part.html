@@ -1,0 +1,22 @@
+
+<ul>
+	{if condition="empty($info) neq true"}
+		{foreach name="info"  item="va"}
+			<li>
+				<div class='rollWinbox_picture fl'>
+					<img src="{$va['user_pic']}" />
+					<p>{$va['nickname']}</p>
+				</div>
+				<div class='rollWinbox_prize fl'>
+					<img src="{$va['goods_image_url']}" />
+				</div>
+			</li>
+		{/foreach}
+	{/if}
+</ul>
+<div class="nowWinNum" value="{$winNum}" style="display:none"></div>
+<!--分页-->
+<div class="roll-pages" style="text-align: center;">
+	{$page}
+</div>
+

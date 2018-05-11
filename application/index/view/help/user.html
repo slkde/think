@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>{include file="common@common/common"}</head>
+<body>
+{include file="common@common/head"}
+{include file="common@common/toasttips"}
+
+    <link href="__CSS__/common.css" type="text/css" rel="stylesheet">
+    <link href="__CSS__/help.css" type="text/css" rel="stylesheet">
+    <div class="cont-wrapper {$game_name}">
+
+            <div class="help-wrap clearfix">
+               {include file="index@help/_left"}
+
+                <div class="fr help-right">
+                    <div class="help-tab-btn" id="help_tab_btn">
+                        <a class="active" href="javascript:">账户绑定</a>
+                    </div>
+                    <div class="help-tab-cont" id="help_tab_cont">
+
+                        <div style="display: block;">
+                            <h4 class="help-tab-title">账户绑定</h4>
+                            <div class="help-tab-item">
+                                <div>1.点击头像右上角的个人头像</div>
+                                <img src="__IMG__/help/2-25.png" alt="">
+                            </div>
+                            <div class="help-tab-item">
+                                <div>2.点击设置按钮</div>
+                                <img src="__IMG__/help/2-26.png" alt="">
+                            </div>
+                            <div class="help-tab-item">
+                                <div>3.先绑定手机</div>
+                                <img src="__IMG__/help/2-27.png" alt="">
+                            </div>
+                            <div class="help-tab-item">
+                                <div>4.输入手机号后点击获取验证码，待验证码发送到手机后输入验证码点击绑定即可</div>
+                                <img src="__IMG__/help/2-28.png" alt="">
+                            </div>
+                            <div class="help-tab-item">
+                                <div>5.继续点击 绑定SteamID</div>
+                                <img src="__IMG__/help/2-29.png" alt="">
+                            </div>
+                            <div class="help-tab-item">
+                                <div>6.输入您Steam的账号和密码点击登陆</div>
+                                <img src="__IMG__/help/2-30.png" alt="">
+                            </div>
+                            <div class="help-tab-item">
+                                <div>7.绑定成功后，网页跳出提示窗口</div>
+                                <img src="__IMG__/help/2-31.png" alt="">
+                            </div>
+                            <div class="help-tab-item">
+                                <div>8.最后，来绑定交易链接 点击“点击获取交易URL“</div>
+                                <img src="__IMG__/help/2-32.png" alt="">
+                            </div>
+                            <div class="help-tab-item">
+                                <div>9.将“第三方网站”下“交易URL”下的链接 复制</div>
+                                <img src="__IMG__/help/2-33.png" alt="">
+                            </div>
+                            <div class="help-tab-item">
+                                <div>10.粘贴到{:config('WEN_NAME')}的用户信息中 点击保存，完成。</div>
+                                <img src="__IMG__/help/2-34.png" alt="">
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+    </div>
+
+    <script src="__JS__/common.min.js"></script>
+    <script src="__JS__/help.js"></script>
+
+{include file="common@common/foot"}
+</body>

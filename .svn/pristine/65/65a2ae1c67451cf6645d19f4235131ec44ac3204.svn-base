@@ -1,0 +1,102 @@
+<style type="text/css">
+	label.control-label {
+		width: 80px;
+	}
+    .bjui-pageFooter > ul > li{ display: inline-block;float:none;text-align:center}
+    .bjui-pageFooter > ul{ text-align: center }
+</style>
+
+
+
+					
+<script type="text/javascript">
+
+    function doc_upload_success(file, data) {
+
+        var json = $.parseJSON(data)
+
+        $(this).bjuiajax('ajaxDone', json)
+
+        if (json[BJUI.keys.statusCode] == BJUI.statusCode.ok) {
+
+            $('#doc_pic').val(json.filename)
+
+            $('#doc_span_pic').html('<img src="'+ json.filename +'" width="50px" height="50px" style="margin-left:30px" >')
+
+        }
+
+    }
+
+</script>
+
+
+
+<div class="bjui-pageContent">
+	<form action="{:url('Links/add')}" method="post"   data-toggle="validate">
+        
+<!--         <input type = "hidden" name = 'pid'  value="{$Request.param.id}"/> -->
+		<table class="table-bordered table-condensed table-hover" width="100%">
+			<tbody>
+				<tr>
+					<td>
+						<label for="j_custom_number" class="control-label x85" >
+								链接名称：
+							</label>
+						<input type="text" name="links_name" data-rule="required;length[1~255]">
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<label for="j_custom_number" class="control-label x85" >
+								链接地址：
+							</label>
+						<input type="text" name="links" data-rule="required;length[1~255]">
+					</td>
+				</tr>
+
+
+				<tr>
+					<td>
+						<label for="j_custom_number" class="control-label x85">
+						        链接图片：
+							</label>
+
+
+								<div style="display:inline-block; vertical-align:middle;">
+
+								    <div id="doc_pic_up" data-toggle="upload" data-uploader="{:url('Common/uploadimg')}"
+
+								        data-file-size-limit="1024000000"
+
+								        data-file-type-exts="*.jpg;*.png;*.gif;*.mpg"
+
+								        data-multi="true"
+
+								        data-on-upload-success="doc_upload_success"
+
+								        data-icon="cloud-upload"></div>
+
+								    <input type="hidden" name="icon" value="" id="doc_pic">
+
+								</div>
+                                <br/>
+								<span id="doc_span_pic"></span>
+
+
+					</td>
+				</tr>
+
+
+
+ 
+			</tbody>
+		</table>
+</div>
+<div class="bjui-pageFooter">
+	<ul>
+		<li><button type="submit" class="but btn-blue" data-icon="save">保存</button></li>
+		<li><button type="button" class="btn-close" data-icon="close">取消</button></li>
+	</ul>
+</div>
+</form>

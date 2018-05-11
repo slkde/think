@@ -1,0 +1,135 @@
+<style type="text/css">
+	label.control-label {
+		width: 80px;
+	}
+    .bjui-pageFooter > ul > li{ display: inline-block;float:none;text-align:center}
+    .bjui-pageFooter > ul{ text-align: center }
+</style>
+
+<div class="bjui-pageContent">
+	<form action="{:url('Member/add')}" method="post" data-toggle="validate">
+       
+		<table class="table-bordered table-condensed table-hover" width="100%">
+			<tbody>
+
+
+				<tr>
+					<td>
+						<label for="j_custom_number" class="control-label x85">
+								用户账号：
+							</label>
+						<input type="text" name="username" data-rule="required;length[6~50]">
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<label for="j_custom_number" class="control-label x85">
+								密码：
+							</label>
+						<input type="password" name="password" data-rule="required;length[6~50]">
+					</td>
+				</tr>
+
+                <tr>
+					<td>
+						<label for="j_custom_number" class="control-label x85">
+								用户昵称：
+							</label>
+						<input type="text" name="nickname" data-rule="required;length[6~50]">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="j_custom_number" class="control-label x85">
+								SteamID：
+							</label>
+						<input type="text" name="steam_id" data-rule="number">
+					</td>
+				</tr>
+
+
+				<tr>
+					<td>
+						<label for="j_custom_number" class="control-label x85">
+								SteamUrl：
+							</label>
+						<input type="text" name="steam_url" data-rule="url">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="j_custom_number" class="control-label x85">
+								手机：
+							</label>
+						<input type="text" name="mobile" data-rule="mobile">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="j_custom_number" class="control-label x85">
+								邮箱：
+							</label>
+						<input type="text" name="email" data-rule="email">
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<label for="j_custom_number" class="control-label x85">
+							  大商：
+						</label>
+						<input type="radio" name="dashang"  	data-toggle="icheck" value = '1' data-label="是" >
+						<input type="radio" name="dashang"  	data-toggle="icheck" value = '0' data-label="否" checked>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<label for="j_custom_number" class="control-label x85">
+								余额：
+							</label>
+						<input type="text" name="money" data-rule="number">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="j_custom_number" class="control-label x85">
+								ugt：
+							</label>
+						<input type="text" name="ugt" data-rule="number">
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<label for="j_custom_number" class="control-label x85">
+								每月提现免手续20W：
+							</label>
+						<input type="radio" name="SWEQ" data-toggle="icheck" value = '1' data-label="启用" checked>
+						<input type="radio" name="SWEQ" data-toggle="icheck" value = '0' data-label="禁用">
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						<label for="j_custom_number" class="control-label x85">
+								账号状态：
+						</label>
+						<input type="radio" name="status"  	data-toggle="icheck" value = '1' data-label="启用" checked>
+						<input type="radio" name="status"  	data-toggle="icheck" value = '-1' data-label="禁用">
+					</td>
+				</tr>
+
+
+
+			</tbody>
+		</table>
+</div>
+<div class="bjui-pageFooter">
+	<ul>
+		<li><button type="submit" class="but btn-blue" data-icon="save">保存</button></li>
+		<li><button type="button" class="btn-close" data-icon="close">取消</button></li>
+	</ul>
+</div>
+</form>

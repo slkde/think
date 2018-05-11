@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>{include file="common@common/common"}</head>
+<body>
+{include file="common@common/toasttips"}
+
+	<link href="__CSS__/accounttrade.css" type="text/css" rel="stylesheet">
+
+	<div class="cont-wrapper {$game_name}" style="background-image: url(/static/PC/image/acctrade_bac.jpg);">
+		<!--文本居中盒子-->
+		<div class="acctrade_center">
+			<!--个人中心-->
+			<div class="acctrade_mine">
+				{if condition = " :is_login()"}
+					<span class="buy_history fl">我买过的</span>
+				{else}
+					<a href="{:getLogin()}" target="_blank" class="buy_history_login fl">我买过的</a>
+				{/if}
+				<span class="connect fr">联系客服：717588204</span>
+			</div>
+			<!--价格详情-->
+			<div class="account_price">
+				<div class="price_det fl">
+					<div class="cost_pricebox fl">
+						<p class="save_price">已省135元</p>
+						<p class="cost_price"><span class="cost_line"></span>¥1588</p>
+					</div>
+					<div class="now_price fl">
+						<span class="rmb_icon">¥</span><span class="price_num">999</span>
+					</div>
+				</div>
+				{if condition = " :is_login()"}
+					<div class="save_buy fl"></div>
+				{else}
+					<a href="{:getLogin()}" class="save_buy_login fl"></a>
+				{/if}	
+			</div>
+			<div class="rule_conbox">
+				<!--交易规则-->
+				<div class="trade_rule">
+					<span class="line_90"></span>
+					<p>本账号为通过游戏赠送方式生成的游戏账号，购买后即买即玩，可立即加入游戏，祝福您大吉大利，天天吃鸡！本商品一经售出，不支持非商品本身质量问题的退款申请哦！</p>
+				</div>
+				<!--常见问题-->
+				<div class="faq_title">
+					<span class="line_90 max_pad"></span>
+					<p>常见问题</p>
+				</div>
+				<!--问题内容-->
+				<div class="ques_box">
+					<span class="ques_title">怎么注册Steam账号？</span>
+					<div class="ques_det">请登录：https://store.steampowered.com/join/?l=schinese</div>
+				</div>
+				<div class="ques_box">
+					<span class="ques_title">购买后如何领取游戏？</span>
+					<div class="ques_det">您购买后请登陆steam在库中查看您的游戏，如果库中没有，您还可以在礼物中领取游戏！</div>
+				</div>
+				<div class="ques_box">
+					<span class="ques_title">领取游戏时提示：地区国家无法激活？</span>
+					<div class="ques_det">请检查电脑是否开了加速器或VPN代理之类的软件，如果是，请先退出对应软件，然后重新登录Steam进行操作</div>
+				</div>
+				<div class="ques_box">
+					<span class="ques_title">购买后在Steam平台中不能添加好友？</span>
+					<div class="ques_det">您还可以采用以下方式免费开通加好友功能：https://jingyan.baidu.com/article/b2c186c8d8966cc46ff6ff41.html</div>
+				</div>
+				<div class="ques_box maxbox_height">
+					<span class="ques_title">电脑配置要求？</span>
+					<div class="ques_det max_height">
+						<p>最低配置:</p> 
+						<p>操作系统：64-bit Windows 7, Windows 8.1, Windows 10</p> 
+						<p>处理器：Intel Core i3-4340 / AMD FX-6300</p> 
+						<p>内存：6 GB RAM </p>
+						<p>图形：nVidia GeForce GTX660 2GB / AMD Radeon HD 7850 2GB DirectX </p>
+						<p>版本：11 </p>
+						<p>网络：宽带互联网连接 </p>
+						<p>存储空间：需要 30 GB 可用空间</p>
+					</div>
+				</div>
+				<div class="ques_box">
+					<span class="ques_title">是否支持退款？</span>
+					<div class="ques_det">由于卡密的特殊性，拍下除卡密错误外概不退换。</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!--弹窗模块--我的订单-->
+	<div class="myorder_box">
+		<div class="my_order_title">我的订单</div>
+		<div class="my_order_head">
+			<span class="order_time fl">下单时间</span>
+			<span class="order_name fl">游戏名称</span>
+			<span class="order_type fl">支付方式</span>
+			<span class="order_peice fl">支付金额</span>
+			<span class="order_status fl">订单状态</span>
+			<span class="order_do fl">操作</span>
+		</div>
+		<div class="my_order_con">
+			<ul>
+				<li>
+					<span class="order_time fl">2018-4-12 12:23:44</span>
+					<span class="order_name fl">绝地求生</span>
+					<span class="order_type fl">支付宝</span>
+					<span class="order_peice fl">¥23.00</span>
+					<span class="order_status fl">已支付</span>
+					<span class="order_do fl check_det">查看详情</span>
+				</li>
+				<li>
+					<span class="order_time fl">2018-4-12 12:23:44</span>
+					<span class="order_name fl">绝地求生</span>
+					<span class="order_type fl">支付宝</span>
+					<span class="order_peice fl">¥23.00</span>
+					<span class="order_status fl">已支付</span>
+					<span class="order_do fl check_det">查看详情</span>
+				</li>
+				
+			</ul>
+		</div>
+	</div>
+	<!--弹窗模块--账号信息-->
+	<div class="account_info_box">
+		<div class="account_head">账号信息</div>
+		<div class="account_info">
+			<div class="account_title">steam账号信息</div>
+			<div class="account_info_det fl">
+				<p>【steam账号】：<input class="color_orange contentBox" id="account_add" value="12455945" onfocus="return false"></input></p>
+				<p>【steam密码】：<input class="color_orange contentBox" id="account_key" value="minsdaw4455"></input></p>
+			</div>
+			<div class="account_copy fl">
+				<p onclick="autoCopy('account_add')">复制</p>
+				<p onclick="autoCopy('account_key')">复制</p>
+			</div>
+		</div>
+		<div class="account_info">
+			<div class="account_title">绑定邮箱信息</div>
+			<div class="account_info_det fl">
+				<p>【邮箱账号】：<input class="color_orange contentBox" id="email_add" value="12542215@qq.com"></input></p>
+				<p>【邮箱密码】：<input class="color_orange contentBox" id="email_key" value="minlihjjsaw"></input></p>
+			</div>
+			<div class="account_copy fl">
+				<p onclick="autoCopy('email_add')">复制</p>
+				<p onclick="autoCopy('email_key')">复制</p>
+			</div>
+		</div>
+	</div>
+	<!--弹窗模块--扫码支付-->
+	<div class="scan_recharge">
+		<div class="scan_head">扫码支付</div>
+		<div class="scan_tips">正在使用即时到账交易，请及时付款！</div>
+		<div class="scan_pic"></div>
+		<div class="scan_price color_orange">
+			<span class="scan_total">合计：</span>¥99.5
+		</div>
+	</div>
+	<!--弹窗模块--手机验证-->
+	<div class="phone_verify">
+		<div class="verify_head">购买账号</div>
+		<div class="send_verify_box">
+			<p>
+				<input class="phone_num" type="text" placeholder="请输入手机号码" maxlength="11" />
+				<input class="send_verify" type="button" value="发送验证码" />
+			</p>
+			<p><input type="text" placeholder="请输入验证码" maxlength="6" /></p>
+		</div>
+		<div class="verify_total">合计：￥93</div>
+		<div class="recharge_type">
+			<p>
+				<input class="chose_btn fl active" value="微信" type="button"></input>
+				<input class="chose_btn fl" value="支付宝" type="button"></input>
+			</p>
+		</div>
+	</div>
+	<!--遮罩层-->
+	<div class="acctrade-mask"></div>
+	<include file="../common/view/common/toasttips.html"/>
+	
+	<script src="__JS__/accounttrade.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<?php
+namespace pay\alipaywap;
+header("Content-type:text/html;charset=utf8");
+class Alipay
+{
+
+   private $config = [
+      	'app_id' => "2016080501710892",
+		//商户私钥，您的原始格式RSA私钥
+		'merchant_private_key' => "MIIEpQIBAAKCAQEAtDY/vKh9Oun9nC+XNsbJ0Q80P1QkXKvC5hfqRZzx/XcLRaOCdkuUy4jtx011LoNeSYzd2d4vbyLtGSXvT7/lwevjz1IzYtlnZNmhxFO5Ov7FGWlAVHuqdncdOk9NvXk+i2TJUlMoCCvqTN8yHpZ3IsJYxdcJBAr0AsPz7RuJds9lIA7jAyVC01jId76A9tfY5luUg4cyzIi1gvKedtm7yOX+3CjqnZU5YC6xX+RLXm0RFmxFaehJj9O5ERziLMSjXQ8AQSOxFK3KIq1qEYo8lxIjnhNe2dYoZqT4cyrcB+/7B6qC5rLVRQp6Pl6Iw0FgcwGpVdDF6vVzer+/J5IFpwIDAQABAoIBAAhEDLxchhHztZw6Wpc6mvsp1V2qQFi30CK5qhczUa4sjanODCfc46BKUY24sc1GXUbGXU6m8EoKshFbOhTQWnuAlFxoCs9X5XQsv0zAAlkAYo390+OMII96ey63gHtWWlYOc2WBRu7JBOAtxKC+igxgGa5JZLJ4xiRyVHflsXJvkRXx4MI/Xs4gKaXUyJ24slIAR5iVM5N5hyQVIXpDteWhA3kHD0nwSRiIgFmMaUMjOwlaN42NgX0x6Cav8QgITIdT2E/AC3EPhMYsPJo3w8Np6CP7YkY1/jMqkW+dgS1vh3c4hxwJYVSEBhXpBPWr0T8vRyXQFRovB0Y9gglWvmECgYEA5fNCOHZYeMC0EXwfRxAyawXoL+syQSSWYNj+9QMPMUZJjlH99wNq5rZt3NoJhVHqx5YrUK6pwzooXfLZ5ht/ROW8k27uRjYtG5vkhDhh4XQjGniO8pI3/OF4Oq+q+q3nodyvmEftP2kN9bJSFrGyl3yzYU4ic9of96zZ799Eez8CgYEAyKCKAkHYc8Ktl02DFZQYvIIJ/tZDN26ff/W5Rw4s+coSCoLMZMizWOU7OCjKsaXuQkwykk120F3lfiefJ6xTHh1bp0cFn+qvMd/HeB6ekFkgIKk4Q/JunTMDIWOGoDUC/c8syztuF3x9EAy4kjOOiVhebxyyVJkVZuqdvPxFY5kCgYEAwZYCaNBQ+Q+aSKILHuNm3qyxZS4HN8pagxwLwC8cKip3IEasnLiW1bY9VVGF9GQbWH1258yzhHTAqR8bDFqX0WPrVt9r31YasYSTZDCnTotcRhu6lEI+ujkC470iHzoqqBzHA1eCRwDlTLQb4Zkltdy4kzGZVZkLkpJFQ2jeGTcCgYEAurqY2LL6R/vo34r4N2xIfaM2tGYt13jxoQJOeLDb8X0+v2Ov4xndux5XuNRWm3OJx1DuPLc2n4bVI06zVhSQo9XFSXLT7FxcxTm3iLhO8qDRQzTctnj8tPkWr8vXMGNGrn5V/a4JsHhgWkDMxN6RiomiEx6NaCm2/rvdJllSJ/kCgYEAy2xeiWrf+xmUr/0uWwcL1F9QR2RwRkOrJwDe3Vlu8Lu1STZk1kmcCaR4x8yen94WiDwU37ku73O+NlOhUYS0HNyTTd/Gb821Vsg1eBg2TCHUc3k1bcZwKuZTXzBbquLjgVh6XaP4rwusUihrJ84TS8++HjN8Er+aKQQYOIKSI3w=",
+		//异步通知地址
+		'notify_url' => "",
+		//同步跳转
+		'return_url' => "",
+		//编码格式
+		'charset' => "UTF-8",
+		//签名方式
+		'sign_type'=>"RSA2",
+		//支付宝网关
+		'gatewayUrl' => "https://openapi.alipay.com/gateway.do",
+		//沙箱网关
+		//'gatewayUrl' => 'https://openapi.alipaydev.com/gateway.do',
+
+		//支付宝公钥,查看地址：https://openhome.alipay.com/platform/keyManage.htm 对应APPID下的支付宝公钥。
+		'alipay_public_key' => "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAg45q9wx9BUr4ysafYuvFZHv2OWpZOi70e2+3dSvSpqE/alQw1opPzghnmPNq+V8RxV/fxV3vsQqFbks4KHTwUXz3LPu25dohxpASd4EFo8saSLThA1ZyN8Hmdo9Zl6Mvw4fyt38fturmD3DI4AbNW4VZ3vw/h3X0hlQs5idzQeW1uSXGC2n9tZqzJL4AAP/MjiVFImtJFdI7fxdy6R0tVN2jeIxiB31OHbyhiiaC3vefBAZmqmL1scSmGozHCv9yipmh/fy2FD1XS0dqWOLV5ci88LmcFDyWSASItgLBrag6r7pBOHOcrfuiZQzX9E6CL4rIeufdR5mJq3QPuLy1NwIDAQAB",
+   	 ];
+
+    
+
+
+    //发起支付，弹出支付页面
+	public function pay($array)
+	{
+           // dump($array); die('123');
+           if (!empty($array['order_sn'])&& trim( $array['order_sn'])!=""){
+		    //商户订单号，商户网站订单系统中唯一订单号，必填
+		    $out_trade_no =  $array['order_sn'];
+		    //订单名称，必填
+		    $subject = $array['WIDsubject'];
+		    //付款金额，必填
+		    $total_amount = $array['amount'];
+		    //超时时间
+		    $timeout_express="1m";
+
+		    $payRequestBuilder = new AlipayTradeWapPayContentBuilder();
+		    //$payRequestBuilder->setBody($body);
+		    $payRequestBuilder->setSubject($subject);
+		    $payRequestBuilder->setOutTradeNo($out_trade_no);
+		    $payRequestBuilder->setTotalAmount($total_amount);
+		    $payRequestBuilder->setTimeExpress($timeout_express);
+
+		    $payResponse = new AlipayTradeService($this->config);
+		    $result=$payResponse->wapPay($payRequestBuilder,$array['return_url'],$array['notify_url']);
+
+		    return ;
+		  }
+
+	} 
+
+
+	    
+  //   function  chksign($array = '')
+  //   {
+		// $alipaySevice = new AlipayTradeService($this->config); 
+		// $result = $alipaySevice->check($array);
+
+		// if($result) {
+		// return true;
+  //       } else {
+  //       return false;
+  //       }
+  //   }
+    function  chksign($array = '')
+    {
+		$alipaySevice = new AlipayTradeService($this->config); 
+		$result = $alipaySevice->check($array);
+
+	     if($result)
+	     {
+	        // 支付宝解释: 交易成功且结束，即不可再做任何操作。
+	        if($array['trade_status'] == 'TRADE_FINISHED')
+	        {
+	          return true;
+	        //支付宝解释: 交易成功，且可对该交易做操作，如：多级分润、退款等。
+	        }elseif ($array['trade_status'] == 'TRADE_SUCCESS'){
+	          return true;
+	        }else{
+	          return false; 
+	        }
+	         
+	     }else{
+	         return false;
+	     }
+
+
+    }
+
+   
+
+
+
+
+
+
+
+
+}	
+
+ 

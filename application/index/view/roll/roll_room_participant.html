@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>{include file="common@common/common"}</head>
+<body>
+{include file="common@common/head"}
+{include file="common@common/toasttips"}
+
+    <link href="__CSS__/jedate.css" type="text/css" rel="stylesheet">
+    <link href="__CSS__/roll_room.css" type="text/css" rel="stylesheet">
+    <link href="__CSS__/User_backpack.css" type="text/css" rel="stylesheet">
+
+    <div class="cont-wrapper {$game_name}">
+
+
+        <!--roll房间主体-->
+        <div class="roll-main-content clearfix bc">
+           <div class="roll-room-title">
+                <div class="roll-room-person-info bc">
+                    <div class="bc">
+                        <img src="{$userPic}" />
+                    </div>
+                    <p>{$nickname}</p>
+                </div>
+                <div class="microblog-box">
+                    {if condition="empty($info['microblog']) neq true"}
+                        <p class="clearfix"><i class="fl icon iconfont">&#xe613;</i><a class="fl over-hide" href="{$info['microblog']}" target="_blank">{$info['microblog']}</a></p>
+                    {/if}
+                    {if condition="empty($info['live_telecast']) neq true"}
+                        <p class="clearfix"><i class="fl icon iconfont">&#xe718;</i><a class="fl over-hide" href="{$info['live_telecast']}" target="_blank">{$info['live_telecast']}</a></p>
+                    {/if}
+                </div>
+            </div>
+            
+            <!--左侧房间管理部分-->
+            <div class="roll-room-left fl">
+                <div class="roll-hot-title">
+                    <input class="fl" type="button" value="ROLL活动" />
+                    <!-- JiaThis Button BEGIN -->
+                    <div class="jiathis_style" style="float: left;padding-left: 10px;padding-top: 20px;"><span class="jiathis_txt" style="color: #888;">分享到：</span>
+                    <a class="jiathis_button_weixin"></a>
+                    <a class="jiathis_button_tsina"></a>
+                    <a class="jiathis_button_cqq"></a>
+                    <!-- <a class="jiathis_button_tieba"></a> -->
+                    </div>
+                    <script type="text/javascript">
+                    var jiathis_config={
+                        title:'',
+                        summary:'',
+                    };
+                    // console.log(jiathis_config);
+                    </script>
+                    <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+                    <!-- JiaThis Button END -->
+
+                   
+                    {if  condition="$info['is_disable'] eq 1"}
+                        <input class="fr join-status" type="button" value="已被封禁"/>
+                    {elseif condition="$info['status'] eq 0" }
+                        <input class="fr join-status" type="button" value="还未开始"/>
+                    {elseif condition="$info['status'] eq 1"}
+                        {if condition="empty($parted) eq true"}
+                            <input class="fr" type="button" value="立即参与" id="activity-join"/>
+                            {else/}
+                            <input class="fr" type="button" value="已经参与"/>
+                        {/if}
+                    {else}
+                        <input class="fr join-status" type="button" value="已经结束">
+                    {/if}
+
+                </div>
+                <div class="roll-room-activity-title">
+                    <p>活动说明</p>
+                </div>
+                <div class="roll-room-activity-detail">
+                    <p class="roll-room-activityId" style="display:none">{$info['id']}</p>
+                    <p id='sum'>{$info['active_des']}</p>
+                    <p>活动时间：{$info['start_time']} 至 {$info['end_time']}</p>
+                </div>
+                <div class="roll-room-activity-goods">
+                    <div class="rollActivity_good_part">
+                        {if condition="empty($goods) neq true"}
+                            {foreach name="goods" item="v"}
+                                <div class="rollActivity_good_list"  value="{$v['goods_id']}">
+                                    <img src="{$v['goods_image_url']}" />
+                                </div>
+                            {/foreach}
+                        {/if}
+                    </div>
+                    <div style="display:none"></div>
+                </div>
+                <div class="roll-room-activity-title roll-room-jorw">
+                    <input class="active partNum" type="button" value="已参与({$partInfo['part_num']}人)" />
+                    <input class="winNum" type="button" value="已中奖({$info['win_num']}人)" />
+                </div>
+                <div class="roll-room-activity-perbox">
+                    <ul>
+                        {if condition="empty($partInfo['part']) neq true"}
+                            {foreach name="partInfo['part']" item="vo"}
+                                <li>
+                                    <img src="{$vo['user_pic']}" />
+                                    <p>{$vo['nickname']}</p>
+                                </li>
+                            {/foreach}
+                        {/if}
+                    </ul>
+                </div>
+                <div class="roll-room-activity-winbox">
+                    <!--获奖人员盒子-->
+                </div>
+            </div>
+            
+            <!--右侧往期获奖-->
+            <div class="roll-room-right fr">
+                <div class="roll-hot-title">
+                    <div class="text-wrap">
+                        <p class="text">最新获奖</p>
+                    </div>
+                </div>
+                <div>
+                    <ul class="winners-list-new">
+                       {if condition="empty($win) neq true"}
+                            {foreach name="win" item="val"}
+                                <li class="clearfix">
+                                    <div class="fl winners-list-perinfo">
+                                        <div class="fl winners-list-new-pic">
+                                            <img src="{$val['user_pic']}" />
+                                        </div>
+                                        <div class="fl winners-list-new-info">
+                                            <p class="over-hide">{$val['nickname']}</p>
+                                            <p class="over-hide">{$val['time_inter']}获得了<span>1</span>件饰品</p>
+                                        </div>
+                                    </div>
+                                    <div class="fr winners-list-goods">
+                                        <img src="{$val['goods_image_url']}" />
+                                    </div>
+                                </li>
+                            {/foreach}
+                        {/if}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--活动参加-->
+    <div class="roll-activity-join">
+        <div class="roll-activity-join-title">参加活动</div>
+        <div class="roll-activity-join-con">
+            <div {if condition="empty($info['password']) eq true"} style="display:none" {/if} > ROLL密码：<input class="joinPassWord" /></div>
+            
+            <div>
+                <span class="fl">&nbsp;&nbsp;&nbsp;验&nbsp;证&nbsp;码：<input class="joinCode" /></span>
+                <i class="roll-activity-join-indent fl"><img id="verify" src="{:url('index/roll/captcha')}"/></i>
+            </div>
+        </div>
+        <div class="roll-activity-join-btn">
+            <input type="button" value="参加" id="activity-join-btn" />
+        </div>
+        <i class="icon iconfont close-icon">&#xe60b;</i>
+    </div>
+
+    <!--遮罩-->
+    <div class="roll-room-mask"></div>
+    <script src="__JS__/roll.js"></script>
+    <style>
+        .backpack-goods-modal{
+            left:110px;
+        }
+        .backpack-goods-modal::after{
+            left:-26px;
+            border-color: transparent #333 transparent transparent ;
+        }
+        .backpack-goods-modal::before{
+            left:-28px;
+            border-color: transparent #ddd transparent transparent ;
+        }
+        .backpack-goods-modal .g-info-list div div{
+            text-align: left;
+        }
+    </style>
+    <script>
+        $(function () {
+            window.ImgequestRead = "https://steamcommunity-a.akamaihd.net/economy/image/";
+            //商品图片滑过请求商品详情面板
+            goodsDetailsPanel($('.rollActivity_good_part'),'.rollActivity_good_list');
+            function goodsDetailsPanel(proxyDom,triggerDom){
+                var goodsInfoPanel = true;
+                var timer;
+                proxyDom.on('mouseover',triggerDom,function (e) {
+                    var _that = $(this);
+                    var goodsId = $(this).attr('value');
+                    $(this).siblings(triggerDom).find('.backpack-goods-modal').css('display','none');
+                    timer = setTimeout(function () {
+                        if(_that.find('.backpack-goods-modal').css('display')){
+                            _that.find('.backpack-goods-modal').css('display','block');
+                        }else{
+                            if(goodsInfoPanel){
+                                goodsInfoPanel = false;
+                                $.ajax({
+                                    type:'get',
+                                     url: '/index.php/goods/content/getContent',
+                                    data:{'id':goodsId},
+                                    success:function (a) {
+                                        if(a){
+                                            var d = JSON.parse(a);
+                                            var goodsInfo = d.descriptions;
+                                            var tags = d.tags;
+                                            var html = '';
+                                            var tagsHtml = '';
+                                            if(goodsInfo){
+                                                for(var g = 0; g < goodsInfo.length; g++){
+                                                    if(goodsInfo[g].value != ' '){
+                                                        html += '<div style="color:#'+ goodsInfo[g].color +';">'+ goodsInfo[g].value +'</div>'
+                                                    }
+                                                }
+                                            }
+                                            if(tags){
+                                                for(var s = 0;s < tags.length;s++){
+                                                    tagsHtml += '<span style="color: #'+ tags[s].color +';">'+ tags[s].localized_tag_name +'</span>'
+                                                }
+                                            }
+                                            _that.append('<div class="backpack-goods-modal" style="text-align: center;line-height: 16px;">' +
+                                                '<img class="g-info-img" src="'+ window.ImgequestRead+d.icon_url +'">' +
+                                                '<div class="g-info-name" style="color:#'+ d.name_color +';">'+ d.name +'</div>' +
+                                                '<div class="g-info-type">'+ d.type +'</div>' +
+                                                '<div class="g-info-price"><span class="tip">市场参考价:</span><span class="number">￥'+ d.price + '</span></div>' +
+                                                '<div class="g-info-tags">标签:'+ tagsHtml +'</div>'+
+                                                '<div class="g-info-list">'+ html +'</div>'+
+                                                '</div>'+
+                                                '</li>');
+
+                                            var t = _that.find(".backpack-goods-modal");
+                                            t.css("display", "block");
+                                        }
+                                        _that.find('.backpack-goods-modal').css('display','block');
+                                        goodsInfoPanel = true;
+                                    },
+                                    error:function () {
+
+                                    }
+                                })
+                            }
+
+                        }
+
+                    },200);
+                });
+                //商品详情面板隐藏
+                proxyDom.on('mouseout',triggerDom,function () {
+                    clearTimeout(timer);
+                    $(this).children('.backpack-goods-modal').css('display','none');
+                });
+            }
+
+        })
+    </script>
+
+{include file="common@common/foot"}
+</body>

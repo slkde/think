@@ -1,0 +1,186 @@
+			<div class="roll-content-right fr">
+				<!--创建活动-->
+				<div class="roll-right-top">
+					<div class="roll-hot-title">
+						<div class="text-wrap">
+							<p class="text">活动说明<i class="icon iconfont fr" id="creatActivityTip">&#xe617;</i></p>
+						</div>
+						<div class="creatActivityTip">
+							<p>1.当ROLL房参与人数大于或等于10人后，您此前添加的饰品将不能回收。</p>
+							<p>2.每人在每个房间内可获得的饰品最多为1件，获奖后饰品会存放至您的站内库中。</p>
+							<p>3.ROLL房设有开放时间限制，限制时间为30分钟至5天。</p>
+							<p>4.抽奖形式：房主可手动逐一抽取，每次至多5人获奖。在活动结束时ROLL房中的所有饰品将会通过自动抽奖的方式发放。</p>
+							<p>5.活动结束后，ROLL房如有剩余饰品将返还给房主，存放回站内库中。</p>
+							<p>6.部分具有广告宣传性质的房间我站将进行屏蔽，情节严重者将取消创建房间权限。</p>
+						</div>
+					</div>
+					<div class="roll-content-right-creat-box bc">
+						<p>1.你可以创建一个属于自己的ROLL房,将站内库中的饰品作为礼物发放给你的粉丝或好友们，与他们分享你的快乐，获得更多关注。</p>
+						<p>2.参与ROLL房活动，攒人品夺饰品。</p>
+						<p>3.所有用户都可以设置房间密码。</p>
+                        
+                        {php} $uid = is_login();{/php}
+                        {if condition="$uid neq false"} 
+						<input type="button" value="创建活动" id="creat_activity" class="creat-activity" />
+						{else}
+						<a class="creat-activity"  href="{:getLogin()}" target="_blank">创建活动</a>
+						{/if}
+
+
+					</div>
+				</div>
+				<!--最新获奖-->
+				<div class="roll-right-middle">
+					<div class="roll-hot-title">
+						<div class="text-wrap">
+							<p class="text">土豪房主</p>
+						</div>
+					</div>
+					<ul class="roll-list">
+
+						{foreach name="rich" id="vo"} 
+						<li><a href="#">
+							<img class="img" src="{$vo.user_pic}" alt="">
+							<div class="name over-hide">{$vo.nickname}</div>
+							<div class="price">￥{$vo.goods_price}</div>
+						</a></li>
+					    {/foreach}
+					</ul>
+				</div>
+				<div class="roll-content-bottom">
+					<div class="roll-hot-title">
+						<div class="text-wrap">
+							<p class="text">最新获奖</p>
+						</div>
+					</div>
+					<div>
+						<ul class="winners-list-new">
+							{if condition="empty($newWin) neq true"}
+								{foreach name="newWin" item="val" key="key" }
+									{if condition="($key elt 5) && (empty($val) neq true)"}
+										<li class="clearfix">
+											<div class="fl winners-list-perinfo">
+												<div class="fl winners-list-new-pic">
+													<img src="{$val['user_pic']}" />
+												</div>
+												<div class="fl winners-list-new-info">
+													<p class="over-hide">{$val['nickname']}</p>
+													<p class="over-hide">{$val['time_inter']}获得了<span>1</span>件饰品</p>
+												</div>
+											</div>
+											<div class="fr winners-list-goods">
+												<img src="{$val['goods_image_url']}" />
+											</div>
+										</li>
+									{/if}
+								{/foreach}
+							{/if}
+						</ul>
+					</div>
+				</div>
+			</div>
+
+
+
+
+<!--活动创建-->
+		<div class="creat-activity-box">
+			<div class="creat-activity-content bc">
+				<div class="creat-activity-title">创建活动</div>
+				<p>活动说明</p>
+				<textarea name="acticty_info" rows="6" cols="57"></textarea>
+				<p>活动时间</p>
+				<input name="start_time" id="cdateinfo1" class="fl" placeholder="开始日期" readonly /><span>至</span><input name="end_time" id="cdateinfo2" class="fr" placeholder="结束日期" readonly />
+				<p>设置密码<input type="checkbox" class="isPass" /></p>
+				<input name="password" placeholder="" style="text-align: center;" />
+				<p>微博地址</p>
+				<input name="wbaddress" placeholder="" />
+				<p>直播地址</p>
+				<input name="zbaddress" placeholder="" />
+				<div class="roll-creat-tips">
+					<p>小贴士：</p>
+					<p>1、当参与人数大于等于10人后,您添加的饰品将不能收回</p>
+					<p>2、如果您在活动时间内未送出所有饰品,系统将在截至时间自动送出剩余饰品</p>
+				</div>
+				<div>
+					<input type="submit" value="创建" id="roll-creat-btn" />
+				</div>
+			</div>
+			<i class="icon iconfont close-icon">&#xe60b;</i>
+		</div>
+	<!--遮罩层-->
+	<div class="roll-mask"></div>
+	<script src="__JS__/jedate.min.js"></script>
+	<script src="__JS__/roll.js"></script>
+	<script type="text/javascript">
+		function saveReport(){
+			var actictyInfo=$("textarea[name='acticty_info']").val();
+			var startTime=$("#cdateinfo1").val();
+			var endTime=$("#cdateinfo2").val();
+			var passWord=$("input[name='password']").val();
+			var wbAddress=$("input[name='wbaddress']").val();
+			var zbAddress=$("input[name='zbaddress']").val();
+			
+			if(startTime==''||endTime==''||startTime==endTime){
+                $(".roll-mask").show();
+                $(".creat-activity-box").show();
+                $("body").css("overflow","hidden");
+	            writeCont("请输入有效活动时间");
+	        }else{
+	        	$.post("/index.php/index/roll/createAitivity",{acticty_info:actictyInfo,start_time:startTime,end_time:endTime,password:passWord,wbaddress:wbAddress,zbaddress:zbAddress},function(data){
+	        		var data=JSON.parse(data);
+	        		writeCont(data.msg);
+	        		if(data.status==1)
+	        		{
+                        $(".roll-mask").hide();
+                        $(".creat-activity-box").hide();
+                        $("body").css("overflow","auto");
+	        			setTimeout(function(){
+		               		window.location.reload();
+		               },3000);
+	        		}
+	        	});
+//	        	window.location.href="/index.php/index/Roll/createAitivity/acticty_info/"+actictyInfo+"/start_time/"+startTime+"/end_time/"+endTime+"/password/"+passWord+"/wbaddress/"+wbAddress+"/zbaddress/"+zbAddress;     
+	        }
+        }
+        $("#roll-creat-btn").on("click",function(){
+			saveReport();
+		});
+		
+		
+		//实现日期选择联动
+		var start = {
+		    format: 'YYYY-MM-DD hh:mm:ss',
+		    //festival:true,
+		    minDate: $.nowDate({DD:0}), //最大日期
+		    zIndex:4100,
+		    choosefun: function(elem,datas){
+		    	end.minDate = datas; //开始日选好后，重置结束日的最小日期
+		    		
+		    	var tempEnd = Date.parse(new Date(datas));
+				tempEnd = tempEnd/1000+(7*24*3600);
+		       	tempEnd=$.timeStampDate(tempEnd.toString(),1,'YYYY-MM-DD hh:mm:ss');
+		        end.maxDate = tempEnd; //开始日选好后，重置结束日的最大日期
+		        endDates();
+		    }
+		};
+		var end = {
+		    format: 'YYYY-MM-DD hh:mm:ss',
+		    //festival:true,
+		    zIndex:4100,
+		    choosefun: function(elem,datas){
+//		        end.maxDate = datas; //将结束日的初始值设定为开始日的最大日期
+		    }
+		};
+		//这里是日期联动的关键        
+		function endDates() {
+		    //将结束日期的事件改成 false 即可
+//		    end.trigger = true;
+		    $("#cdateinfo2").jeDate(end);
+		}
+		$('#cdateinfo1').jeDate(start);
+		$('#cdateinfo2').jeDate(end);
+		
+	</script>
+
+	

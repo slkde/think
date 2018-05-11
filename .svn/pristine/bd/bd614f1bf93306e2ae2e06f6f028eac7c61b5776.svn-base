@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>{include file="common@common/common"}</head>
+<body>
+{include file="common@common/head"}
+{include file="common@common/toasttips"}
+
+<link href="__CSS__/game_order.css" type="text/css" rel="stylesheet">
+<link href="__CSS__/common.css" type="text/css" rel="stylesheet">
+<link href="__CSS__/csgo_index.css" type="text/css" rel="stylesheet">
+<link href="__CSS__/User_backpack.css" type="text/css" rel="stylesheet">
+<link href="__CSS__/goods_details.css" type="text/css" rel="stylesheet">
+<link href="__CSS__/key_payment.css" type="text/css" rel="stylesheet">
+
+
+	<div class="cont-wrapper {$game_name}">
+		<div class="content bc clearfix">
+		    <div class="d-goods-info-left fl">
+		        <div class="d-goods-info clearfix">
+		
+		            <div class="fl d-info-img-wrap">
+		                <div class="fl d-info-img">
+		                        <img src="{$info['image']}" alt="" title="">
+		                </div>
+		            </div>
+		
+		            <div class="fr d-info-wrap">
+		                <div class="d-g-name">{$info['name']}</div>
+		                    
+		                <div class="d-g-price">售价：
+		                	<span id = "market_price">￥{$steamPrice}</span>【Steam售价：¥{$countSteamPrice}】</div>
+		                <div class="d-g-sell-number">
+		                    <span>累计出售：{$count} 件</span>
+		                    <span>本周出售：{$num} 件</span>
+		                </div>
+		
+		                <div class="d-g-operate" cate-id="{$cate_id}" bus-uid="{$info['bus_uid']}">
+					        <a class="operate-btn3" id="batch_buy_btn" style="cursor: pointer;">购买</a>
+		                </div>
+		            </div>
+		        </div>
+
+    <div class="d-goods-wrap clearfix">
+        <div class="d-goods-other fl">
+            <div class="d-goods-title">
+                 <div class="fl menu-tab-btn" id="goods-details-table">
+				    <a id="goods-details-sell" class="backpack-menu-btn active"
+				       href ="" >捆绑包游戏</a>
+				    <a id="goods-details-history" class="backpack-menu-btn"
+				       href="">成交历史</a>
+				</div>
+            </div>
+            <div class="good-other-onsell">
+                <span class="fl">游戏名称</span>
+                <span class="fl">卖家</span>
+                <span class="fl">Steam价格</span>
+                <span class="fl">用户操作</span>
+            </div>
+
+            <ul id="box-goods-details-sell" class="d-goods-other-list">
+                {volist name="$data" id="vo"}
+                {if condition="$vo.is_out eq 1"}
+                    <li class="clearfix togray" data-id="{$vo['id']}" style="height: 90px;border-bottom: 1px solid #ddd;">
+                        <a class="fl g-other-img-wrap" target="_blank" style="background-image: url(__IMG__/goods-del-bg.png);">
+                            <div class="g-other-img">
+                                <img style="max-width: 145%;margin-left: -25%;" src="https://cdn.steamstatic.com/steam/apps/{$vo['steam_game_id']}/header.jpg" alt="" class="goods-info-img">
+                            </div>
+                        </a>
+                        <div class="fl g-other-faname">
+                            <p class="over-hide">{$vo['game_name']}</p>
+                        </div>
+                        <div class="fl g-other-fatime">
+                            <time class="g-other-time fl">
+                                {if condition="$vo.avatar neq ''"}
+                                <img class="fl" src="/{$vo.avatar}">
+                                {else/}
+                                <img class="fl" src="/static/PC/image/default_avatar_128_128.jpg">
+                                {/if}
+                                <a class="fl over-hide" href="javascript:">{$vo['nickname']}</a>
+                            </time>
+                        </div>
+                        <div class="fl g-other-faprice">￥<span>{$vo['steam_price']}</span></div>
+
+                        <a class="fl g-other-buy buy_pay_btn" data-id="{$vo.id}" href="https://store.steampowered.com/app/{$vo['steam_game_id']}" target="_blank" style="width: 100px;">前往STEAM</a>
+
+                        <!--售罄-->
+                        <div class="sell_out">售罄</div>
+
+                    </li>
+                {else/}
+                    <li class="clearfix" data-id="{$vo['id']}" style="height: 90px;border-bottom: 1px solid #ddd;">
+                        <a class="fl g-other-img-wrap" target="_blank" style="background-image: url(__IMG__/goods-del-bg.png);">
+                            <div class="g-other-img">
+                                <img src="https://cdn.steamstatic.com/steam/apps/{$vo['steam_game_id']}/header.jpg" alt="" class="goods-info-img">
+                            </div>
+                        </a>
+                        <div class="fl g-other-faname">
+                            <p class="over-hide">{$vo['game_name']}</p>
+                        </div>
+                        <div class="fl g-other-fatime">
+                            <time class="g-other-time fl">
+                                {if condition="$vo.avatar neq ''"}
+                                <img class="fl" src="/{$vo.avatar}">
+                                {else/}
+                                <img class="fl" src="/static/PC/image/default_avatar_128_128.jpg">
+                                {/if}
+                                <a class="fl over-hide" href="javascript:">{$vo['nickname']}</a>
+                            </time>
+                        </div>
+                        <div class="fl g-other-faprice">￥<span>{$vo['steam_price']}</span></div>
+
+                        <a class="fl g-other-buy buy_pay_btn" data-id="{$vo.id}" href="https://store.steampowered.com/app/{$vo['steam_game_id']}" target="_blank" style="width: 100px;">前往STEAM</a>
+                    </li>
+                {/if}
+               {/volist}
+            </ul>
+
+    
+        </div>
+
+
+    </div>
+    </div>
+      {include file="index@cdkey/key_recommend"}
+    </div>
+    </div>
+    </div>
+	
+	<div class="payment-key-type-cont">
+    	<!--确认购买界面-->
+    	<div class="payment-type-header">确认购买</div>
+    	<div class="payment-content">
+    		<!--提示内容-->
+    	</div>
+    	<div class="submit-box">
+    		<input type="button" value="确定" id="nowbuy_btn" />
+    	</div>
+    </div>
+    <div class="loading-mask" style="display: none;"> </div>
+
+    <script src="__JS__/common.min.js"></script>
+    <script src="__JS__/key_bindingBuy.js"></script>
+    
+{include file="common@common/foot"}
+</body>

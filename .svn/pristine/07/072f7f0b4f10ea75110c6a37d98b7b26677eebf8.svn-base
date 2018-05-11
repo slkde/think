@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>{include file="common@common/common"}</head>
+<body>
+{include file="common@common/head"}
+{include file="common@common/toasttips"}
+<link href="__CSS__/common.css" type="text/css" rel="stylesheet">
+<link href="__CSS__/index.css" type="text/css" rel="stylesheet">
+<link href="__CSS__/key_page.css" type="text/css" rel="stylesheet">
+
+    <div class="cont-wrapper {$game_name}">
+		
+		<div class="content">
+            <div class="py-index-main">
+
+
+               <!--==================================单个游戏展示开始=====================================-->
+                <div id="index_pubg" class="index-goods-wrap">
+                    <div class="goods-nav">
+                        <div class="goods-nav-title clearfix">
+                            <img class="fl" src="__IMG__/index-title-steam.png" alt="">
+                            <span class="fl goods-nav-title-text">STEAM游戏</span>
+                        </div>
+
+                    </div>
+                    <ul id="goods-list-pubg" class="index-goods-list clearfix">
+                        {volist name="dataSingle" id="vo"}
+                        <li class="fl styleChange" style="width: 280px;">
+                                <a href="{:url('index/cdkey/single_list',['steam_game_id' => $vo.steam_game_id])}" class="goods-item">
+                                    <div class="goods-img">
+                                        <img style="width: 100%;height: 106%;" src="https://cdn.steamstatic.com/steam/apps/{$vo.steam_game_id}/header.jpg" alt="{$vo['game_name']}">
+                                    </div>
+                                    <div class="goods-info-wrap">
+                                        <div class="goods-name over-hide">{$vo['game_name']}</div>
+                                        <div class="goods-info clearfix">
+                                            <span class="goods-price fl">￥{$vo['key_price']}</span>
+                                            <span class="goods-number fr">{$vo['num']}件在售</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            {/volist}
+                    </ul>
+                    <div class="pageBox">
+                    	<ul></ul>
+                    </div>
+
+                    <!-- <div class="index-goods-replace">
+                        <a href="" class="index-goods-replace-btn"><i class="icon iconfont">&#xe734;</i><span>换一换</span></a>
+                    </div> -->
+                </div>
+                <!--==================================单个游戏展示结束=====================================-->
+
+
+
+                <!--==================================捆绑游戏展示开始=====================================-->
+                <div id="index_csgo" class="index-goods-wrap">
+                    <div class="goods-nav">
+                        <div class="goods-nav-title clearfix">
+                            <img class="fl" src="__IMG__/steam_binding.png" alt="">
+                            <span class="fl goods-nav-title-text">捆绑游戏</span>
+                        </div>
+
+                    </div>
+                    <ul  id="goods-list-csgo" class="index-goods-list clearfix">
+                        {volist name="$dataBinding" id="vo"}
+                            <li class="fl">
+                                <a href="{:url('index/cdkey/binding_list',['cate_id' => $vo.id])}" class="goods-item">
+                                    <div class="goods-img">
+                                        <img src="{$vo['image']}" alt="{$vo['name']}">
+                                    </div>
+                                    <div class="goods-info-wrap">
+                                        <div class="goods-name over-hide">{$vo['name']}</div>
+                                        <div class="goods-info clearfix">
+                                            <span class="goods-price fl">￥{$vo['price']}</span>
+                                            <span class="goods-number fr">{$vo['total_num']}件在售</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        {/volist}
+                    </ul>
+                    <div class="pageBox2">
+                    	<ul></ul>
+                    </div>
+
+                    <!-- <div class="index-goods-replace">
+                        <a href="" class="index-goods-replace-btn"><i class="icon iconfont">&#xe734;</i><span>换一换</span></a>
+                    </div> -->
+                </div>
+                <!--==================================捆绑游戏展示结束=====================================-->
+
+            </div>
+        </div>
+		
+    </div>
+
+
+ <script  src = "__JS__/common.min.js"></script> 
+  <script  src = "__JS__/key_page.js"></script> 
+{include file="common@common/foot"}
+</body>

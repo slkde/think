@@ -1,0 +1,15 @@
+
+<ul>
+	{if condition="empty($goods) neq true"}
+		{foreach name="goods"  item="vo"}
+			<li value="{$vo['id']}" class="roll-activity-addgoodc-box-list">
+				<span><img src="{$vo['goods_image_url']}" /></span>
+				<img src="__IMG__/gou.png" />
+			</li>
+		{/foreach}
+	{/if}
+</ul>
+<!--分页-->
+<div class="roll-pages" style="text-align: center;">
+	{$page}
+</div>

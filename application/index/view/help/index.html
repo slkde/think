@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>{include file="common@common/common"}</head>
+<body>
+{include file="common@common/head"}
+{include file="common@common/toasttips"}
+
+    <link href="__CSS__/common.css" type="text/css" rel="stylesheet">
+    <link href="__CSS__/help.css" type="text/css" rel="stylesheet">
+    <div class="cont-wrapper {$game_name}">
+        <div class="help-wrap clearfix">
+               {include file="index@help/_left"}
+
+                <div class="fr help-right">
+                    <div class="help-tab-btn" id="help_tab_btn">
+                        <a class="active" href="javascript:">网站公告</a>
+                    </div>
+                    <div class="help-tab-cont" id="help_tab_cont">
+
+                        <div style="display: block;">
+                            <h4 class="help-tab-title">购买、出售前的准备工作</h4>
+                            <div class="help-tab-item">
+                                <div>在{:config('WEB_NAME')}进行Steam平台游戏交易服务时，请在购买、出售饰品前确认您的Steam账号为可交易状态并顺利访问Steam接受报价。</div>
+                                <div>查看能否正常访问Steam，链接地址：<a class="a-color" target="_blank" href="https://steamcommunity.com">https://steamcommunity.com</a></div>
+                            </div>
+                            <div class="help-tab-item">
+                                <div><span class="item-number">1.</span>最近Steam社区无法访问导致的Steam直接登陆和Steam ID、Steam交易URL无法绑定的情况，我站推出几种方式以便广大用户使用。</div>
+                                <br />
+                                电脑端请使用
+                                <p class="mt10" style="text-indent: 6em;"><a class="a-color" target="_blank" href="/Uploads/steam/Steam.exe">Steam社区加速器1</a></p>
+                                <p class="mt10" style="text-indent: 6em;"><a class="a-color" target="_blank" href="/Uploads/steam/steamcommunity_302_V2.exe">Steam社区加速器2</a></p>
+                                <p class="mt10">以上加速器均可为您的电脑端Steam社区加速，以便您登录并绑定steam。</p>
+                                <p>如果是手机端接收报价，建议玩家用网易UU加速器加速Steam手机端的APP即可正常使用Steam接收报价、确认报价。</p>
+                                <p><a class="a-color" href="{:url('index/help/accelerate')}">相关教程</a></p>
+                            </div>
+                            <div class="help-tab-item">
+                                <div><span class="item-number">2.</span>绑定Steam及录入交易链接</div>
+                                <div class="mt10">{:config('WEB_NAME')}账号需要绑定Steam账号才可以进行交易。（点击{:config('WEB_NAME')}首页右侧的个人头像→在子选项中找到账户设置→完成绑定即可）</div>
+                                <p><a class="a-color" href="{:url('index/help/user')}">相关教程</a></p>
+                                <div>若无法打开Steam社区请参考第一条加速器设备使用</div>
+                            </div>
+                            <div class="help-tab-item">
+                                <div><span class="item-number">3.</span>Steam库的状态</div>
+                                <div class="mt10">当您的背包里面提示没有物品或STEAM库为私密状态，则需在Steam个人中心设置：登陆Steam社区→点击SteamID在子选项中点击查看个人资料→点击编辑个人资料→我的隐私设置→库存状态改为公开即可。</div>
+                                <p><a class="a-color" href="{:url('index/help/steam')}">相关教程</a></p>
+                            </div>
+                            <div class="help-tab-item">
+                                <div><span class="item-number">4.</span>购买、出售饰品。</div>
+                                <div class="mt10">在购买饰品后，点击导航栏中“我的背包”，在{:config('BACKPACK_KU')}中选择购买饰品的相对游戏，点击取回即可。</div>
+                                <div class="mt10">常见问题：如果是已操作取回，Steam里未收到报价，请查看取回Steam的库的提示内容：Steam账号有交易限制或Steam库存权限未公开将不能收到报价；检查{:config('WEB_NAME')}保存的交易链接是否失效、Steam库存物品是否超过999件等；若提示“您使用了一台新设备登陆”则需等待7天以后才能进行取回操作。</div>
+                                <p><a class="a-color" href="{:url('index/help/backpack')}">相关教程</a></p>
+                                <div class="mt10">
+                                    <p>想要在{:config('WEB_NAME')}中出售自己的饰品必须先要将游戏内的饰品存入{:config('WEB_NAME')}中：</p>
+                                    <p>我的背包→在Steam库中选择想上架饰品的游戏→选择该饰品→点击存入</p>
+                                    <p><a class="a-color" href="{:url('index/help/backpack')}">相关教程</a></p>
+                                </div>
+                                <div class="mt10">
+                                    <p>在您的饰品存入{:config('BACKPACK_KU')}后，就可以进行常规的上架操作：</p>
+                                    <p>我的背包→在{:config('BACKPACK_KU')}中选择想要上架饰品的游戏→选择该饰品→点击上架</p>
+                                    <p><a class="a-color" href="{:url('index/help/sell')}">相关教程</a></p>
+                                </div>
+                            </div>
+                            <div class="help-tab-item">
+                                <div><span class="item-number">5.</span>相关问题</div>
+                                <div class="mt10">若在存入饰品时手机上面无法显示或打开确认消息，请下载加速器并重试。</div>
+                                <div>在{:config('WEB_NAME')}上出售物品需满足一下条件：</div>
+                                <div>1.绑定手机令牌超过15天</div>
+                                <div>2.Steam账号为可交易状态</div>
+                                <div>3.库存为公开状态</div>
+                                <div>若存入是提示“未开通手机令牌超过15天，无法出售”则需下载Steam app，开通并绑定Steam手机令牌</div>
+                            </div>
+                            <div class="help-tab-item">
+                                <div><span class="item-number">6.</span>用户协议</div>
+                                <a class="mt10" target="_blank" href="{:url('index/help/protocol')}">请务必点击查看《{:config('WEB_NAME')}服务协议》</a>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="__JS__/help.js"></script>
+ <script  src = "__JS__/common.min.js"></script> 
+{include file="common@common/foot"}
+</body>

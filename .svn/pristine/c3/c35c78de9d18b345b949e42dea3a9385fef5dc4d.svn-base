@@ -1,0 +1,76 @@
+<?php
+namespace pay\alipayunion;
+header("Content-type:text/html;charset=utf8");
+
+class Alipay
+{
+    private $config = [
+        'partner' => '2088701084339582',
+        'key' => '8rpnvau4pzi4z37ejfglb0lfqid6q7lv', //安全检验码，以数字和字母组成的32位字符
+        'sign_type' => 'MD5', //签名方式 不需修改
+        'input_charset' => 'utf-8', //字符编码格式 目前支持 gbk 或 utf-8
+        'cacert' => '', //ca证书路径地址，用于curl中ssl校验。请保证cacert.pem文件在当前文件夹目录中
+        'transport' => 'http' //访问模式,根据自己的服务器是否支持ssl访问，若支持请选择https；若不支持请选择http
+    ];
+
+    //构造要请求的参数数组，无需改动
+    public $parameter = [
+        'service' => 'bptb_pay_file',
+        'partner' => '2088701084339582',
+        'notify_url' => '',
+        'file_digest_type' => 'MD5',
+        'digest_bptb_pay_file' => '',
+        '_input_charset' => 'utf-8'
+    ];
+
+    /**
+     * 向银联发起转账请求
+     */
+    public function pay_union($array)
+    {
+        $this->parameter['notify_url'] = $array['notify_url'];
+        $this->parameter['digest_bptb_pay_file'] = md5_file($array['bptb_pay_file']);
+
+        $alipaySubmit = new AlipaySubmit($this->config);
+        $html_text = $alipaySubmit->buildRequestHttpInFile($this->parameter, 'bptb_pay_file', $array['bptb_pay_file']);
+        return $html_text;
+    }
+
+
+    public function chksign()
+    {
+        if(empty($_POST)) {//判断POST来的数组是否为空
+            return false;
+        }else {
+            //生成签名结果
+            $AlipayNotify = new AlipayNotify();
+            $isSign = $AlipayNotify->getSignVeryfy($_POST, $_POST["sign"]);
+            //获取支付宝远程服务器ATN结果（验证是否是支付宝发来的消息）
+            $responseTxt = 'false';
+            if (! empty($_POST["notify_id"])) {$responseTxt = $this->getResponse($_POST["notify_id"]);}
+
+            //写日志记录
+            //if ($isSign) {
+            //	$isSignStr = 'true';
+            //}
+            //else {
+            //	$isSignStr = 'false';
+            //}
+            //$log_text = "responseTxt=".$responseTxt."\n notify_url_log:isSign=".$isSignStr.",";
+            //$log_text = $log_text.createLinkString($_POST);
+            //logResult($log_text);
+
+            //验证
+            //$responsetTxt的结果不是true，与服务器设置问题、合作身份者ID、notify_id一分钟失效有关
+            //isSign的结果不是true，与安全校验码、请求时的参数格式（如：带自定义参数等）、编码格式有关
+            if (preg_match("/true$/i",$responseTxt) && $isSign) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+
+
+
+}

@@ -1,0 +1,59 @@
+<style type="text/css">
+	label.control-label {
+		width: 85px;
+	}
+</style>
+
+<div class="bjui-pageContent tableContent">
+  <form name="sortform" data-toggle="ajaxform" action="{:url('Group/rule_group')}" method="post" style="font-size: 0">
+  <input name="id" type="hidden" value="{$group_data.id}" />
+    <table data-toggle="tablefixed" data-width="100%" data-nowrap="true">
+      <thead>
+        <tr style="height:36px;line-height:36px;">
+          <th style="background:#1078C1;color:#fff;" width="26">
+          <input type="checkbox" class="checkboxCtrl" data-group="ids[]" data-toggle="icheck">
+          <th style="background:#1078C1;color:#fff;">权限名称</th>
+          <th style="background:#1078C1;color:#fff;">权限链接</th>
+          
+		</th>
+        </tr>
+      </thead>
+      <tbody>
+
+          {foreach $rule_data as $voo}
+          <tr>
+          <td><input type="checkbox" data-toggle="icheck" name="ids[]" value="{$voo['id']}" {if condition=" in_array($voo.id,$group_data.rules)"} checked {/if} /></td>
+          <td>{$voo.name}</td>
+          <td>{$voo.mca}</td>
+          
+          </tr>
+
+              {foreach  $voo._data as $vo}
+              <tr>
+              <td> <input type="checkbox" data-toggle="icheck" name="ids[]" value="{$vo['id']}" {if condition=" in_array($vo.id,$group_data.rules)"} checked {/if}  />   </td>
+              <td>└─{$vo.name}</td>
+              <td>{$vo.mca}</td>
+              </tr>
+
+                    {foreach  $vo._data as $v}
+                    <tr>
+                    <td><input type="checkbox" data-toggle="icheck" name="ids[]" value="{$v['id']}" {if condition=" in_array($v.id,$group_data.rules)"} checked {/if}  /></td>
+                    <td>│ └─{$v.name}</td>
+                    <td>{$v.mca}</td>
+                    </tr>  
+
+            {/foreach}          
+          {/foreach}
+        {/foreach}
+     
+
+      </tbody>
+    </table>
+  </form>
+</div>
+<div class="bjui-pageFooter">
+	  <ul style="float: left;">
+    <li><button type="button" class="btn-close" data-icon="close">关闭</button></li>
+    <li><button type="submit" class="but btn-blue" id="btn_submit" data-icon="save">保存</button></li>
+    </ul>
+</div>

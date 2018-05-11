@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>{include file="common@common/common"}</head>
+<body>
+{include file="common@common/head"}
+{include file="common@common/toasttips"}
+
+<link href="__CSS__/common.css" type="text/css" rel="stylesheet">
+<link href="__CSS__/help.css" type="text/css" rel="stylesheet">
+<div class="cont-wrapper {$game_name}">
+    <div class="help-wrap clearfix">
+        {include file="index@help/_left"}
+
+        <div class="fr help-right">
+            <div class="help-tab-btn" id="help_tab_btn">
+                <a class="active" href="javascript:">游戏激活</a>
+            </div>
+            <div class="help-tab-cont" id="help_tab_cont">
+                <div style="display: block;">
+                    <h4 class="help-tab-title">如何激活steam游戏？</h4>
+                    <div class="help-tab-item">
+                        <div>在您选择好Steam游戏/捆绑包后，点击购买并完成交易。</div>
+
+                        <!--<img src="__IMG__/help/steam_1.png" alt="">-->
+
+                        <div>购买成功后，点击右上方头像进入用户中心，在游戏订单中激活游戏或申请售后服务。</div>
+
+                        <!--<img src="__IMG__/help/steam_2.png" alt="">-->
+
+                        <div>点击确认激活按钮游戏，并登录要激活游戏的Steam账号（若未绑定Steam手机令牌，请选择邮箱令牌登录）。</div>
+
+                        <!--<img src="__IMG__/help/steam_3.png" alt="">-->
+
+                        <div>登录Steam账号后，网站将自动帮您激活游戏。提示激活成功后，游戏自动发放至您的游戏库中。</div>
+
+                        <!--<img src="__IMG__/help/steam_4.png" alt="">-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="__JS__/common.min.js"></script>
+<script src="__JS__/help.js"></script>
+
+{include file="common@common/foot"}
+</body>

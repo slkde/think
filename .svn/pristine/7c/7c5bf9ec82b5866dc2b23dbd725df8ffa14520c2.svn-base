@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>{include file="common@common/common"}</head>
+<body>
+{include file="common@common/head"}
+{include file="common@common/toasttips"}
+
+<link href="__CSS__/common.css" type="text/css" rel="stylesheet">
+<link href="__CSS__/help.css" type="text/css" rel="stylesheet">
+<div class="cont-wrapper {$game_name}">
+    <div class="help-wrap clearfix">
+        {include file="index@help/_left"}
+
+        <div class="fr help-right">
+            <div class="help-tab-btn" id="help_tab_btn">
+                <a class="active" href="javascript:">卖家</a>
+                <a href="javascript:">买家</a>
+            </div>
+            <div class="help-tab-cont" id="help_tab_cont">
+
+                <div style="display: block;">
+                    <h4 class="help-tab-title">饰品如何私密出售？</h4>
+                    <div class="help-tab-item">
+                        <div>1.在功能菜单中点击物品背包或者在用户中心菜单里进入我的背包。</div>
+                        <img src="__IMG__/help/secrect_1.png" alt="">
+                    </div>
+                    <div class="help-tab-item">
+                        <div>2.将要出售的物品存入{:config('BACKPACK_KU')}，选择该物品点击私密按钮。</div>
+                        <img src="__IMG__/help/secrect_2.png" alt="">
+                    </div>
+                    <div class="help-tab-item">
+                        <div>3.编辑出售信息，输入相应的物品价格，点击私密出售按钮确定编辑。</div>
+                        <img src="__IMG__/help/secrect_3.png" alt="">
+                    </div>
+                    <div class="help-tab-item">
+                        <div>4.确定私密出售后，网站将自动生成该物品的购买网址，将物品网址复制给买家，等待完成交易即可。</div>
+                        <img src="__IMG__/help/secrect_4.png" alt="">
+                    </div>
+                    <div class="help-tab-item">
+                        <div>5.如您遗忘了私密交易的网址或未复制成功，可以在我的交易→私密管理中查询。</div>
+                        <img src="__IMG__/help/secrect_5.png" alt="">
+                    </div>
+
+                </div>
+
+
+                <div>
+                    <h4 class="help-tab-title">饰品如何私密购买？</h4>
+                    <div class="help-tab-item">
+                        <div>购买前须知：{:config('WEB_NAME')}所有私密交易的网址全部为“{:config('WEB_URL')}/xxx..xxx.html”请您在进入网址前核对网址信息，以防进入钓鱼网站。</div>
+                    </div>
+                    <div class="help-tab-item">
+                        <div>1.进入卖家给您发送的网址后，核实购买物品的信息与价格，无误后点击立即购买按钮。</div>
+                        <img src="__IMG__/help/secrect_6.png" alt="">
+                    </div>
+                    <div class="help-tab-item">
+                        <div>2.点击按钮后，将跳出您账户余额信息方便您检查余额，无误后点击立即支付完成交易。</div>
+                        <img src="__IMG__/help/secrect_7.png" alt="">
+                        <img src="__IMG__/help/secrect_8.png" alt="">
+                    </div>
+                    <div class="help-tab-item">
+                        <div>3.若您账户内余额不足，将无法继续购买，请及时充值。</div>
+                        <img src="__IMG__/help/secrect_9.png" alt="">
+                        <img src="__IMG__/help/secrect_10.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="__JS__/common.min.js"></script>
+<script src="__JS__/help.js"></script>
+
+{include file="common@common/foot"}
+</body>

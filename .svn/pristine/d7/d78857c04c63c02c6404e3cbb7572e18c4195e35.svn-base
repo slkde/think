@@ -1,0 +1,122 @@
+ <style type="text/css">
+   .tableContent  table  thead tr th{background:#1078C1;color:#fff;}
+   .bjui-pageHeader {padding:0px 5px;}
+   .tableContent  table tr td{ height: 30px; }
+</style>
+
+
+
+<script type="text/javascript">
+//查询收起
+$.CurrentNavtab.find('#chaxun').on('click',function () {
+  if($.CurrentNavtab.find(".bjui-moreSearch").css('display')=='block')
+  $.CurrentNavtab.find(".showMoreSearch").trigger('click');
+})
+
+</script>
+
+<div class="bjui-pageHeader" >
+	  <form id="pagerForm" data-toggle="ajaxsearch" action="{:url('adv/index')}" method="get">
+      <div class="bjui-searchBar" style="margin-top:6px">
+      <label  class="control-label x85">所属分类：</label>
+        <select name='cid' data-toggle="selectpicker" >
+           <option value ='0' {if  condition="$v.id eq 0"} selected {/if} > 全部</option>
+           {volist name ='category' id = 'v'}
+           <option value ='{$v.id}' {if  condition="$v.id eq $cid"} selected {/if} > {$v.title}</option>
+           {/volist}
+        </select>
+        <button type="submit" class="btn-default" data-icon="search" id="chaxun">查询</button>&nbsp;
+        <a class="btn btn-orange" href="javascript:;" onclick="$(this).navtab('reloadForm', true);" data-icon="undo">清空查询</a>&nbsp;&nbsp;
+      </div>
+    </form>
+</div>
+
+<div class="bjui-pageContent tableContent" > 
+  <form name="sortform" data-toggle="ajaxform" action="{:url('adv/sort')}" method="post">
+	<table data-toggle="tablefixed" data-width="100%" data-nowrap="true">
+		<thead>
+		<tr style="height:36px;line-height:36px;">
+
+<!-- 			<th style="background:#1078C1;color:#fff;"  width="10">
+				<input type="checkbox" class="checkboxCtrl" data-group="ids" data-toggle="icheck">
+			</th> -->
+	    <th  width="20">ID</th>
+      <th  width="10">排序</th>
+      <th  width="30">所属分类</th>
+      <th  width="30">广告标题</th>
+      <th  width="30">图片</th>
+      <th  width="30">链接</th>
+      <th  width="40">开始时间</th>
+      <th  width="40">结束时间</th>
+      <th  width="40" >创建时间</th>
+      <th  width="40">操作
+            &nbsp;&nbsp;&nbsp;&nbsp;<a  href="{:url('adv/add')}" 
+            data-toggle="dialog" class="btn btn-green"
+            data-id="adv_add" data-mask="true"
+            data-reload="true" data-width="400"
+            data-height="500" 
+            data-on-close="refresh">新增</a>
+      </th>
+			
+		 <!-- 	<th  width="30">操作</th>  -->
+		</tr>
+		</thead>
+		<tbody>
+				{foreach  name ='data' item='v' key='k'}
+				<tr data-id="{$k}">
+<!-- 					<td>
+					<input type="checkbox" name="ids" data-toggle="icheck" value="{$v.id}">
+					</td>	 -->
+					<td>{$v.id}</td>	
+          <td>
+            <input type="text" class="ids" name="sort[{$v.id}]" value="{$v.sort}" style="width:100%" />
+          </td>
+          <td>{$v.ctitle}</td>	
+          <td>{$v.title}</td>
+          <td><img  src="{$v.path}"  height="80px" /></td>
+          <td>{$v.url}</td>
+          <td>
+             {$v.start_time|date='Y-m-d H:i:s',###}
+          </td>
+          <td>
+            {$v.end_time|date='Y-m-d H:i:s',###}
+          </td>
+          <td>{$v.create_time|date='Y-m-d H:i:s',###}</td>
+          <td>
+            <a href="{:url('adv/save',['id' => $v['id']])}" class="btn btn-green" 
+            data-toggle="dialog"
+            data-id="Goodscate_save" data-mask="true"
+            data-reload="true" data-width="600"
+            data-height="500" 
+            data-on-close="refresh">修改
+            </a>
+            <a href="{:url('adv/delete', ['id' => $v['id']])}" class="btn btn-red" data-toggle="doajax" data-confirm-msg="确定要永久删除吗？">删除</a>
+          </td>
+
+				</tr>
+				{/foreach}
+		</tbody>
+	</table>
+</form>
+</div>
+
+<div class="bjui-pageFooter">
+
+  <button type="submit" class="btn-blue" data-icon="refresh" style="float:left">
+    更新排序
+  </button>
+
+	<div class="pages">
+		<span>每页&nbsp;</span>
+		<div class="selectPagesize">
+			<select data-toggle="selectpicker" data-toggle-change="changepagesize">
+				   {foreach name="pagesizes" id="v"}
+				   <option value="{$v}">{$v}</option>
+				   {/foreach}
+			</select>
+		</div>
+		<span>&nbsp;条，共 {$total} 条</span>
+	</div>
+	<div class="pagination-box" data-toggle="pagination" data-total="{$total}" data-page-size="{$pagesize}"  data-page-current="{$pageCurrent}">
+	</div>
+</div>

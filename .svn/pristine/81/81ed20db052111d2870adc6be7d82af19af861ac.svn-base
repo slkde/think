@@ -1,0 +1,164 @@
+<style type="text/css">
+	label.control-label {
+		width: 120px;
+	}
+    .bjui-pageFooter > ul > li{ display: inline-block;float:none;text-align:center}
+    .bjui-pageFooter > ul{ text-align: center }
+</style>
+
+<div class="bjui-pageContent">
+	<form action="{:url('Config/switchs')}" method="post" data-toggle="validate">
+       
+		<table class="table-bordered table-condensed table-hover" width="100%">
+			<tbody>
+
+				<tr>
+					<td>
+						<label for="j_custom_number" class="control-label x85">
+								网站开关：
+						</label>
+				
+							<input type="radio" name="web"    value='1' {eq name="$data.web" value="1"} checked {/eq}	data-toggle="icheck" data-label="开">
+			                <input type="radio" name="web"    value='0'	{eq name="$data.web" value="0"} checked {/eq} data-toggle="icheck" data-label="关">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="j_custom_number" class="control-label x85">
+								登陆开关：
+						</label>
+				
+						<input type="radio" name="login"   	value='1'	{eq name="$data.login" value="1"} checked {/eq} data-toggle="icheck" data-label="开">
+                        <input type="radio" name="login"  	value='0'	{eq name="$data.login" value="0"} checked {/eq} data-toggle="icheck" data-label="关">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="j_custom_number" class="control-label x85">
+								注册开关：
+						</label>
+				
+						<input type="radio" name="register"   	value='1'	{eq name="$data.register" value="1"} checked {/eq} data-toggle="icheck" data-label="开">
+                        <input type="radio" name="register"  	value='0'	 {eq name="$data.register" value="0"} checked {/eq} data-toggle="icheck" data-label="关">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="j_custom_number" class="control-label x85">
+								充值开关：
+						</label>
+				
+						<input type="radio" name="recharge"   	value='1'	{eq name="$data.recharge" value="1"} checked {/eq} data-toggle="icheck" data-label="开">
+                        <input type="radio" name="recharge"  	value='0'	 {eq name="$data.recharge" value="0"} checked {/eq} data-toggle="icheck" data-label="关">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="j_custom_number" class="control-label x85">
+								提现开关：
+						</label>
+				
+						<input type="radio" name="withdrawals"   	value='1'	 {eq name="$data.withdrawals" value="1"} checked {/eq} data-toggle="icheck" data-label="开">
+                        <input type="radio" name="withdrawals"  	value='0'	  {eq name="$data.withdrawals" value="0"} checked {/eq} data-toggle="icheck" data-label="关">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="j_custom_number" class="control-label x85">
+							自动提现开关：
+						</label>
+
+						<input type="radio" name="withdrawalsAuto"   	value='1'	 {eq name="$data.withdrawalsAuto" value="1"} checked {/eq} data-toggle="icheck" data-label="开">
+						<input type="radio" name="withdrawalsAuto"  	value='0'	  {eq name="$data.withdrawalsAuto" value="0"} checked {/eq} data-toggle="icheck" data-label="关">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="j_custom_number" class="control-label x85">
+								普通购买开关：
+						</label>
+				
+						<input type="radio" name="buy"   	value='1'	{eq name="$data.buy" value="1"} checked {/eq} data-toggle="icheck" data-label="开">
+                        <input type="radio" name="buy"  	value='0'	{eq name="$data.buy" value="0"} checked {/eq} data-toggle="icheck" data-label="关">
+					</td>
+				</tr>
+<!-- 				<tr>
+					<td>
+						<label for="j_custom_number" class="control-label x85">
+								UGT购买开关：
+						</label>
+				
+						<input type="radio" name="ugtbuy"   	value='1'	{eq name="$data.ugtbuy" value="1"} checked {/eq} data-toggle="icheck" data-label="开">
+                        <input type="radio" name="ugtbuy"  	value='0'	{eq name="$data.ugtbuy" value="0"} checked {/eq} data-toggle="icheck" data-label="关">
+					</td>
+				</tr> -->
+				<tr>
+					<td>
+						<label for="j_custom_number" class="control-label x85">
+								纯净购买开关：
+						</label>
+				
+						<input type="radio" name="purebuy"   	value='1'	{eq name="$data.purebuy" value="1"} checked {/eq} data-toggle="icheck" data-label="开">
+                        <input type="radio" name="purebuy"  	value='0'	{eq name="$data.purebuy" value="0"} checked {/eq} data-toggle="icheck" data-label="关">
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<label for="j_custom_number" class="control-label x85">
+								存入开关：
+						</label>
+				
+						<input type="radio" name="deposit"   	value='1'	{eq name="$data.deposit" value="1"} checked {/eq} data-toggle="icheck" data-label="开">
+                        <input type="radio" name="deposit"  	value='0'	{eq name="$data.deposit" value="0"} checked {/eq} data-toggle="icheck" data-label="关">
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<label for="j_custom_number" class="control-label x85">
+								取出开关：
+						</label>
+				
+						<input type="radio" name="take"   	value='1'	{eq name="$data.take" value="1"} checked {/eq} data-toggle="icheck" data-label="开">
+                        <input type="radio" name="take"  	value='0'	{eq name="$data.take" value="0"} checked {/eq} data-toggle="icheck" data-label="关">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="j_custom_number" class="control-label x85">
+								租赁开关：
+						</label>
+				
+						<input type="radio" name="lease"   	value='1'	{eq name="$data.lease" value="1"} checked {/eq} data-toggle="icheck" data-label="开">
+                        <input type="radio" name="lease"  	value='0'	{eq name="$data.lease" value="0"} checked {/eq} data-toggle="icheck" data-label="关">
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<label for="j_custom_number" class="control-label x85">
+								归还开关：
+						</label>
+				
+						<input type="radio" name="lease_reclaim"   	value='1'	{eq name="$data.lease_reclaim" value="1"} checked {/eq} data-toggle="icheck" data-label="开">
+                        <input type="radio" name="lease_reclaim"  	value='0'	{eq name="$data.lease_reclaim" value="0"} checked {/eq} data-toggle="icheck" data-label="关">
+					</td>
+				</tr>
+
+
+
+ 
+
+
+
+			</tbody>
+		</table>
+</div>
+<div class="bjui-pageFooter">
+	<ul>
+		<li><button type="submit" class="but btn-blue" data-icon="save">保存</button></li>
+		<li><button type="button" class="btn-close" data-icon="close">取消</button></li>
+	</ul>
+</div>
+</form>

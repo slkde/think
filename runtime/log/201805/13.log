@@ -1,0 +1,36 @@
+---------------------------------------------------------------
+[ 2018-05-13T00:01:54+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/login
+[ info ] gkkblog.com/admin/login [运行时间：0.063228s][吞吐率：15.82req/s] [内存消耗：3,245.97kb] [文件加载：51]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'content-length' => '41',
+  'accept' => '*/*',
+  'origin' => 'http://gkkblog.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://gkkblog.com/admin/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'asdf',
+  'captcha' => 'asdf',
+)
+[ info ] [ RUN ] app\pyadminurl\controller\Login->login[ D:\wamp64\www\think\application\pyadminurl\controller\Login.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'app\base\controller\Rsa' not found[D:\wamp64\www\think\application\pyadminurl\controller\Login.php:65]

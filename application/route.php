@@ -9,13 +9,28 @@
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 
-return [
-    '__pattern__' => [
-        'name' => '\w+',
-    ],
-    '[hello]'     => [
-        ':id'   => ['index/hello', ['method' => 'get'], ['id' => '\d+']],
-        ':name' => ['index/hello', ['method' => 'post']],
-    ],
+use think\Route;
 
-];
+// return [
+//     '__pattern__' => [
+//         'name' => '\w+',
+//     ],
+//     '[hello]'     => [
+//         ':id'   => ['index/hello', ['method' => 'get'], ['id' => '\d+']],
+//         ':name' => ['index/hello', ['method' => 'post']],
+//     ],
+
+// ];
+
+// Route::get('admin', function(){
+//     echo 123;
+// });
+
+// Route::rule('index/admin', function(){
+//     echo 123;
+// });
+
+Route::get('admin/login','pyadminurl/login/index');
+Route::post('admin/login','pyadminurl/login/login');
+
+// Route::rule('admin/','pyadminurl/index/index');

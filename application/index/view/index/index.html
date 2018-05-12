@@ -1,399 +1,135 @@
-<!DOCTYPE html>
+﻿<!doctype html>
 <html>
-<head>{include file="common@common/common"}</head>
+<head>
+<meta charset="utf-8">
+<title>个人博客</title>
+<meta name="keywords" content="个人博客模板,博客模板" />
+<meta name="description" content="寻梦主题的个人博客模板，优雅、稳重、大气,低调。" />
+<link href="/static/css/base.css" rel="stylesheet">
+<link href="/static/css/index.css" rel="stylesheet">
+<!--[if lt IE 9]>
+<script src="/static/js/modernizr.js"></script>
+<![endif]-->
+</head>
 <body>
-{include file="common@common/head"}
-
-
-<link href="__CSS__/common.css" type="text/css" rel="stylesheet">
-<link href="__CSS__/index.css" type="text/css" rel="stylesheet">
-<link href="__CSS__/swiper.min.css" type="text/css" rel="stylesheet">
-<script src="__JS__/swiper.min.js"></script>
-
-<div class="cont-wrapper {$game_name}">
-    <div class="top-banner clearfix">
-        <div class="fl top-left">
-            <!-- Swiper -->
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    {volist name ='banner' id ='v'}
-                    <div class="swiper-slide"><a target="_blank" href="{$v.url}"
-                                                 style="background-image: url({$v.path})"></a></div>
-                    {/volist}
-                </div>
-
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
-                <!-- Add Arrows -->
-                <div class="swiper-button-next"><i class="icon iconfont">&#xe622;</i></div>
-                <div class="swiper-button-prev"><i class="icon iconfont">&#xe642;</i></div>
-            </div>
-
-            <!-- Initialize Swiper -->
-            <script>
-                var swiper = new Swiper('.top-banner .swiper-container', {
-                    pagination: '.swiper-pagination',
-                    nextButton: '.swiper-button-next',
-                    prevButton: '.swiper-button-prev',
-                    slidesPerView: 1,
-                    paginationClickable: true,
-                    spaceBetween: 30,
-                    loop: true,
-                    speed: 500,
-                    autoplay: 4000
-                });
-            </script>
-        </div>
-        <div class="fr top-right">
-
-            {notempty name="member"}
-            <!--已登录-start-->
-            <div class="info-top">
-                <div class="user-info clearfix">
-                    {if condition="$member.icon neq ''"}
-                    <img class="fl user-info-img" src="{$member.icon}">
-                    {else/}
-                    <img class="fl user-info-img" src="/static/PC/image/default_avatar_128_128.jpg">
-                    {/if}
-                    <div class="fl user-info-text">
-                        <div class="user-name over-hide">{$member.nickname}
-
-                        </div>
-                        {if condition="$member.steam_id neq null"}
-                        <div class="user-steam-id">steamID:{$member.steam_id}</div>
-                        {/if}
-                    </div>
-                </div>
-                <div class="user-price clearfix">
-                    <div class="fl recharge-number">余额:<span><span class="recharge-number-icon">￥</span>{$member.money}</span>
-                    </div>
-                    <a class="fr recharge-btn" href="{:url('ucenter/wallet/recharge')}">充值</a>
-                </div>
-            </div>
-            <div class="info-middle clearfix">
-                <a id="backpack_url" href="{$backpack_url}">我的背包</a>
-                <a href="{:url('ucenter/transaction/nowsell')}">我的交易</a>
-                <a href="{:url('ucenter/wanttobuy/lib')}">求购管理</a>
-                <a href="{:url('ucenter/user/collect')}">我的收藏</a>
-                <a href="{:url('ucenter/wallet/wallet')}">我的钱包</a>
-                <a href="{:url('integralmall/index/index')}">积分商城</a>
-            </div>
-            <div class="info-bottom clearfix">
-                <div class="info-msg-item fl">
-                    <a class="fl" href="{:url('ucenter/message/sys_message')}">系统消息：</a>
-                    <span class="fl number">{$member['sysMessage']}</span>
-                </div>
-                <div class="info-msg-item fl">
-                    <a class="fl" href="{:url('ucenter/message/message')}">交易消息：</a>
-                    <span class="fl number">{$member['sellMessage']}</span>
-                </div>
-            </div>
-            <div class="default-game-type">
-                <span class="fl">主要游戏：</span>
-                <div class="fl default-game-list">
-                    <i data-game='csgo' class="main_game csgo {if $member.main_game eq 1}game_cur{/if}"
-                       title="把CS:GO设置为主要游戏"></i>
-                    <i data-game='dota2' class="main_game dota2 {if $member.main_game eq 2}game_cur{/if}"
-                       title="把DOTA2设置为主要游戏"></i>
-                    <i data-game='pubg' class="main_game pubg {if $member.main_game eq 3}game_cur{/if}"
-                       title="把PUBG设置为主要游戏"></i>
-                    <i data-game='h1z1' class="main_game h1z1 {if $member.main_game eq 4}game_cur{/if}"
-                       title="把H1Z1设置为主要游戏"></i>
-                    <i data-game='steam' class="main_game steam {if $member.main_game eq 5}game_cur{/if}"
-                       title="把STEAM设置为主要游戏"></i>
-                </div>
-
-            </div>
-
-            {if condition="$isSign eq yes"}
-            <a class="sign-in-btn" href="javascript:;">已签到</a>
-            {else/}
-            <a class="sign-in-btn" id="sign_in_btn" href="javascript:;"><i class="icon iconfont">&#xe631;</i><span>签到</span></a>
-            {/if}
-
-
-            <!--已登录-end-->
-            {else}
-            <!--未登录-start-->
-            <div class="login-panel">
-                <img class="login-panel-img" src="__IMG__/login_panel_img.png" alt="">
-                <div class="clearfix">
-                    <a class="fl login-btn" href="{:url('member/member/login')}">登录</a>
-                    <a class="fr login-btn" href="{:url('member/member/register')}">注册</a>
-                </div>
-
-            </div>
-
-            <!--未登录-end-->
-
-            {/notempty}
-        </div>
-
-    </div>
-    <div class="content">
-        <div class="py-index-main">
-
-
-            <!--==================================PUBG首页展示开始=====================================-->
-            <div id="index_pubg" class="index-goods-wrap">
-                <div class="goods-nav">
-                    <div class="goods-nav-title clearfix">
-                        <img class="fl" src="__IMG__/index-title-pubg.png" alt="">
-                        <span class="fl goods-nav-title-text">绝地求生</span><span style="color:red">（暂时无法交易）</span>
-                    </div>
-
-                    <ul id="pubg-nav" class="goods-nav-list clearfix">
-                        <li class="active"><a href="javascript:">热门饰品</a></li>
-                        <li><a href="javascript:">最新求购</a></li>
-                    </ul>
-                    <a class="goods-nav-more fr" href="{:url('goods/lists/pug')}"><span>前往专区</span><i
-                            class="icon iconfont">&#xe622;</i></a>
-                </div>
-                <ul id="goods-list-pubg" class="index-goods-list clearfix">
-                    {volist name="pubg_list" id="vo"}
-                    <li class="fl">
-                        <a href="{:url('goods/content/sell',['id' => $vo.id])}" class="goods-item">
-                            <div class="goods-img">
-                                <img src="{$vo['goods_image_url']}" alt="{$vo['goods_name']}">
-                            </div>
-                            <div class="goods-info-wrap">
-                                <div class="goods-name over-hide">{$vo['goods_name']}</div>
-                                <div class="goods-info clearfix">
-                                    <span class="goods-price fl">￥{$vo['price']}</span>
-                                    <span class="goods-number fr">{$vo['num']}件在售</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    {/volist}
-                </ul>
-                <!-- <div class="index-goods-replace">
-                    <a href="" class="index-goods-replace-btn"><i class="icon iconfont">&#xe734;</i><span>换一换</span></a>
-                </div> -->
-            </div>
-            <!--==================================PUBG首页展示结束=====================================-->
-
-
-            <!--==================================CSGO首页展示开始=====================================-->
-            <div id="index_csgo" class="index-goods-wrap">
-                <div class="goods-nav">
-                    <div class="goods-nav-title clearfix">
-                        <img class="fl" src="__IMG__/index-title-csgo.png" alt="">
-                        <span class="fl goods-nav-title-text">CS:GO</span>
-                    </div>
-
-                    <ul id="csgo-nav" class="goods-nav-list clearfix">
-                        <li class="active"><a href="javascript:">热门饰品</a></li>
-                        <li><a href="javascript:">最新求购</a></li>
-                    </ul>
-                    <a class="goods-nav-more fr" href="{:url('goods/lists/csgo')}"><span>前往专区</span><i
-                            class="icon iconfont">&#xe622;</i></a>
-                </div>
-                <ul id="goods-list-csgo" class="index-goods-list clearfix">
-                    {volist name="csgo_list" id="vo"}
-                    <li class="fl">
-                        <a href="{:url('goods/content/sell',['id' => $vo.id])}" class="goods-item">
-                            <div class="goods-img">
-                                <img src="{$vo['goods_image_url']}" alt="{$vo['goods_name']}">
-                            </div>
-                            <div class="goods-info-wrap">
-                                <div class="goods-name over-hide">{$vo['goods_name']}</div>
-                                <div class="goods-info clearfix">
-                                    <span class="goods-price fl">￥{$vo['price']}</span>
-                                    <span class="goods-number fr">{$vo['num']}件在售</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    {/volist}
-                </ul>
-                <!-- <div class="index-goods-replace">
-                    <a href="" class="index-goods-replace-btn"><i class="icon iconfont">&#xe734;</i><span>换一换</span></a>
-                </div> -->
-            </div>
-            <!--==================================CSGO首页展示结束=====================================-->
-
-
-            <!--==================================DOTA2首页展示开始=====================================-->
-            <div id="index_dota2" class="index-goods-wrap">
-                <div class="goods-nav">
-                    <div class="goods-nav-title clearfix">
-                        <img class="fl" src="__IMG__/index-title-dota2.png" alt="">
-                        <span class="fl goods-nav-title-text">DOTA2</span>
-                    </div>
-
-                    <ul id="dota2-nav" class="goods-nav-list clearfix">
-                        <li class="active"><a href="javascript:">热门饰品</a></li>
-                        <li><a href="javascript:">最新求购</a></li>
-                    </ul>
-                    <a class="goods-nav-more fr" href="{:url('goods/lists/dota2')}"><span>前往专区</span><i
-                            class="icon iconfont">&#xe622;</i></a>
-                </div>
-                <ul id="goods-list-dota" class="index-goods-list clearfix">
-                    {volist name="dota2_list" id="vo"}
-                    <li class="fl">
-                        <a href="{:url('goods/content/sell',['id' => $vo.id])}" class="goods-item">
-                            <div class="goods-img">
-                                <img src="{$vo['goods_image_url']}" alt="{$vo['goods_name']}">
-                            </div>
-                            <div class="goods-info-wrap">
-                                <div class="goods-name over-hide">{$vo['goods_name']}</div>
-                                <div class="goods-info clearfix">
-                                    <span class="goods-price fl">￥{$vo['price']}</span>
-                                    <span class="goods-number fr">{$vo['num']}件在售</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    {/volist}
-                </ul>
-            </div>
-            <!--==================================DOTA2首页展示结束=====================================-->
-
-
-            <!--==================================h1z1首页展示开始=====================================-->
-            <div id="index_h1z1" class="index-goods-wrap">
-                <div class="goods-nav">
-                    <div class="goods-nav-title clearfix">
-                        <img class="fl" src="__IMG__/index-title-h1z1.png" alt="">
-                        <span class="fl goods-nav-title-text">H1Z1</span>
-                    </div>
-
-                    <ul id="h1z1-nav" class="goods-nav-list clearfix">
-                        <li class="active"><a href="javascript:">热门饰品</a></li>
-                        <li><a href="javascript:">最新求购</a></li>
-                    </ul>
-                    <a class="goods-nav-more fr" href="{:url('goods/lists/h1z1')}"><span>前往专区</span><i
-                            class="icon iconfont">&#xe622;</i></a>
-                </div>
-                <ul id="goods-list-h1z1" class="index-goods-list clearfix">
-                    {volist name="h1z1_list" id="vo"}
-                    <li class="fl">
-                        <a href="{:url('goods/content/sell',['id' => $vo.id])}" class="goods-item">
-                            <div class="goods-img">
-                                <img src="{$vo['goods_image_url']}" alt="{$vo['goods_name']}">
-                            </div>
-                            <div class="goods-info-wrap">
-                                <div class="goods-name over-hide">{$vo['goods_name']}</div>
-                                <div class="goods-info clearfix">
-                                    <span class="goods-price fl">￥{$vo['price']}</span>
-                                    <span class="goods-number fr">{$vo['num']}件在售</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    {/volist}
-                </ul>
-            </div>
-            <!--==================================h1z1首页展示结束=====================================-->
-
-
-            <!--==================================steam首页展示开始=====================================-->
-            <div id="index_steam" class="index-goods-wrap">
-                <div class="goods-nav">
-                    <div class="goods-nav-title clearfix">
-                        <img class="fl" src="__IMG__/index-title-steam.png" alt="">
-                        <span class="fl goods-nav-title-text">STEAM卡牌</span>
-                    </div>
-                    <ul id="steam-nav" class="goods-nav-list clearfix">
-                        <li class="active"><a href="javascript:">热门饰品</a></li>
-                        <li><a href="javascript:">最新求购</a></li>
-                    </ul>
-                    <a class="goods-nav-more fr" href="{:url('goods/lists/steam')}"><span>前往专区</span><i
-                            class="icon iconfont">&#xe622;</i></a>
-                </div>
-                <ul id="goods-list-steam" class="index-goods-list clearfix">
-                    {volist name="steam_list" id="vo"}
-                    <li class="fl">
-                        <a href="{:url('goods/content/sell',['id' => $vo.id])}" class="goods-item">
-                            <div class="goods-img">
-                                <img src="{$vo['goods_image_url']}" alt="{$vo['goods_name']}">
-                            </div>
-                            <div class="goods-info-wrap">
-                                <div class="goods-name over-hide">{$vo['goods_name']}</div>
-                                <div class="goods-info clearfix">
-                                    <span class="goods-price fl">￥{$vo['price']}</span>
-                                    <span class="goods-number fr">{$vo['num']}件在售</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    {/volist}
-                </ul>
-            </div>
-            <!--==================================steam游戏首页展示开始=====================================-->
-            <div id="index_dota2" class="index-goods-wrap">
-                <div class="goods-nav">
-                    <div class="goods-nav-title clearfix">
-                        <img class="fl" src="__IMG__/index-title-steam.png" alt="">
-                        <span class="fl goods-nav-title-text">STEAM游戏</span>
-                    </div>
-
-                    <ul id="dota2-nav" class="goods-nav-list clearfix">
-                        <li class="active"><a href="javascript:">热门游戏</a></li>
-                        <!-- <li><a href="javascript:">最新求购</a></li> -->
-                    </ul>
-                    <a class="goods-nav-more fr" href="{:url('index/cdkey/index')}"><span>前往专区</span><i
-                            class="icon iconfont">&#xe622;</i></a>
-                </div>
-                <ul id="goods-list-dota" class="index-goods-list clearfix" style="min-height: 220px;">
-                    {volist name="dataSingle" id="vo"}
-                    <li class="fl" style="width: 280px;margin-right: 3px">
-                        <a href="{:url('index/cdkey/single_list',['steam_game_id' => $vo.steam_game_id])}"
-                           class="goods-item">
-                            <div class="goods-img" style="height: 130px;">
-                                <img style=""
-                                     src="https://cdn.steamstatic.com/steam/apps/{$vo.steam_game_id}/header.jpg"
-                                     alt="{$vo['goods_name']}">
-                            </div>
-                            <div class="goods-info-wrap">
-                                <div class="goods-name over-hide">{$vo['game_name']}</div>
-                                <div class="goods-info clearfix">
-                                    <span class="goods-price fl">￥{$vo['key_price']}</span>
-                                    <span class="goods-number fr">{$vo['num']}件在售</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    {/volist}
-                </ul>
-
-                <ul id="goods-list-dota" class="index-goods-list clearfix" style="min-height: 220px;">
-                    {volist name="dataBinding" id="vo"}
-                    <li class="fl">
-                        <a href="{:url('index/cdkey/binding_list',['cate_id' => $vo.id])}" class="goods-item">
-                            <div class="goods-img">
-                                <img src="{$vo['image']}" alt="{$vo['name']}">
-                            </div>
-                            <div class="goods-info-wrap">
-                                <div class="goods-name over-hide">{$vo['name']}</div>
-                                <div class="goods-info clearfix">
-                                    <span class="goods-price fl">￥{$vo['price']}</span>
-                                    <span class="goods-number fr">{$vo['total_num']}件在售</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    {/volist}
-                </ul>
-            </div>
-            <!--==================================steam首页展示结束=====================================-->
-        </div>
-    </div>
+<header>
+  <div id="logo"><a href="/"></a></div>
+  <nav class="topnav" id="topnav"><a href="index.html"><span>首页</span><span class="en">Protal</span></a><a href="about.html"><span>关于我</span><span class="en">About</span></a><a href="newlist.html"><span>慢生活</span><span class="en">Life</span></a><a href="moodlist.html"><span>碎言碎语</span><span class="en">Doing</span></a><a href="share.html"><span>模板分享</span><span class="en">Share</span></a><a href="knowledge.html"><span>学无止境</span><span class="en">Learn</span></a><a href="book.html"><span>留言版</span><span class="en">Gustbook</span></a></nav>
+  </nav>
+</header>
+<div class="banner">
+  <section class="box">
+    <ul class="texts">
+      <p>打了死结的青春，捆死一颗苍白绝望的灵魂。</p>
+      <p>为自己掘一个坟墓来葬心，红尘一梦，不再追寻。</p>
+      <p>加了锁的青春，不会再因谁而推开心门。</p>
+    </ul>
+    <div class="avatar"><a href="#"><span>坤哥</span></a> </div>
+  </section>
 </div>
-
-
-<!--<div class="fixed-left-nav">-->
-<!--<a id="fixed_left_pubg" href="javascript:"><i class="icon iconfont">&#xe605;</i><span>PUBG</span></a>-->
-<!--<a id="fixed_left_csgo" href="javascript:"><i class="icon iconfont">&#xe60f;</i><span>CSGO</span></a>-->
-<!--<a id="fixed_left_dota2" href="javascript:"><i class="icon iconfont">&#xe60d;</i><span>DOTA2</span></a>-->
-<!--</div>-->
-
-
-<script src="__JS__/common.min.js"></script>
-<script src="__JS__/index.js"></script>
-
-
-{include file="common@common/foot"}
+<div class="template">
+  <div class="box">
+    <h3>
+      <p><span>个人博客</span>模板 Templates</p>
+    </h3>
+    <ul>
+      <li><a href="/"  target="_blank"><img src="/static/images/01.jpg"></a><span>仿新浪博客风格·梅——古典个人博客模板</span></li>
+      <li><a href="/" target="_blank"><img src="/static/images/02.jpg"></a><span>黑色质感时间轴html5个人博客模板</span></li>
+      <li><a href="/"  target="_blank"><img src="/static/images/03.jpg"></a><span>Green绿色小清新的夏天-个人博客模板</span></li>
+      <li><a href="/" target="_blank"><img src="/static/images/04.jpg"></a><span>女生清新个人博客网站模板</span></li>
+      <li><a href="/"  target="_blank"><img src="/static/images/02.jpg"></a><span>黑色质感时间轴html5个人博客模板</span></li>
+      <li><a href="/"  target="_blank"><img src="/static/images/03.jpg"></a><span>Green绿色小清新的夏天-个人博客模板</span></li>
+    </ul>
+  </div>
+</div>
+<article>
+  <h2 class="title_tj">
+    <p>文章<span>推荐</span></p>
+  </h2>
+  <div class="bloglist left">
+    <h3>程序员请放下你的技术情节，与你的同伴一起进步</h3>
+    <figure><img src="/static/images/001.png"></figure>
+    <ul>
+      <p>如果说掌握一门赖以生计的技术是技术人员要学会的第一课的话， 那么我觉得技术人员要真正学会的第二课，不是技术，而是业务、交流与协作，学会关心其他工作伙伴的工作情况和进展...</p>
+      <a title="/" href="/" target="_blank" class="readmore">阅读全文>></a>
+    </ul>
+    <p class="dateview"><span>2013-11-04</span><span>作者：坤哥</span><span>个人博客：[<a href="/news/life/">程序人生</a>]</span></p>
+    <h3>程序员请放下你的技术情节，与你的同伴一起进步</h3>
+    <figure><img src="/static/images/001.png"></figure>
+    <ul>
+      <p>如果说掌握一门赖以生计的技术是技术人员要学会的第一课的话， 那么我觉得技术人员要真正学会的第二课，不是技术，而是业务、交流与协作，学会关心其他工作伙伴的工作情况和进展...</p>
+      <a title="/" href="/" target="_blank" class="readmore">阅读全文>></a>
+    </ul>
+    <p class="dateview"><span>2013-11-04</span><span>作者：坤哥</span><span>个人博客：[<a href="/news/life/">程序人生</a>]</span></p>
+    <h3>程序员请放下你的技术情节，与你的同伴一起进步</h3>
+    <figure><img src="/static/images/001.png"></figure>
+    <ul>
+      <p>如果说掌握一门赖以生计的技术是技术人员要学会的第一课的话， 那么我觉得技术人员要真正学会的第二课，不是技术，而是业务、交流与协作，学会关心其他工作伙伴的工作情况和进展...</p>
+      <a title="/" href="/" target="_blank" class="readmore">阅读全文>></a>
+    </ul>
+    <p class="dateview"><span>2013-11-04</span><span>作者：坤哥</span><span>个人博客：[<a href="/news/life/">程序人生</a>]</span></p>
+    <h3>程序员请放下你的技术情节，与你的同伴一起进步</h3>
+    <figure><img src="/static/images/001.png"></figure>
+    <ul>
+      <p>如果说掌握一门赖以生计的技术是技术人员要学会的第一课的话， 那么我觉得技术人员要真正学会的第二课，不是技术，而是业务、交流与协作，学会关心其他工作伙伴的工作情况和进展...</p>
+      <a title="/" href="/" target="_blank" class="readmore">阅读全文>></a>
+    </ul>
+    <p class="dateview"><span>2013-11-04</span><span>作者：坤哥</span><span>个人博客：[<a href="/news/life/">程序人生</a>]</span></p>
+    <h3>程序员请放下你的技术情节，与你的同伴一起进步</h3>
+    <figure><img src="/static/images/001.png"></figure>
+    <ul>
+      <p>如果说掌握一门赖以生计的技术是技术人员要学会的第一课的话， 那么我觉得技术人员要真正学会的第二课，不是技术，而是业务、交流与协作，学会关心其他工作伙伴的工作情况和进展...</p>
+      <a title="/" href="/" target="_blank" class="readmore">阅读全文>></a>
+    </ul>
+    <p class="dateview"><span>2013-11-04</span><span>作者：坤 and 康</span><span>个人博客：[<a href="/news/life/">程序人生</a>]</span></p>
+  </div>
+  <aside class="right">
+    <div class="weather"><iframe width="250" scrolling="no" height="60" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=12&icon=1&num=1"></iframe></div>
+    <div class="news">
+    <h3>
+      <p>最新<span>文章</span></p>
+    </h3>
+    <ul class="rank">
+      <li><a href="/" title="Column 三栏布局 个人网站模板" target="_blank">Column 三栏布局 个人网站模板</a></li>
+      <li><a href="/" title="with love for you 个人网站模板" target="_blank">with love for you 个人网站模板</a></li>
+      <li><a href="/" title="免费收录网站搜索引擎登录口大全" target="_blank">免费收录网站搜索引擎登录口大全</a></li>
+      <li><a href="/" title="做网站到底需要什么?" target="_blank">做网站到底需要什么?</a></li>
+      <li><a href="/" title="企业做网站具体流程步骤" target="_blank">企业做网站具体流程步骤</a></li>
+      <li><a href="/" title="建站流程篇——教你如何快速学会做网站" target="_blank">建站流程篇——教你如何快速学会做网站</a></li>
+      <li><a href="/" title="box-shadow 阴影右下脚折边效果" target="_blank">box-shadow 阴影右下脚折边效果</a></li>
+      <li><a href="/" title="打雷时室内、户外应该需要注意什么" target="_blank">打雷时室内、户外应该需要注意什么</a></li>
+    </ul>
+    <h3 class="ph">
+      <p>点击<span>排行</span></p>
+    </h3>
+    <ul class="paih">
+      <li><a href="/" title="Column 三栏布局 个人网站模板" target="_blank">Column 三栏布局 个人网站模板</a></li>
+      <li><a href="/" title="withlove for you 个人网站模板" target="_blank">with love for you 个人网站模板</a></li>
+      <li><a href="/" title="免费收录网站搜索引擎登录口大全" target="_blank">免费收录网站搜索引擎登录口大全</a></li>
+      <li><a href="/" title="做网站到底需要什么?" target="_blank">做网站到底需要什么?</a></li>
+      <li><a href="/" title="企业做网站具体流程步骤" target="_blank">企业做网站具体流程步骤</a></li>
+    </ul>
+    <h3 class="links">
+      <p>友情<span>链接</span></p>
+    </h3>
+    <ul class="website">
+      <li><a href="http://www.houdunwang.com">坤哥在此</a></li>
+      <li><a href="http://bbs.houdunwang.com">坤哥在此呀</a></li>
+    </ul> 
+    </div>  
+    <!-- Baidu Button BEGIN -->
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare"><a class="bds_tsina"></a><a class="bds_qzone"></a><a class="bds_tqq"></a><a class="bds_renren"></a><span class="bds_more"></span><a class="shareCount"></a></div>
+    <script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6574585" ></script> 
+    <script type="text/javascript" id="bdshell_js"></script> 
+    <script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script> 
+    <!-- Baidu Button END -->   
+    </aside>
+</article>
+<footer>
+  <p>Design by 坤哥在此 <a href="http://www.itxdl.cn/" target="_blank">http:///www.itxdl.cn</a> <a href="/">网站统计</a></p>
+</footer>
+<script src="/static/js/silder.js"></script>
 </body>
 </html>

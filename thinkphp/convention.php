@@ -242,7 +242,7 @@ return [
         // 数据库连接DSN配置
         'dsn'             => '',
         // 服务器地址
-        'hostname'        => '127.0.0.1',
+        'hostname'        => 'localhost',
         // 数据库名
         'database'        => 'blog',
         // 数据库用户名

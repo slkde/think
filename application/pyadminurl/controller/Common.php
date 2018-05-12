@@ -20,28 +20,31 @@ class Common extends controller
 	{
 		parent::_initialize();
         
-		$auth = new \zzh\Auth();
-		$request = Request::instance();
-		$m = $request->module();
-		$c = $request->controller();
-		$a = $request->action();
+		// $auth = new \zzh\Auth();
+		// $request = Request::instance();
+		// $m = $request->module();
+		// $c = $request->controller();
+		// $a = $request->action();
 
-		$rule_name=$m.'/'.$c.'/'.$a;
-		$request = \think\Request::instance();
-		$ip = $request->ip();
-        $params = input('param.');
+		// $rule_name=$m.'/'.$c.'/'.$a;
+		// $request = \think\Request::instance();
+		// $ip = $request->ip();
+        // $params = input('param.');
     
-        if(count($params) > 0 )
-        {
-         Zlog($params,'Admin','ip:'.$ip .'操作的方法为:'.$rule_name);   
-        }
+        // if(count($params) > 0 )
+        // {
+        //  Zlog($params,'Admin','ip:'.$ip .'操作的方法为:'.$rule_name);   
+        // }
 
-		if(!Session::get('user.id') == 1)
-		{
-			$result=$auth->check($rule_name,Session::get('user.id'));
-			if(!$result){
-				$this->errjson('您没有权限访问!');
-			}
+		// if(!Session::get('user.id') == 1)
+		// {
+		// 	$result=$auth->check($rule_name,Session::get('user.id'));
+		// 	if(!$result){
+		// 		$this->errjson('您没有权限访问!');
+		// 	}
+		// }
+		if(!Session::get('user')){
+			return $this->redirect('/admin');
 		}
 		
 	}

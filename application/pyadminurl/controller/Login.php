@@ -4,7 +4,7 @@ use think\Db;
 use think\Session ; 
 use think\Controller;
 use app\pyadminurl\model\User;
-use app\base\controller\Rsa;
+use app\config;
 class Login  extends Controller
 {
     
@@ -13,7 +13,7 @@ class Login  extends Controller
      */
     public function index(){
         if(Session::get('user'))
-        $this->redirect('Index/index');
+        $this->redirect('admin/index');
         return view();
     }
     public function login()
@@ -62,46 +62,46 @@ class Login  extends Controller
             // $this->validate($data,[
             //     'captcha|验证码'=>'require|captcha'
             // ]); 
-            echo Rsa::encrypt(123);die();
-            var_dump(User::get(['user_name' => $post['username']]));die;
-            // echo User::getData();die;
+            // echo md5($post['password'].config('admin_user_str'));die();
+            // $data = User::get(['user_name' => $post['username']])->toArray();
+            // $data->update(['user_pass' => md5($post['password']).config('admin_user_str')]);
+            // var_dump($data['password']);die;
+
             $captcha = new \think\captcha\Captcha();
-            // var_dump($captcha);die;
             $boolean = $captcha->check($post['captcha'],'admin');
+            // var_dump($boolean);die;
             if(!$boolean) { 
-                $this->errlogin($post['username'],1);
+                // $this->errlogin($post['username'],1);
                 return ['status'=>0,'msg'=>'验证码不正确!'];
             } 
-            User::find();die;
-            $data = Db::name('admin_user')->where('username',$post['username'])->where('status',1)->find();
+            // User::find();die;
+            // $data = Db::name('user')->where('user_name',$post['username'])->find();
+
+            $data = User::get(['user_name' => $post['username']])->toArray();
+            // var_dump($data);die();
             if(empty($data)){
-                $this->errlogin($post['username'],2);
+                // $this->errlogin($post['username'],2);
                 return ['status'=>0,'msg'=>'账号不存在!'];
             }
-
-            if($data['password'] != md5($post['password'].config('admin_user_str')))
+            if($data['user_pass'] != md5($post['password'].config('admin_user_str')))
             {   
-                $this->errlogin($post['username'],3);
+                // $this->errlogin($post['username'],3);
                 return ['status'=>0,'msg'=>'密码错误！'];
             }else{
-                $userData = 
-                [
-                    'last_login_ip' => $ip,
-                    'last_login_time' => time()
-                ];
-                Db::name('admin_user')->where('id',$data['id'])->update($userData);
-                $session['id'] = $data['id'];
-                $session['username'] = $data['username'];
+                // $userData = 
+                // [
+                //     'last_login_ip' => $ip,
+                //     'last_login_time' => time()
+                // ];
+                // Db::name('admin_user')->where('id',$data['id'])->update($userData);
+                $session['id'] = $data['user_id'];
+                $session['username'] = $data['user_name'];
                 Session::set('user',$session);
                 return ['status'=>1,'msg'=>'登陆成功']; 
             }
         // }
     }
 
-
-    public function  doLogin(){
-        return 1;
-    }
 
     /*
      * 登陆失败，日志记录
@@ -127,12 +127,13 @@ class Login  extends Controller
      */
     public function logout()
     {
+        // var_dump(redirect('admin'));die;
         Session::delete('user');
-        $this->redirect('Login/login');
+        return $this->redirect('/admin');
     }
 
 
-    public function  captcha()
+    public function captcha()
     {
     	$config = [
 		    // 验证码字体大小

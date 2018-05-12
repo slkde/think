@@ -11,9 +11,12 @@ class Index extends Common
      public function index()
      {
      	// 分配菜单数据
-	     $nav_data = Db::name('admin_nav')->order('sort asc')->select(); 
-		 $nav_data = $this->getTreeData($nav_data,'level');
-		 $this->assign('nav_data',$nav_data);
+	    //  $nav_data = Db::name('admin_nav')->order('sort asc')->select(); 
+		//  $nav_data = $this->getTreeData($nav_data,'level');
+
+		//  $nav_data = '';
+		//  $this->assign('nav_data',$nav_data);
+
      	 return view();
      }
       

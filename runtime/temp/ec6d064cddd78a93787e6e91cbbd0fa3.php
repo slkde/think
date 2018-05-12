@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:74:"D:\wamp64\www\think\public/../application/pyadminurl\view\login\index.html";i:1526139708;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:74:"D:\wamp64\www\think\public/../application/pyadminurl\view\login\index.html";i:1526150270;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,7 +31,7 @@ canvas{z-index:-1;position:absolute;}
   <div class="checkcode">
     <input type="text" id="J_codetext" name = "captcha" placeholder="验证码" maxlength="4" class="login_txtbx" >
   </div>
-      <img id='captcha' src="<?php echo url('Login/captcha'); ?>" alt="captcha"  style="float:right;"/>
+      <img id='captcha' src="<?php echo url('/Login/captcha/'); ?>" alt="captcha"  style="float:right;"/>
  </dd>
  <dd>
    <?php echo token(); ?>

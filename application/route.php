@@ -30,7 +30,9 @@ use think\Route;
 //     echo 123;
 // });
 
-Route::get('admin/login','pyadminurl/login/index');
-Route::post('admin/login','pyadminurl/login/login');
+Route::get('admin/','pyadminurl/login/index');
+Route::post('admin/','pyadminurl/login/login');
+Route::rule('admin/logout','pyadminurl/login/logout');
+Route::get('login/captcha','pyadminurl/login/captcha');
 
-// Route::rule('admin/','pyadminurl/index/index');
+Route::rule('admin/index','pyadminurl/index/index');

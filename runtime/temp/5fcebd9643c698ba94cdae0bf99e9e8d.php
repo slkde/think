@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:71:"G:\phpStudy\WWW\think\public/../application/index\view\index\index.html";i:1526108256;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:71:"G:\phpStudy\WWW\think\public/../application/index\view\index\index.html";i:1526125331;}*/ ?>
 ﻿<!doctype html>
 <html>
 <head>
@@ -51,13 +51,14 @@
     <?php if(is_array($data) || $data instanceof \think\Collection || $data instanceof \think\Paginator): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
     <h3><?php echo $vo['art_title']; ?></h3>
     <figure><img src="<?php echo $vo['art_thumb']; ?>"></figure>
-    <ul>
-      <a title="/" href="/" target="_blank" class="readmore">阅读全文>></a>
+    <ul id="gkk_content">
+      <a title="/" href="<?php echo url('index/index/artlist',['art_id' => $vo['art_id']]); ?>" target="_blank" class="readmore">阅读全文>></a>
       <p><?php echo $vo['art_content']; ?></p>
 
     </ul>
     <p class="dateview"><span><?php echo date("y-m-d",$vo['art_time']); ?></span><span>作者：<?php echo $vo['art_editor']; ?></span><span>个人博客：[<a href="/news/life/">程序人生</a>]</span></p>
   <?php endforeach; endif; else: echo "" ;endif; ?>
+    <?php echo $page; ?>
   </div>
   <aside class="right">
     <div class="weather"><iframe width="250" scrolling="no" height="60" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=12&icon=1&num=1"></iframe></div>

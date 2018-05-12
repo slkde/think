@@ -16,15 +16,26 @@ class Index  extends Common
 	*/
 	public function index()
 	{
-	    $data = Db::name('article')->where('is_display',1)->select();
-        foreach($data as $key=>&$value){
-            $value['cate_name'] = Db::name('category')->where('cate_id',$value['cate_id'])->value('cate_name');
-//            var_dump($value);die;
-        }
-//        var_dump($data);die;
-        $this->assign('data',$data);
+	    $data = Db::name('article')
+            ->where('is_display',1)
+            ->paginate(3,false, ['type' => 'Bootstrap',
+                'var_page' => 'page',
+                'query' => request()->param(),
+            ]);
+        $page = $data->render();
+        $this->assign([
+            'data'=>$data,
+            'page' => $page,
+        ]);
 		return view();
 	}
+
+	public function artList()
+    {
+        $art_id = input('art_id');
+        var_dump($art_id);
+        return view();
+    }
      
 
 

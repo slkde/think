@@ -4,6 +4,8 @@ use think\Controller;
 use think\Request;
 use think\Session;
 use think\Db;
+use app\pyadminurl\model\Navs;
+use app\pyadminurl\model\User;
 
 class Index extends Common
 {
@@ -13,9 +15,11 @@ class Index extends Common
      	// 分配菜单数据
 	    //  $nav_data = Db::name('admin_nav')->order('sort asc')->select(); 
 		//  $nav_data = $this->getTreeData($nav_data,'level');
+		$nav_data = Navs::all()->toArray();
+		// var_dump($nav_data);die;
 
 		//  $nav_data = '';
-		//  $this->assign('nav_data',$nav_data);
+		 $this->assign('nav_data',$nav_data);
 
      	 return view();
      }
@@ -73,11 +77,13 @@ class Index extends Common
 			$last = strtotime(date('Y-m-t', strtotime($date)));
 			//echo $first .'-'. $last ."<br/>";
 			//得到每个月的注册会员
-		    $register[] = Db::name('member')->where('reg_time','between',$first.','.$last)
-		                                    ->count();
-		    //得到每个月的登陆会员
-		    $login[] = Db::name('member')->where('last_login_time','between',$first.','.$last)
-		                                    ->count();
+		    // $register[] = Db::name('member')->where('reg_time','between',$first.','.$last)
+		    //                                 ->count();
+		    // //得到每个月的登陆会员
+		    // $login[] = Db::name('member')->where('last_login_time','between',$first.','.$last)
+			// 								->count();
+											
+			$regeister[] = User::all()->count();
 	    }
        
         //将数据写入模板中

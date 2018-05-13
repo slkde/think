@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:74:"D:\wamp64\www\think\public/../application/pyadminurl\view\index\index.html";i:1526151398;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:74:"D:\wamp64\www\think\public/../application/pyadminurl\view\index\index.html";i:1526217566;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh">
     <head>
@@ -109,7 +109,7 @@
                     <i class="fa fa-bars"></i>
                 </button>
         <!--         <a class="bjui-navbar-logo" href="#"><img src="/static/Admin/bestjui/images/logo.png" style="height: 62px;margin-left: 20px;margin-top: 4px;"></a> -->
-        <a class="bjui-navbar-logo" href="/" style="text-align: center;line-height: 40px;font-size:18px;color:#FFFFFF;margin-left:20px">PY </a>
+        <a class="bjui-navbar-logo" href="/" style="text-align: center;line-height: 40px;font-size:18px;color:#FFFFFF;margin-left:20px">郭康康的博客 </a>
             </div>
             <nav id="bjui-navbar-collapse">
                 <ul class="bjui-navbar-right">
@@ -141,7 +141,7 @@
                             <div class="items hide" data-noinit="true" id="liu">
 
 
-                               <?php if(is_array($nav_data) || $nav_data instanceof \think\Collection || $nav_data instanceof \think\Paginator): $i = 0; $__LIST__ = $nav_data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+                               <!-- <?php if(is_array($nav_data) || $nav_data instanceof \think\Collection || $nav_data instanceof \think\Paginator): $i = 0; $__LIST__ = $nav_data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
 
                                  <ul class="menu-items" data-faicon="<?php echo $vo['ico']; ?>"   data-tit="<?php echo $vo['name']; ?>">
                                       <?php if(is_array($vo['_data']) || $vo['_data'] instanceof \think\Collection || $vo['_data'] instanceof \think\Paginator): $i = 0; $__LIST__ = $vo['_data'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?>
@@ -149,9 +149,43 @@
                                       <?php endforeach; endif; else: echo "" ;endif; ?>
                                  </ul>
                              
-                               <?php endforeach; endif; else: echo "" ;endif; ?>
-                              
+                               <?php endforeach; endif; else: echo "" ;endif; ?> -->
 
+                            <ul class="menu-items" data-faicon="" data-tit="首页">
+
+                                <li>
+                                    <a href="<?php echo url('/admin/index/'); ?>" data-toggle="navtab" data-options="{ faicon:'caret-right'}" data-fresh="true">首页</a>
+                                </li>
+
+                            </ul>
+                              
+                            <ul class="menu-items" data-faicon="" data-tit="分类编辑">
+                            
+                                <li>
+                                    <a href="<?php echo url('/admin/index/'); ?>" data-toggle="navtab" data-options="{ faicon:'caret-right'}" data-fresh="true">分类添加</a>
+                                    <a href="<?php echo url('/admin/index/'); ?>" data-toggle="navtab" data-options="{ faicon:'caret-right'}" data-fresh="true">分类删除</a>
+                                </li>
+                            
+                            </ul>
+                            
+                            <ul class="menu-items" data-faicon="" data-tit="分类导航">
+                                <?php if(is_array($nav_data) || $nav_data instanceof \think\Collection || $nav_data instanceof \think\Paginator): $i = 0; $__LIST__ = $nav_data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+
+                                    <li>
+                                        <a href="<?php echo url('/admin/index/' .$vo['nav_id']); ?>" data-toggle="navtab" data-options="{ id:'<?php echo $vo['nav_id']; ?>', faicon:'caret-right'}" data-fresh="true"><?php echo $vo['nav_name']; ?></a>
+                                    </li>
+
+                                <?php endforeach; endif; else: echo "" ;endif; ?>
+                            </ul>
+                                
+
+                            <ul class="menu-items" data-faicon="" data-tit="系统配置">
+
+                                <li>
+                                    <a href="<?php echo url('/admin/config/' . $vo['nav_id']); ?>" data-toggle="navtab" data-options="{ id:'<?php echo $vo['nav_id']; ?>', faicon:'caret-right'}" data-fresh="true">网站配置</a>
+                                </li>
+
+                            </ul>
  
                             </div>
                         </li>
@@ -200,13 +234,13 @@
                                     <div class="panel-body">
 
 
-                                        <div style="mini-width:400px;height:200px" data-toggle="echarts" data-type="bar,line"  data-url="<?php echo url('Index/member'); ?>"></div>
+                                        <div style="mini-width:400px;height:200px" data-toggle="echarts" data-type="bar,line"  data-url="<?php echo url('/admin/index/member/'); ?>"></div>
 
                                     </div>
                                 </div>
                             </div>
 
-                          <div class="col-md-12">
+                          <!-- <div class="col-md-12">
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
                                         <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw" style="color: #7dcbf1;"></i><a href="#" style="font-size:16px;">充值，提现统计</a></h3></div>
@@ -227,7 +261,7 @@
                                         <div style="mini-width:400px;height:200px" data-toggle="echarts" data-type="bar,line"  data-url="<?php echo url('Index/order'); ?>"></div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!--</div>-->
                             <!--</div>-->
                         </div>

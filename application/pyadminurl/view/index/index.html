@@ -108,7 +108,7 @@
                     <i class="fa fa-bars"></i>
                 </button>
         <!--         <a class="bjui-navbar-logo" href="#"><img src="/static/Admin/bestjui/images/logo.png" style="height: 62px;margin-left: 20px;margin-top: 4px;"></a> -->
-        <a class="bjui-navbar-logo" href="/" style="text-align: center;line-height: 40px;font-size:18px;color:#FFFFFF;margin-left:20px">PY </a>
+        <a class="bjui-navbar-logo" href="/" style="text-align: center;line-height: 40px;font-size:18px;color:#FFFFFF;margin-left:20px">郭康康的博客 </a>
             </div>
             <nav id="bjui-navbar-collapse">
                 <ul class="bjui-navbar-right">
@@ -140,7 +140,7 @@
                             <div class="items hide" data-noinit="true" id="liu">
 
 
-                               {volist name="nav_data" id="vo" }
+                               <!-- {volist name="nav_data" id="vo" }
 
                                  <ul class="menu-items" data-faicon="{$vo.ico}"   data-tit="{$vo.name}">
                                       {volist name="$vo._data" id="v"}
@@ -148,9 +148,43 @@
                                       {/volist}
                                  </ul>
                              
-                               {/volist}
-                              
+                               {/volist} -->
 
+                            <ul class="menu-items" data-faicon="" data-tit="首页">
+
+                                <li>
+                                    <a href="{:url('/admin/index/')}" data-toggle="navtab" data-options="{ faicon:'caret-right'}" data-fresh="true">首页</a>
+                                </li>
+
+                            </ul>
+                              
+                            <ul class="menu-items" data-faicon="" data-tit="分类编辑">
+                            
+                                <li>
+                                    <a href="{:url('/admin/index/')}" data-toggle="navtab" data-options="{ faicon:'caret-right'}" data-fresh="true">分类添加</a>
+                                    <a href="{:url('/admin/index/')}" data-toggle="navtab" data-options="{ faicon:'caret-right'}" data-fresh="true">分类删除</a>
+                                </li>
+                            
+                            </ul>
+                            
+                            <ul class="menu-items" data-faicon="" data-tit="分类导航">
+                                {volist name="nav_data" id="vo" }
+
+                                    <li>
+                                        <a href="{:url('/admin/index/' .$vo.nav_id)}" data-toggle="navtab" data-options="{ id:'{$vo.nav_id}', faicon:'caret-right'}" data-fresh="true">{$vo.nav_name}</a>
+                                    </li>
+
+                                {/volist}
+                            </ul>
+                                
+
+                            <ul class="menu-items" data-faicon="" data-tit="系统配置">
+
+                                <li>
+                                    <a href="{:url('/admin/config/' . $vo.nav_id)}" data-toggle="navtab" data-options="{ id:'{$vo.nav_id}', faicon:'caret-right'}" data-fresh="true">网站配置</a>
+                                </li>
+
+                            </ul>
  
                             </div>
                         </li>
@@ -199,13 +233,13 @@
                                     <div class="panel-body">
 
 
-                                        <div style="mini-width:400px;height:200px" data-toggle="echarts" data-type="bar,line"  data-url="{:url('Index/member')}"></div>
+                                        <div style="mini-width:400px;height:200px" data-toggle="echarts" data-type="bar,line"  data-url="{:url('/admin/index/member/')}"></div>
 
                                     </div>
                                 </div>
                             </div>
 
-                          <div class="col-md-12">
+                          <!-- <div class="col-md-12">
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
                                         <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw" style="color: #7dcbf1;"></i><a href="#" style="font-size:16px;">充值，提现统计</a></h3></div>
@@ -226,7 +260,7 @@
                                         <div style="mini-width:400px;height:200px" data-toggle="echarts" data-type="bar,line"  data-url="{:url('Index/order')}"></div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!--</div>-->
                             <!--</div>-->
                         </div>

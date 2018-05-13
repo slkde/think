@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:69:"D:\wamp64\www\think\public/../application/index\view\index\index.html";i:1526192505;s:70:"D:\wamp64\www\think\public/../application/common\view\common\head.html";i:1526192505;s:70:"D:\wamp64\www\think\public/../application/common\view\common\foot.html";i:1526192505;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:69:"D:\wamp64\www\think\public/../application/index\view\index\index.html";i:1526201018;s:70:"D:\wamp64\www\think\public/../application/common\view\common\head.html";i:1526202030;s:70:"D:\wamp64\www\think\public/../application/common\view\common\foot.html";i:1526201018;}*/ ?>
 ﻿<!doctype html>
 <html>
 <head>

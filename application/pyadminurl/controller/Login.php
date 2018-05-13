@@ -3,26 +3,34 @@ namespace app\pyadminurl\controller;
 use think\Db;
 use think\Session ; 
 use think\Controller;
+use app\pyadminurl\model\User;
+use app\config;
 class Login  extends Controller
 {
     
     /** 
      * 登陆
      */
-    public function  login()
+    public function index(){
+        if(Session::get('user'))
+        $this->redirect('admin/index');
+        return view();
+    }
+    public function login()
     {   /*
         $session['id'] = 1;
         $session['username'] = 'pyadmin';
         Session::set('user',$session);
         */
-
-        if(request()->isGet())
-        {  
-          if(Session::get('user'))
-            $this->redirect('Index/index');
-         return view();
-        }else{
+        // echo 123;die;
+        // if(request()->isGet())
+        // {  
+        //     if(Session::get('user'))
+        //     $this->redirect('Index/index');
+        //     return view();
+        // }else{
             $post = input('post.');
+            // var_dump($post);die;
             $request = \think\Request::instance();
             $ip =  $request->ip();
 
@@ -32,55 +40,66 @@ class Login  extends Controller
             }
              
             //php获取今日开始时间戳和结束时间戳
-            $beginToday=mktime(0,0,0,date('m'),date('d'),date('Y'));
-            $endToday=mktime(0,0,0,date('m'),date('d')+1,date('Y'))-1;
+            // $beginToday=mktime(0,0,0,date('m'),date('d'),date('Y'));
+            // $endToday=mktime(0,0,0,date('m'),date('d')+1,date('Y'))-1;
 
             //验证当前用户今天是否登陆失败3次   
-            $count = Db::name('login_error')
-            ->where('username',$post['username'])
-            ->where('create_time',['>',$beginToday],['<',$endToday],'and')
-            ->count();
-            
-            if($count >=3){ return ['status'=>0,'msg'=>'失败次数过多，不能登陆'];}   
- 
-            //验证当前ip今天是否登陆失败3次
-            $count = Db::name('login_error')
-            ->where('ip',$ip)
-            ->where('create_time',['>',$beginToday],['<',$endToday],'and')
-            ->count();
-            
-            if($count >=3){ return ['status'=>0,'msg'=>'失败次数过多，不能登陆'];}   
+            // $count = Db::name('login_error')
+            // ->where('username',$post['username'])
+            // ->where('create_time',['>',$beginToday],['<',$endToday],'and')
+            // ->count();
 
+            
+            // if($count >=3){ return ['status'=>0,'msg'=>'失败次数过多，不能登陆'];}   
+ 
+            // //验证当前ip今天是否登陆失败3次
+            // $count = Db::name('login_error')
+            // ->where('ip',$ip)
+            // ->where('create_time',['>',$beginToday],['<',$endToday],'and')
+            // ->count();
+            
+            // if($count >=3){ return ['status'=>0,'msg'=>'失败次数过多，不能登陆'];}  
+            // $this->validate($data,[
+            //     'captcha|验证码'=>'require|captcha'
+            // ]); 
+            // echo md5($post['password'].config('admin_user_str'));die();
+            // $data = User::get(['user_name' => $post['username']])->toArray();
+            // $data->update(['user_pass' => md5($post['password']).config('admin_user_str')]);
+            // var_dump($data['password']);die;
 
             $captcha = new \think\captcha\Captcha();
             $boolean = $captcha->check($post['captcha'],'admin');
+            // var_dump($boolean);die;
             if(!$boolean) { 
-                $this->errlogin($post['username'],1);
+                // $this->errlogin($post['username'],1);
                 return ['status'=>0,'msg'=>'验证码不正确!'];
             } 
-            $data = Db::name('admin_user')->where('username',$post['username'])->where('status',1)->find();
+            // User::find();die;
+            // $data = Db::name('user')->where('user_name',$post['username'])->find();
+
+            $data = User::get(['user_name' => $post['username']])->toArray();
+            // var_dump($data);die();
             if(empty($data)){
-                $this->errlogin($post['username'],2);
+                // $this->errlogin($post['username'],2);
                 return ['status'=>0,'msg'=>'账号不存在!'];
             }
-
-            if($data['password'] != md5($post['password'].config('admin_user_str')))
+            if($data['user_pass'] != md5($post['password'].config('admin_user_str')))
             {   
-                $this->errlogin($post['username'],3);
+                // $this->errlogin($post['username'],3);
                 return ['status'=>0,'msg'=>'密码错误！'];
             }else{
-                $userData = 
-                [
-                    'last_login_ip' => $ip,
-                    'last_login_time' => time()
-                ];
-                Db::name('admin_user')->where('id',$data['id'])->update($userData);
-                $session['id'] = $data['id'];
-                $session['username'] = $data['username'];
+                // $userData = 
+                // [
+                //     'last_login_ip' => $ip,
+                //     'last_login_time' => time()
+                // ];
+                // Db::name('admin_user')->where('id',$data['id'])->update($userData);
+                $session['id'] = $data['user_id'];
+                $session['username'] = $data['user_name'];
                 Session::set('user',$session);
                 return ['status'=>1,'msg'=>'登陆成功']; 
             }
-        }
+        // }
     }
 
 
@@ -108,12 +127,13 @@ class Login  extends Controller
      */
     public function logout()
     {
+        // var_dump(redirect('admin'));die;
         Session::delete('user');
-        $this->redirect('Login/login');
+        return $this->redirect('/admin');
     }
 
 
-    public function  captcha()
+    public function captcha()
     {
     	$config = [
 		    // 验证码字体大小

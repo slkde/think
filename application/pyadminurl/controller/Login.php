@@ -13,7 +13,7 @@ class Login  extends Controller
      */
     public function index(){
         if(Session::get('user'))
-        $this->redirect('admin/index');
+        return $this->redirect('/admin/index/');
         return view();
     }
     public function login()

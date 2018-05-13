@@ -23,19 +23,20 @@ class Member extends Common
             if(empty($this->switchs['login'])){tojson('登陆已关闭!');}
             //验证
             $validate = new Validate([
-                'user_name|账号'  => 'require|max:50|min:6',
-                'user_pass|密码' => 'require|max:50|min:6'
+                'username|账号'  => 'require|max:50|min:6',
+                'password|密码' => 'require|max:50|min:6'
             ]);
 
             $data = input('post.');
+//            var_dump($data);die;
             if (!$validate->check($data)) {tojson($validate->getError());}
-            $map['user_name|user_user_email'] =  $data['user_name'];
+            $map['user_name|user_email'] =  $data['username'];
             $member = Db::name('user')->where($map)->find();
             if(empty($member)){tojson('账号不存在！');}
             //if(empty($member['mobile'])){ tojson('请绑定手机号码！',-1);}
             if($member['status'] == -1){ tojson('账号已禁用');}
 
-            if($member['user_pass'] != md5(sha1($data['user_pass']) . config('member_key')))
+            if($member['user_pass'] != md5(sha1($data['password']) . config('member_key')))
             {
                 tojson('密码错误！');
             }else{
@@ -49,7 +50,7 @@ class Member extends Common
                         'last_login_time' => time()
                     ];
 
-                Db::name('user')->where('id',$member['user_id'])->update($userData);
+                Db::name('user')->where('user_id',$member['user_id'])->update($userData);
                 $session['id'] = $member['user_id'];
                 $session['user_name'] = $member['user_name'];
                 $session['user_nickname'] = $member['user_nickname'];
@@ -79,17 +80,15 @@ class Member extends Common
             //判断注册是否开启
             if(empty($this->switchs['register'])){ tojson('注册已关闭！');}
             $data = input('post.');
-
+//            var_dump($data);die;
             $rule = [
-                'user_pass|密码'  => 'require|max:50|min:6',
-                'user_nickname|昵称'  => 'max:50|min:6|unique:member',
-                'user_user_email|邮箱'     => 'user_user_email|unique:member',
+                'password|密码'  => 'require|max:50|min:6',
+                'user_nickname|昵称'  => 'max:50|min:6|unique:user',
+                'user_email|邮箱'     => 'email|unique:user',
 //                'mobile|手机号'    => 'regex:/^1[34578]\d{9}$/|unique:member',
             ];
-
-
-                $userLogic = new \app\message\controller\user_user_email();
-                $check_code = $userLogic->sms_code_verify($data['user_user_email'], $data['code']);
+                $userLogic = new \app\message\controller\Email();
+                $check_code = $userLogic->sms_code_verify($data['email'], $data['code']);
                 if($check_code['status'] != 1) { tojson('验证码验证失败!'); }
 
             //验证
@@ -100,13 +99,12 @@ class Member extends Common
             $ip =  $request->ip();
 
             $member = [
-                'user_nickname' => $data['user_nickname'],
-                'user_user_email' => $data['user_user_email']?:'',
-                'user_pass' => md5(sha1($data['user_pass']) . config('member_key')),
+                'user_nickname' => $data['nickname'],
+                'user_email' => $data['email']?:'',
+                'user_pass' => md5(sha1($data['password']) . config('member_key')),
                 'reg_time' => time(),
                 'reg_ip' => $ip,
             ];
-
             $boolean = Db::name('user')->insert($member);
             if($boolean)
             {
@@ -140,7 +138,7 @@ class Member extends Common
                 'user_email|邮箱'     => 'user_email',
             ];
                 //如果没有手机 表示邮箱验证
-                $userLogic = new \app\message\controller\user_email();
+                $userLogic = new \app\message\controller\Email();
                 $check_code = $userLogic->sms_code_verify($data['user_email'], $data['code']);
                 if($check_code['status'] != 1) { tojson('验证码验证失败!'); }
                 $member = Db::name('user')->where('user_email',$data['user_email'])->find();

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:76:"G:\phpStudy\WWW\think\public/../application/member\view\member\register.html";i:1526190150;s:74:"G:\phpStudy\WWW\think\public/../application/common\view\common\common.html";i:1526091211;s:77:"G:\phpStudy\WWW\think\public/../application/common\view\common\toasttips.html";i:1526091211;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:76:"G:\phpStudy\WWW\think\public/../application/member\view\member\register.html";i:1526197451;s:74:"G:\phpStudy\WWW\think\public/../application/common\view\common\common.html";i:1526091211;s:77:"G:\phpStudy\WWW\think\public/../application/common\view\common\toasttips.html";i:1526091211;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -117,6 +117,8 @@
 <link rel="stylesheet" href="/static/PC/login/icon/iconfont.css">
 <link rel="stylesheet" href="/static/PC/login/css/common.css">
 <link rel="stylesheet" href="/static/PC/login/css/register.css">
+    <script src="/static/PC/login/js/jquery-2.1.3.min.js"></script>
+
 </head>
 
 <div class="register-box">
@@ -190,8 +192,21 @@
     </div>
 </div>
 <script src="/static/PC/login/js/register.js"></script>
-<script src="/static/PC/login/js/jquery-2.1.3.min.js"></script>
-
+<script>
+    window.writeCont = function (e,fn) {
+        $(".toast-tip-content").html(e);
+        $(".toast-tip-box").fadeIn(200);
+        $('.toast-mask').fadeIn(200);
+        if(!fn){return}
+        $('body').on('click','#toast-tip-submit',fn)
+    };
+    $(function () {
+        $("body").on("click", '#toast-tip-submit', function () {
+            $('.toast-mask').fadeOut(100);
+            $(".toast-tip-box").fadeOut(100);
+        });
+    });
+</script>
 </body>
 </html>
 

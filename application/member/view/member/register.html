@@ -7,6 +7,8 @@
 <link rel="stylesheet" href="/static/PC/login/icon/iconfont.css">
 <link rel="stylesheet" href="/static/PC/login/css/common.css">
 <link rel="stylesheet" href="/static/PC/login/css/register.css">
+    <script src="/static/PC/login/js/jquery-2.1.3.min.js"></script>
+
 </head>
 
 <div class="register-box">
@@ -80,8 +82,21 @@
     </div>
 </div>
 <script src="/static/PC/login/js/register.js"></script>
-<script src="/static/PC/login/js/jquery-2.1.3.min.js"></script>
-
+<script>
+    window.writeCont = function (e,fn) {
+        $(".toast-tip-content").html(e);
+        $(".toast-tip-box").fadeIn(200);
+        $('.toast-mask').fadeIn(200);
+        if(!fn){return}
+        $('body').on('click','#toast-tip-submit',fn)
+    };
+    $(function () {
+        $("body").on("click", '#toast-tip-submit', function () {
+            $('.toast-mask').fadeOut(100);
+            $(".toast-tip-box").fadeOut(100);
+        });
+    });
+</script>
 </body>
 </html>
 

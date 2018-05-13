@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:73:"G:\phpStudy\WWW\think\public/../application/member\view\member\login.html";i:1526182117;s:74:"G:\phpStudy\WWW\think\public/../application/common\view\common\common.html";i:1526091211;s:77:"G:\phpStudy\WWW\think\public/../application/common\view\common\toasttips.html";i:1526091211;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:73:"G:\phpStudy\WWW\think\public/../application/member\view\member\login.html";i:1526190375;s:74:"G:\phpStudy\WWW\think\public/../application/common\view\common\common.html";i:1526091211;s:77:"G:\phpStudy\WWW\think\public/../application/common\view\common\toasttips.html";i:1526091211;}*/ ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -117,6 +117,8 @@
 <link rel="stylesheet" href="/static/PC/login/icon/iconfont.css">
 <link rel="stylesheet" href="/static/PC/login/css/common.css">
 <link rel="stylesheet" href="/static/PC/login/css/login.css">
+    <script src="/static/PC/login/js/jquery-2.1.3.min.js"></script>
+
 </head>
 
 <div class="login-box">

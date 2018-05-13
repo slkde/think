@@ -11,13 +11,12 @@
 
 <div class="login-box">
     <div class="top-banner">
-        <a class="top-banner-img" href="#"><img src="/static/PC/image/new-logo.png" alt="PY交易站"></a>
-        <p class="top-banner-tip">PY交易平台</p>
+        <p class="top-banner-tip">博客</p>
     </div>
     <div class="login-wrapper">
         <form   action="" method="post" id="login">
             <div class="form-item">
-                <i class="form-icon icon iconfont">&#xe608;</i>
+                <!--<i class="form-icon icon iconfont">&#xe608;</i>-->
                 <input class="form-cont" name="username" type="text" placeholder="请输入邮箱/手机">
             </div>
             <div class="form-item">
@@ -31,9 +30,6 @@
             <button class="btn" type='submit' >登录</button>
         </form>
         <div class="line"></div>
-        <div class="other-login">
-            <a href="{:config('steamloginurl')}" class="steam-login"></a> 
-        </div>
         <a href="{:url('member/member/register')}" class="to-register">
             <span>还没有账号？</span>立即注册<i class="icon iconfont">&#xe619;</i>
         </a>

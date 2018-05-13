@@ -29,7 +29,7 @@ class Member extends Common
 
             $data = input('post.');
             if (!$validate->check($data)) {tojson($validate->getError());}
-            $map['user_name|email'] =  $data['user_name'];
+            $map['user_name|user_email'] =  $data['user_name'];
             $member = Db::name('user')->where($map)->find();
             if(empty($member)){tojson('账号不存在！');}
             //if(empty($member['mobile'])){ tojson('请绑定手机号码！',-1);}
@@ -52,7 +52,7 @@ class Member extends Common
                 Db::name('user')->where('id',$member['user_id'])->update($userData);
                 $session['id'] = $member['user_id'];
                 $session['user_name'] = $member['user_name'];
-                $session['nickname'] = $member['nickname'];
+                $session['user_nickname'] = $member['user_nickname'];
                 Session::set('member',$session);
 
                 if(Session::has('return_url')){
@@ -82,14 +82,14 @@ class Member extends Common
 
             $rule = [
                 'password|密码'  => 'require|max:50|min:6',
-                'nickname|昵称'  => 'max:50|min:6|unique:member',
-                'email|邮箱'     => 'email|unique:member',
+                'user_nickname|昵称'  => 'max:50|min:6|unique:member',
+                'user_email|邮箱'     => 'user_email|unique:member',
 //                'mobile|手机号'    => 'regex:/^1[34578]\d{9}$/|unique:member',
             ];
 
 
-                $userLogic = new \app\message\controller\Email();
-                $check_code = $userLogic->sms_code_verify($data['email'], $data['code']);
+                $userLogic = new \app\message\controller\user_email();
+                $check_code = $userLogic->sms_code_verify($data['user_email'], $data['code']);
                 if($check_code['status'] != 1) { tojson('验证码验证失败!'); }
 
             //验证
@@ -100,16 +100,14 @@ class Member extends Common
             $ip =  $request->ip();
 
             $member = [
-                'nickname' => $data['nickname'],
-                'email' => $data['email']?:'',
-                'mobile' => $data['mobile']?:'',
+                'user_nickname' => $data['user_nickname'],
+                'user_email' => $data['user_email']?:'',
                 'password' => md5(sha1($data['password']) . config('member_key')),
                 'reg_time' => time(),
                 'reg_ip' => $ip,
-                'type' => 1
             ];
 
-            $boolean = Db::name('member')->insert($member);
+            $boolean = Db::name('user')->insert($member);
             if($boolean)
             {
                 tojson('注册成功，请赶紧登陆吧！',1);

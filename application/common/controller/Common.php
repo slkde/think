@@ -48,7 +48,22 @@ class Common  extends Controller
       $this->redirect('member/member/login');
    }
 
+    /*
+* 返回固定格式的json数据
+*/
 
+    function tojson($msg,$status = 0 ,$url  = '')
+    {
+
+        $json = [
+            'msg' => $msg,
+            'status' => $status,
+            'url'=>$url
+        ];
+        if(!$url){ unset($json['url']);}
+        die(json_encode($json));
+
+    }
 
 
 }

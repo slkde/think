@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:76:"G:\phpStudy\WWW\think\public/../application/member\view\member\register.html";i:1526181937;s:72:"G:\phpStudy\WWW\think\public/../application/common\view\common\head.html";i:1526181543;}*/ ?>
 <!doctype html>
 <html>
 <head>
@@ -15,13 +16,13 @@
 <header>
     <div id="logo"><a href="/"></a></div>
     <nav class="topnav" id="topnav">
-        <a href="{:url('/index/index/index')}"><span>首页</span><span class="en">Protal</span></a>
+        <a href="<?php echo url('/index/index/index'); ?>"><span>首页</span><span class="en">Protal</span></a>
         <!--<a href="about.html"><span>关于我</span><span class="en">About</span></a>-->
         <!--<a href="newlist.html"><span>慢生活</span><span class="en">Life</span></a>-->
         <!--<a href="moodlist.html"><span>碎言碎语</span><span class="en">Doing</span></a>-->
         <!--<a href="share.html"><span>模板分享</span><span class="en">Share</span></a>-->
-        <a href="{:url('member/member/login')}"><span>登录</span><span class="en">Login</span></a>
-        <a href="{:url('member/member/register')}"><span>注册</span><span class="en">Register</span></a></nav>
+        <a href="<?php echo url('member/member/login'); ?>"><span>登录</span><span class="en">Login</span></a>
+        <a href="<?php echo url('member/member/register'); ?>"><span>注册</span><span class="en">Register</span></a></nav>
     </nav>
 </header>
 <div class="banner">
@@ -34,3 +35,14 @@
         <div class="avatar"><a href="#"><span>坤哥</span></a> </div>
     </section>
 </div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+

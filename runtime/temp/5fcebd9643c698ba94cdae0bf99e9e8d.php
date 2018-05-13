@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:71:"G:\phpStudy\WWW\think\public/../application/index\view\index\index.html";i:1526127809;s:72:"G:\phpStudy\WWW\think\public/../application/common\view\common\head.html";i:1526200041;s:72:"G:\phpStudy\WWW\think\public/../application/common\view\common\foot.html";i:1526125947;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:71:"G:\phpStudy\WWW\think\public/../application/index\view\index\index.html";i:1526127809;s:72:"G:\phpStudy\WWW\think\public/../application/common\view\common\head.html";i:1526202323;s:72:"G:\phpStudy\WWW\think\public/../application/common\view\common\foot.html";i:1526125947;}*/ ?>
 ﻿<!doctype html>
 <html>
 <head>
@@ -8,6 +8,10 @@
     <meta name="description" content="寻梦主题的个人博客模板，优雅、稳重、大气,低调。" />
     <link href="/static/css/base.css" rel="stylesheet">
     <link href="/static/css/index.css" rel="stylesheet">
+    <script src="/static/PC/login/js/jquery-2.1.3.min.js"></script>
+    <script src="/static/PC/login/js/login.js"></script>
+    <script src="/static/PC/login/js/register.js"></script>
+    <script src="/static/PC/login/js/reset.js"></script>
     <!--[if lt IE 9]>
     <script src="/static/js/modernizr.js"></script>
     <script src="/static/js/jquery-2.0.3.min.js"></script>
@@ -22,8 +26,27 @@
         <!--<a href="newlist.html"><span>慢生活</span><span class="en">Life</span></a>-->
         <!--<a href="moodlist.html"><span>碎言碎语</span><span class="en">Doing</span></a>-->
         <!--<a href="share.html"><span>模板分享</span><span class="en">Share</span></a>-->
+
+        <?php if(!(empty($member) || (($member instanceof \think\Collection || $member instanceof \think\Paginator ) && $member->isEmpty()))): ?>
+        <!--已登录-start-->
+        <div class="info-top">
+            <div class="user-info clearfix">
+                <img class="fl user-info-img" src="/static/PC/image/default_avatar_128_128.jpg">
+                <div class="fl user-info-text">
+                    <div class="user-name over-hide"><?php echo $member['user_nickname']; ?>
+                    </div>
+                </div>
+            </div>
+        <!--已登录-end-->
+        <?php else: ?>
+        <!--未登录-start-->
         <a href="<?php echo url('/index.php/member/member/login'); ?>"><span>登录</span><span class="en">Login</span></a>
         <a href="<?php echo url('/index.php/member/member/register'); ?>"><span>注册</span><span class="en">Register</span></a></nav>
+
+        <!--未登录-end-->
+
+        <?php endif; ?>
+
     </nav>
 </header>
 <div class="banner">

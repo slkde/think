@@ -16,6 +16,7 @@ class Index  extends Common
 	*/
 	public function index()
 	{
+//        Url::root('index.php');
 	    $data = Db::name('article')
             ->where('is_display',1)
             ->paginate(3,false, ['type' => 'Bootstrap',

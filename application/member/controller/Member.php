@@ -29,7 +29,7 @@ class Member extends Common
 
             $data = input('post.');
             if (!$validate->check($data)) {tojson($validate->getError());}
-            $map['user_name|user_email'] =  $data['user_name'];
+            $map['user_name|user_user_email'] =  $data['user_name'];
             $member = Db::name('user')->where($map)->find();
             if(empty($member)){tojson('账号不存在！');}
             //if(empty($member['mobile'])){ tojson('请绑定手机号码！',-1);}
@@ -81,15 +81,15 @@ class Member extends Common
             $data = input('post.');
 
             $rule = [
-                'password|密码'  => 'require|max:50|min:6',
+                'user_pass|密码'  => 'require|max:50|min:6',
                 'user_nickname|昵称'  => 'max:50|min:6|unique:member',
-                'user_email|邮箱'     => 'user_email|unique:member',
+                'user_user_email|邮箱'     => 'user_user_email|unique:member',
 //                'mobile|手机号'    => 'regex:/^1[34578]\d{9}$/|unique:member',
             ];
 
 
-                $userLogic = new \app\message\controller\user_email();
-                $check_code = $userLogic->sms_code_verify($data['user_email'], $data['code']);
+                $userLogic = new \app\message\controller\user_user_email();
+                $check_code = $userLogic->sms_code_verify($data['user_user_email'], $data['code']);
                 if($check_code['status'] != 1) { tojson('验证码验证失败!'); }
 
             //验证
@@ -101,8 +101,8 @@ class Member extends Common
 
             $member = [
                 'user_nickname' => $data['user_nickname'],
-                'user_email' => $data['user_email']?:'',
-                'password' => md5(sha1($data['password']) . config('member_key')),
+                'user_user_email' => $data['user_user_email']?:'',
+                'user_pass' => md5(sha1($data['user_pass']) . config('member_key')),
                 'reg_time' => time(),
                 'reg_ip' => $ip,
             ];
@@ -114,6 +114,46 @@ class Member extends Common
             }else{
                 tojson('注册失败！',1);
             }
+        }
+    }
+
+    /*
+   * 重置账户密码
+   */
+    public function reset()
+    {
+
+        if(request()->isGet())
+        {
+            View::share('title','找回密码');
+            return view();
+        }else{
+            // //判断注册是否开启
+            // if(empty($this->switchs['register'])){ tojson('注册已关闭！');}
+
+            $data = input('post.');
+            if($data['user_pass'] != $data['confirm_user_pass']){ tojson('两次输入的密码不一致！');}
+            $rule = [
+                'user_pass|密码'  => 'require|max:50|min:6',
+                'confirm_user_pass|确认密码'  => 'require|max:50|min:6',
+                'code|验证码'  => 'require|max:6|min:6',
+                'user_email|邮箱'     => 'user_email',
+            ];
+                //如果没有手机 表示邮箱验证
+                $userLogic = new \app\message\controller\user_email();
+                $check_code = $userLogic->sms_code_verify($data['user_email'], $data['code']);
+                if($check_code['status'] != 1) { tojson('验证码验证失败!'); }
+                $member = Db::name('user')->where('user_email',$data['user_email'])->find();
+
+            if(empty($member)) { tojson('账户不存在！');}
+
+            //验证
+            $validate = new Validate($rule);
+            if (!$validate->check($data)) {tojson($validate->getError());}
+
+            $value['user_pass'] = md5(sha1($data['user_pass']) . config('member_key'));
+            Db::name('user')->where('id',$member['id'])->update($value);
+            tojson('修改成功，赶紧登陆吧！',1);
         }
     }
 }

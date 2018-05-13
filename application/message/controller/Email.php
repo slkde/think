@@ -30,7 +30,7 @@ class Email extends Common
         {   
             $boolean = filter_var($toemail, FILTER_VALIDATE_EMAIL);
             if(!$boolean){ die('请输入正确的邮箱！');} 
-            $boolean = Db::name('member')->where('email',$toemail)->count();
+            $boolean = Db::name('user')->where('user_email',$toemail)->count();
             if($boolean){ die('邮箱已存在！'); } 
             $code = rand(100000, 999999);
             $send = $this->sms_log($toemail,$code);
@@ -99,12 +99,12 @@ class Email extends Common
 
         $mail->isSMTP();// 使用SMTP服务
         $mail->CharSet = "utf8";// 编码格式为utf8，不设置编码的话，中文会出现乱码
-        $mail->Host = "mail.qq.com";// 发送方的SMTP服务器地址
+        $mail->Host = "smtp.qq.com";// 发送方的SMTP服务器地址
         $mail->SMTPAuth = true;// 是否使用身份验证
         $mail->Username = "1558573029@qq.com";// 发送方的163邮箱用户名，就是你申请163的SMTP服务使用的163邮箱</span><span style="color:#333333;">
         $mail->Password = "duanhao662240";// 发送方的邮箱密码，注意用163邮箱这里填写的是“客户端授权密码”而不是邮箱的登录密码！</span><span style="color:#333333;">
         $mail->SMTPSecure = "ssl";// 使用ssl协议方式</span><span style="color:#333333;">
-        $mail->Port = 465;// 163邮箱的ssl协议方式端口号是465/994
+        $mail->Port = 25;// 163邮箱的ssl协议方式端口号是465/994
 
         $mail->setFrom("1558573029@qq.com","博客");// 设置发件人信息，如邮件格式说明中的发件人，这里会显示为Mailer(xxxx@163.com），Mailer是当做名字显示
         $mail->addAddress($toemail,'Wang');// 设置收件人信息，如邮件格式说明中的收件人，这里会显示为Liang(yyyy@163.com)

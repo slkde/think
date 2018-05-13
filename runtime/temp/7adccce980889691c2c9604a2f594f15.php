@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:71:"G:\phpStudy\WWW\think\public/../application/index\view\index\index.html";i:1526127809;s:72:"G:\phpStudy\WWW\think\public/../application/common\view\common\head.html";i:1526128086;s:72:"G:\phpStudy\WWW\think\public/../application/common\view\common\foot.html";i:1526125947;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:73:"G:\phpStudy\WWW\think\public/../application/index\view\index\artlist.html";i:1526127092;s:72:"G:\phpStudy\WWW\think\public/../application/common\view\common\head.html";i:1526128086;s:72:"G:\phpStudy\WWW\think\public/../application/common\view\common\foot.html";i:1526125947;}*/ ?>
 ﻿<!doctype html>
 <html>
 <head>
@@ -28,27 +28,42 @@
         <div class="avatar"><a href="#"><span>坤哥</span></a> </div>
     </section>
 </div>
-<article>
-  <h2 class="title_tj">
-    <p>文章<span>推荐</span></p>
-  </h2>
-  <div class="bloglist left">
-    <?php if(is_array($data) || $data instanceof \think\Collection || $data instanceof \think\Paginator): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-    <h3><?php echo $vo['art_title']; ?></h3>
-    <figure><img src="<?php echo $vo['art_thumb']; ?>"></figure>
-    <ul id="gkk_content">
-      <a title="/" href="<?php echo url('/index.php/index/index/artlist',['art_id' => $vo['art_id']]); ?>" target="_blank" class="readmore">阅读全文>></a>
-      <p><?php echo $vo['art_content']; ?></p>
-
+<link href="/static/css/style.css" rel="stylesheet">
+<article class="blogs">
+<h1 class="t_nav"><span>“慢生活”不是懒惰，放慢速度不是拖延时间，而是让我们在生活中寻找到平衡。</span><a href="/" class="n1">网站首页</a><a href="/" class="n2">慢生活</a></h1>
+<div class="newblog left">
+   <h2><?php echo $data[0]['art_title']; ?></h2>
+   <p class="dateview"><span>发布时间：<?php echo date("y-m-d",$data[0]['art_time']); ?></span><span>作者：<?php echo $data[0]['art_editor']; ?></span><span>分类：[<a href="/news/life/">程序人生</a>]</span></p>
+    <figure><img src="/static/images/001.png"></figure>
+    <ul class="nlist">
+      <p><?php echo $data[0]['art_content']; ?></p>
+      <!--<a title="/" href="/" target="_blank" class="readmore">阅读全文>></a>-->
     </ul>
-    <p class="dateview"><span><?php echo date("y-m-d",$vo['art_time']); ?></span><span>作者：<?php echo $vo['art_editor']; ?></span><span>个人博客：[<a href="/news/life/">程序人生</a>]</span></p>
-  <?php endforeach; endif; else: echo "" ;endif; ?>
-    <?php echo $page; ?>
-  </div>
-  <aside class="right">
-    <div class="weather"><iframe width="250" scrolling="no" height="60" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=12&icon=1&num=1"></iframe></div>
-    <div class="news">
-    <h3>
+    <!--<div class="line"></div>-->
+    </ul>
+    <div class="line"></div>
+    <div class="blank"></div>
+    <!--<div class="ad">  -->
+    <!--<img src="/static/images/ad.png">-->
+    <!--</div>-->
+    <!--<div class="page">-->
+
+<!--&lt;!&ndash;<ul class="pagination"><li class="disabled"><span>«</span></li> <li class="active"><span>1</span></li><li><a href="http://blog.hd/admin/article?page=2">2</a></li> <li><a href="http://blog.hd/admin/article?page=2" rel="next">»</a></li></ul>&ndash;&gt;-->
+
+ <!---->
+    <!--</div>-->
+</div>
+<aside class="right">
+   <div class="rnav">
+      <ul>
+       <li class="rnav1"><a href="/download/" target="_blank">日记</a></li>
+       <li class="rnav2"><a href="/newsfree/" target="_blank">程序人生</a></li>
+       <li class="rnav3"><a href="/web/" target="_blank">欣赏</a></li>
+       <li class="rnav4"><a href="/newshtml5/" target="_blank">短信祝福</a></li>
+     </ul>      
+    </div>
+<div class="news">
+<h3>
       <p>最新<span>文章</span></p>
     </h3>
     <ul class="rank">
@@ -71,7 +86,14 @@
       <li><a href="/" title="做网站到底需要什么?" target="_blank">做网站到底需要什么?</a></li>
       <li><a href="/" title="企业做网站具体流程步骤" target="_blank">企业做网站具体流程步骤</a></li>
     </ul>
-      <h3 class="links">
+    </div>
+    <div class="visitors">
+      <h3><p>最近访客</p></h3>
+      <ul>
+
+      </ul>
+    </div>
+    <h3 class="links">
     <p>友情<span>链接</span></p>
 </h3>
 <ul class="website">

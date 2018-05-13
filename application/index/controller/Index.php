@@ -30,10 +30,25 @@ class Index  extends Common
 		return view();
 	}
 
+    /**
+     * 详情页
+     * @return \think\response\View
+     */
 	public function artList()
     {
         $art_id = input('art_id');
-        var_dump($art_id);
+        $data = Db::name('article')
+            ->where('art_id',$art_id)
+            ->paginate(3,false, ['type' => 'Bootstrap',
+                'var_page' => 'page',
+                'query' => request()->param(),
+            ]);
+//        var_dump($data[0]);die;
+        $page = $data->render();
+        $this->assign([
+            'data'=>$data,
+            'page' => $page,
+        ]);
         return view();
     }
      

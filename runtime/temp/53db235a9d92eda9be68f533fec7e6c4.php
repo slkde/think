@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:74:"D:\wamp64\www\think\public/../application/pyadminurl\view\index\index.html";i:1526217566;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:74:"D:\wamp64\www\think\public/../application/pyadminurl\view\index\index.html";i:1526220963;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh">
     <head>
@@ -162,8 +162,8 @@
                             <ul class="menu-items" data-faicon="" data-tit="分类编辑">
                             
                                 <li>
-                                    <a href="<?php echo url('/admin/index/'); ?>" data-toggle="navtab" data-options="{ faicon:'caret-right'}" data-fresh="true">分类添加</a>
-                                    <a href="<?php echo url('/admin/index/'); ?>" data-toggle="navtab" data-options="{ faicon:'caret-right'}" data-fresh="true">分类删除</a>
+                                    <a href="<?php echo url('/admin/nav/'); ?>" data-toggle="navtab" data-options="{ faicon:'caret-right'}" data-fresh="true">分类显示</a>
+                                    <a href="<?php echo url('/admin/nav/'); ?>" data-toggle="navtab" data-options="{ faicon:'caret-right'}" data-fresh="true">分类添加</a>
                                 </li>
                             
                             </ul>
@@ -182,7 +182,7 @@
                             <ul class="menu-items" data-faicon="" data-tit="系统配置">
 
                                 <li>
-                                    <a href="<?php echo url('/admin/config/' . $vo['nav_id']); ?>" data-toggle="navtab" data-options="{ id:'<?php echo $vo['nav_id']; ?>', faicon:'caret-right'}" data-fresh="true">网站配置</a>
+                                    <a href="/admin/config/" data-toggle="navtab" data-options="{ faicon:'caret-right'}" data-fresh="true">网站配置</a>
                                 </li>
 
                             </ul>

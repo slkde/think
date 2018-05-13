@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+{include file="common@common/common" /}
+{include file="common@common/toasttips"}
+<link rel="stylesheet" href="/static/PC/login/css/base.css">
+<link rel="stylesheet" href="/static/PC/login/icon/iconfont.css">
+<link rel="stylesheet" href="/static/PC/login/css/common.css">
+<link rel="stylesheet" href="/static/PC/login/css/login.css">
+</head>
+
+<div class="login-box">
+    <div class="top-banner">
+        <a class="top-banner-img" href="#"><img src="/static/PC/image/new-logo.png" alt="PY交易站"></a>
+        <p class="top-banner-tip">PY交易平台</p>
+    </div>
+    <div class="login-wrapper">
+        <form   action="" method="post" id="login">
+            <div class="form-item">
+                <i class="form-icon icon iconfont">&#xe608;</i>
+                <input class="form-cont" name="username" type="text" placeholder="请输入邮箱/手机">
+            </div>
+            <div class="form-item">
+                <i class="form-icon icon iconfont">&#xe6e6;</i>
+                <input class="form-cont" name="password"  type="password" placeholder="请输入密码">
+                <button type="button" class="toggle-password">show</button>
+            </div>
+            <div class="reset-link">
+                <a class="reset-link-btn" href="{:url('member/member/reset')}">忘记密码？</a>
+            </div>
+            <button class="btn" type='submit' >登录</button>
+        </form>
+        <div class="line"></div>
+        <div class="other-login">
+            <a href="{:config('steamloginurl')}" class="steam-login"></a> 
+        </div>
+        <a href="{:url('member/member/register')}" class="to-register">
+            <span>还没有账号？</span>立即注册<i class="icon iconfont">&#xe619;</i>
+        </a>
+    </div>
+</div>
+
+<script type="text/javascript">
+	var loginUrl = '{url:("member/member/login")}' ;
+</script>
+<script type="text/javascript" src="__JS__/login.js"></script> 
+<script src="/static/PC/login/js/login.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+

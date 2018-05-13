@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="40dd0812-9902-49bb-90dc-2202daa2b280" name="Default" comment="" />
+    <list default="true" id="40dd0812-9902-49bb-90dc-2202daa2b280" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/application/member/controller/Member.php" afterPath="$PROJECT_DIR$/application/member/controller/Member.php" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,11 +59,21 @@
       <file leaf-file-name="Member.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/member/controller/Member.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="50" lean-forward="false" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
+            <state relative-caret-position="209">
+              <caret line="90" column="41" lean-forward="true" selection-start-line="90" selection-start-column="38" selection-end-line="90" selection-end-column="41" />
               <folding>
                 <element signature="e#39#72#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Request.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/thinkphp/library/think/Request.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="237">
+              <caret line="176" column="27" lean-forward="false" selection-start-line="176" selection-start-column="27" selection-end-line="176" selection-end-column="27" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -156,7 +168,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-52" />
     <option name="y" value="105" />
     <option name="width" value="1612" />
@@ -274,6 +286,7 @@
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pyjy" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -302,15 +315,15 @@
       <updated>1526091475354</updated>
       <workItem from="1526091476702" duration="12451000" />
       <workItem from="1526121490987" duration="5942000" />
-      <workItem from="1526178167528" duration="1078000" />
+      <workItem from="1526178167528" duration="1569000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19471000" />
+    <option name="totallyTimeSpent" value="19962000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25514138" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -503,6 +516,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-6631">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -674,10 +688,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/thinkphp/helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="102" column="13" lean-forward="false" selection-start-line="102" selection-start-column="13" selection-end-line="102" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thinkphp/library/think/Request.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="176" column="27" lean-forward="false" selection-start-line="176" selection-start-column="27" selection-end-line="176" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/member/controller/Member.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="50" lean-forward="false" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
+        <state relative-caret-position="209">
+          <caret line="90" column="41" lean-forward="true" selection-start-line="90" selection-start-column="38" selection-end-line="90" selection-end-column="41" />
           <folding>
             <element signature="e#39#72#0#PHP" expanded="true" />
           </folding>

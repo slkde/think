@@ -1,0 +1,2337 @@
+---------------------------------------------------------------
+[ 2018-05-15T23:03:51+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ info ] gkkblog.com/ [运行时间：0.105966s][吞吐率：9.44req/s] [内存消耗：5,198.05kb] [文件加载：62]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\wamp64\www\think\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/index\view\index\index.html [ array (
+  0 => 'title',
+  1 => 'keywords',
+  2 => 'description',
+  3 => 'data',
+  4 => 'page',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003671s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_web_config` [ RunTime:0.010201s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_web_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000602s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.003257s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` WHERE  `is_display` = 1 LIMIT 1 [ RunTime:0.001370s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_article` WHERE  `is_display` = 1 LIMIT 0,3 [ RunTime:0.000574s ]
+---------------------------------------------------------------
+[ 2018-05-15T23:03:51+08:00 ] 127.0.0.1 127.0.0.1 GET /static/css/base.css
+[ info ] gkkblog.com/static/css/base.css [运行时间：0.039673s][吞吐率：25.21req/s] [内存消耗：2,758.10kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'base.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://gkkblog.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:03:51+08:00 ] 127.0.0.1 127.0.0.1 GET /static/css/index.css
+[ info ] gkkblog.com/static/css/index.css [运行时间：0.049532s][吞吐率：20.19req/s] [内存消耗：2,758.13kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'index.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://gkkblog.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:03:51+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/js/reset.js
+[ info ] gkkblog.com/static/PC/login/js/reset.js [运行时间：0.059251s][吞吐率：16.88req/s] [内存消耗：2,758.89kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'js' => 'reset.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:03:51+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/js/register.js
+[ info ] gkkblog.com/static/PC/login/js/register.js [运行时间：0.071948s][吞吐率：13.90req/s] [内存消耗：2,758.88kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'js' => 'register.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:03:51+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/js/jquery-2.1.3.min.js
+[ info ] gkkblog.com/static/PC/login/js/jquery-2.1.3.min.js [运行时间：0.080823s][吞吐率：12.37req/s] [内存消耗：2,758.93kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'js' => 'jquery-2.1.3.min.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:03:51+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/js/login.js
+[ info ] gkkblog.com/static/PC/login/js/login.js [运行时间：0.083415s][吞吐率：11.99req/s] [内存消耗：2,758.89kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'js' => 'login.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:03:51+08:00 ] 127.0.0.1 127.0.0.1 GET /static/js/silder.js
+[ info ] gkkblog.com/static/js/silder.js [运行时间：0.047080s][吞吐率：21.24req/s] [内存消耗：2,758.23kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'silder.js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:03:51+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/js/register.js
+[ info ] gkkblog.com/static/PC/login/js/register.js [运行时间：0.055788s][吞吐率：17.92req/s] [内存消耗：2,758.88kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'js' => 'register.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:03:51+08:00 ] 127.0.0.1 127.0.0.1 GET /static/uploads/1.jpg
+[ info ] gkkblog.com/static/uploads/1.jpg [运行时间：0.067492s][吞吐率：14.82req/s] [内存消耗：2,758.14kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'uploads',
+    2 => '1.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://gkkblog.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:03:51+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/js/reset.js
+[ info ] gkkblog.com/static/PC/login/js/reset.js [运行时间：0.069161s][吞吐率：14.46req/s] [内存消耗：2,758.89kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'js' => 'reset.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:03:51+08:00 ] 127.0.0.1 127.0.0.1 GET /static/uploads/3.jpg
+[ info ] gkkblog.com/static/uploads/3.jpg [运行时间：0.050372s][吞吐率：19.85req/s] [内存消耗：2,758.14kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'uploads',
+    2 => '3.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://gkkblog.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:03:51+08:00 ] 127.0.0.1 127.0.0.1 GET /static/uploads/2.jpg
+[ info ] gkkblog.com/static/uploads/2.jpg [运行时间：0.097465s][吞吐率：10.26req/s] [内存消耗：2,758.14kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'uploads',
+    2 => '2.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://gkkblog.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:03:52+08:00 ] 127.0.0.1 127.0.0.1 GET /static/js/silder.js
+[ info ] gkkblog.com/static/js/silder.js [运行时间：0.044904s][吞吐率：22.27req/s] [内存消耗：2,758.23kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'silder.js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:42+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/member/member/login.html
+[ info ] gkkblog.com/index.php/member/member/login.html [运行时间：0.093324s][吞吐率：10.72req/s] [内存消耗：4,927.66kb] [文件加载：59]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'member',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://gkkblog.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\Member->login[ D:\wamp64\www\think\application\member\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/member\view\member\login.html [ array (
+  0 => 'title',
+  1 => 'keywords',
+  2 => 'description',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011902s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_web_config` [ RunTime:0.001939s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_web_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000349s ]
+---------------------------------------------------------------
+[ 2018-05-15T23:08:42+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/css/base.css
+[ info ] gkkblog.com/static/PC/login/css/base.css [运行时间：0.042103s][吞吐率：23.75req/s] [内存消耗：2,759.16kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://gkkblog.com/index.php/member/member/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'css' => 'base.css',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:43+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/css/login.css
+[ info ] gkkblog.com/static/PC/login/css/login.css [运行时间：0.058249s][吞吐率：17.17req/s] [内存消耗：2,758.93kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://gkkblog.com/index.php/member/member/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'css' => 'login.css',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:43+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/js/login.js
+[ info ] gkkblog.com/static/PC/login/js/login.js [运行时间：0.067539s][吞吐率：14.81req/s] [内存消耗：2,759.03kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/index.php/member/member/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'js' => 'login.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:43+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/js/jquery-2.1.3.min.js
+[ info ] gkkblog.com/static/PC/login/js/jquery-2.1.3.min.js [运行时间：0.067814s][吞吐率：14.75req/s] [内存消耗：2,759.11kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/index.php/member/member/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'js' => 'jquery-2.1.3.min.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:43+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/icon/iconfont.css
+[ info ] gkkblog.com/static/PC/login/icon/iconfont.css [运行时间：0.074568s][吞吐率：13.41req/s] [内存消耗：2,759.09kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://gkkblog.com/index.php/member/member/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'icon' => 'iconfont.css',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:43+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/css/common.css
+[ info ] gkkblog.com/static/PC/login/css/common.css [运行时间：0.142900s][吞吐率：7.00req/s] [内存消耗：2,759.05kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://gkkblog.com/index.php/member/member/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'css' => 'common.css',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:43+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/js/login.js
+[ info ] gkkblog.com/static/PC/js/login.js [运行时间：0.133827s][吞吐率：7.47req/s] [内存消耗：2,758.15kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/index.php/member/member/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:43+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/js/login.js
+[ info ] gkkblog.com/static/PC/login/js/login.js [运行时间：0.046090s][吞吐率：21.70req/s] [内存消耗：2,759.03kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/index.php/member/member/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'js' => 'login.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:43+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/js/login.js
+[ info ] gkkblog.com/static/PC/js/login.js [运行时间：0.044872s][吞吐率：22.29req/s] [内存消耗：2,758.16kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/index.php/member/member/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:43+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/js/login.js
+[ info ] gkkblog.com/static/PC/login/js/login.js [运行时间：0.041468s][吞吐率：24.11req/s] [内存消耗：2,759.03kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/index.php/member/member/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'js' => 'login.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:45+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/js/reset.js
+[ info ] gkkblog.com/static/PC/login/js/reset.js [运行时间：0.062795s][吞吐率：15.92req/s] [内存消耗：2,758.89kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'js' => 'reset.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:45+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/js/register.js
+[ info ] gkkblog.com/static/PC/login/js/register.js [运行时间：0.078055s][吞吐率：12.81req/s] [内存消耗：2,758.88kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'js' => 'register.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:46+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/js/login.js
+[ info ] gkkblog.com/static/PC/login/js/login.js [运行时间：0.071068s][吞吐率：14.07req/s] [内存消耗：2,758.89kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'js' => 'login.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:46+08:00 ] 127.0.0.1 127.0.0.1 GET /static/js/silder.js
+[ info ] gkkblog.com/static/js/silder.js [运行时间：0.082106s][吞吐率：12.18req/s] [内存消耗：2,758.23kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'silder.js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:46+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/js/register.js
+[ info ] gkkblog.com/static/PC/login/js/register.js [运行时间：0.097403s][吞吐率：10.27req/s] [内存消耗：2,758.80kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'js' => 'register.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:46+08:00 ] 127.0.0.1 127.0.0.1 GET /static/uploads/1.jpg
+[ info ] gkkblog.com/static/uploads/1.jpg [运行时间：0.065471s][吞吐率：15.27req/s] [内存消耗：2,758.14kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'uploads',
+    2 => '1.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://gkkblog.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:46+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/js/reset.js
+[ info ] gkkblog.com/static/PC/login/js/reset.js [运行时间：0.071659s][吞吐率：13.96req/s] [内存消耗：2,758.89kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'js' => 'reset.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:46+08:00 ] 127.0.0.1 127.0.0.1 GET /static/js/silder.js
+[ info ] gkkblog.com/static/js/silder.js [运行时间：0.096964s][吞吐率：10.31req/s] [内存消耗：2,758.23kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'silder.js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:47+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/member/member/register.html
+[ info ] gkkblog.com/index.php/member/member/register.html [运行时间：0.068669s][吞吐率：14.56req/s] [内存消耗：4,929.17kb] [文件加载：59]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'member',
+    2 => 'register',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://gkkblog.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\Member->register[ D:\wamp64\www\think\application\member\controller\Member.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/member\view\member\register.html [ array (
+  0 => 'title',
+  1 => 'keywords',
+  2 => 'description',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001109s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_web_config` [ RunTime:0.002667s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_web_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000420s ]
+---------------------------------------------------------------
+[ 2018-05-15T23:08:47+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/css/base.css
+[ info ] gkkblog.com/static/PC/login/css/base.css [运行时间：0.037419s][吞吐率：26.72req/s] [内存消耗：2,759.01kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://gkkblog.com/index.php/member/member/register.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'css' => 'base.css',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:47+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/icon/iconfont.css
+[ info ] gkkblog.com/static/PC/login/icon/iconfont.css [运行时间：0.036621s][吞吐率：27.31req/s] [内存消耗：2,759.07kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://gkkblog.com/index.php/member/member/register.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'icon' => 'iconfont.css',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:47+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/css/common.css
+[ info ] gkkblog.com/static/PC/login/css/common.css [运行时间：0.037601s][吞吐率：26.60req/s] [内存消耗：2,758.82kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://gkkblog.com/index.php/member/member/register.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'css' => 'common.css',
+)
+[ info ] [ LOG ] INIT File
+File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:47+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/js/jquery-2.1.3.min.js
+[ info ] gkkblog.com/static/PC/login/js/jquery-2.1.3.min.js [运行时间：0.040988s][吞吐率：24.40req/s] [内存消耗：2,759.00kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/index.php/member/member/register.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'js' => 'jquery-2.1.3.min.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:47+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/js/register.js
+[ info ] gkkblog.com/static/PC/login/js/register.js [运行时间：0.088136s][吞吐率：11.35req/s] [内存消耗：2,758.84kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/index.php/member/member/register.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'js' => 'register.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:49+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/js/login.js
+[ info ] gkkblog.com/static/PC/login/js/login.js [运行时间：0.044771s][吞吐率：22.34req/s] [内存消耗：2,758.89kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'js' => 'login.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:49+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/js/register.js
+[ info ] gkkblog.com/static/PC/login/js/register.js [运行时间：0.047902s][吞吐率：20.88req/s] [内存消耗：2,758.80kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'js' => 'register.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:49+08:00 ] 127.0.0.1 127.0.0.1 GET /static/js/silder.js
+[ info ] gkkblog.com/static/js/silder.js [运行时间：0.046369s][吞吐率：21.57req/s] [内存消耗：2,758.23kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'silder.js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:49+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/js/reset.js
+[ info ] gkkblog.com/static/PC/login/js/reset.js [运行时间：0.151701s][吞吐率：6.59req/s] [内存消耗：2,758.89kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'js' => 'reset.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:49+08:00 ] 127.0.0.1 127.0.0.1 GET /static/uploads/1.jpg
+[ info ] gkkblog.com/static/uploads/1.jpg [运行时间：0.042928s][吞吐率：23.29req/s] [内存消耗：2,758.14kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'uploads',
+    2 => '1.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://gkkblog.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:49+08:00 ] 127.0.0.1 127.0.0.1 GET /static/js/silder.js
+[ info ] gkkblog.com/static/js/silder.js [运行时间：0.040324s][吞吐率：24.80req/s] [内存消耗：2,758.23kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'silder.js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:50+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/member/member/login.html
+[ info ] gkkblog.com/index.php/member/member/login.html [运行时间：0.062154s][吞吐率：16.09req/s] [内存消耗：4,673.70kb] [文件加载：57]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'member',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://gkkblog.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\Member->login[ D:\wamp64\www\think\application\member\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/member\view\member\login.html [ array (
+  0 => 'title',
+  1 => 'keywords',
+  2 => 'description',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002598s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_web_config` [ RunTime:0.001599s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_web_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000419s ]
+---------------------------------------------------------------
+[ 2018-05-15T23:08:50+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/icon/iconfont.css
+[ info ] gkkblog.com/static/PC/login/icon/iconfont.css [运行时间：0.040322s][吞吐率：24.80req/s] [内存消耗：2,759.09kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://gkkblog.com/index.php/member/member/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'icon' => 'iconfont.css',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:50+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/css/base.css
+[ info ] gkkblog.com/static/PC/login/css/base.css [运行时间：0.050553s][吞吐率：19.78req/s] [内存消耗：2,759.16kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://gkkblog.com/index.php/member/member/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'css' => 'base.css',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:50+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/css/common.css
+[ info ] gkkblog.com/static/PC/login/css/common.css [运行时间：0.036610s][吞吐率：27.31req/s] [内存消耗：2,759.07kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://gkkblog.com/index.php/member/member/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'css' => 'common.css',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:50+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/js/login.js
+[ info ] gkkblog.com/static/PC/login/js/login.js [运行时间：0.047858s][吞吐率：20.90req/s] [内存消耗：2,758.99kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/index.php/member/member/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'js' => 'login.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:50+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/css/login.css
+[ info ] gkkblog.com/static/PC/login/css/login.css [运行时间：0.047329s][吞吐率：21.13req/s] [内存消耗：2,758.93kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://gkkblog.com/index.php/member/member/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'css' => 'login.css',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:50+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/js/login.js
+[ info ] gkkblog.com/static/PC/js/login.js [运行时间：0.047783s][吞吐率：20.93req/s] [内存消耗：2,758.16kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/index.php/member/member/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:50+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/js/jquery-2.1.3.min.js
+[ info ] gkkblog.com/static/PC/login/js/jquery-2.1.3.min.js [运行时间：0.112620s][吞吐率：8.88req/s] [内存消耗：2,759.11kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/index.php/member/member/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'js' => 'jquery-2.1.3.min.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:50+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/js/login.js
+[ info ] gkkblog.com/static/PC/login/js/login.js [运行时间：0.042933s][吞吐率：23.29req/s] [内存消耗：2,759.03kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/index.php/member/member/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'js' => 'login.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:50+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/js/login.js
+[ info ] gkkblog.com/static/PC/js/login.js [运行时间：0.046999s][吞吐率：21.28req/s] [内存消耗：2,758.16kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/index.php/member/member/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:50+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/js/login.js
+[ info ] gkkblog.com/static/PC/login/js/login.js [运行时间：0.042237s][吞吐率：23.68req/s] [内存消耗：2,759.03kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/index.php/member/member/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'js' => 'login.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:51+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/js/register.js
+[ info ] gkkblog.com/static/PC/login/js/register.js [运行时间：0.060952s][吞吐率：16.41req/s] [内存消耗：2,758.88kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'js' => 'register.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:51+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/js/jquery-2.1.3.min.js
+[ info ] gkkblog.com/static/PC/login/js/jquery-2.1.3.min.js [运行时间：0.071259s][吞吐率：14.03req/s] [内存消耗：2,758.80kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'js' => 'jquery-2.1.3.min.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:51+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/js/login.js
+[ info ] gkkblog.com/static/PC/login/js/login.js [运行时间：0.117351s][吞吐率：8.52req/s] [内存消耗：2,758.89kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'js' => 'login.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:51+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/js/reset.js
+[ info ] gkkblog.com/static/PC/login/js/reset.js [运行时间：0.190301s][吞吐率：5.25req/s] [内存消耗：2,758.89kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'js' => 'reset.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:51+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/js/register.js
+[ info ] gkkblog.com/static/PC/login/js/register.js [运行时间：0.124347s][吞吐率：8.04req/s] [内存消耗：2,758.88kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'js' => 'register.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:52+08:00 ] 127.0.0.1 127.0.0.1 GET /index/index/index.html
+[ info ] gkkblog.com/index/index/index.html [运行时间：0.068871s][吞吐率：14.52req/s] [内存消耗：4,925.70kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://gkkblog.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\wamp64\www\think\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/index\view\index\index.html [ array (
+  0 => 'title',
+  1 => 'keywords',
+  2 => 'description',
+  3 => 'data',
+  4 => 'page',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001253s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_web_config` [ RunTime:0.003529s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_web_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000332s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.002551s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` WHERE  `is_display` = 1 LIMIT 1 [ RunTime:0.000349s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_article` WHERE  `is_display` = 1 LIMIT 0,3 [ RunTime:0.000437s ]
+---------------------------------------------------------------
+[ 2018-05-15T23:08:52+08:00 ] 127.0.0.1 127.0.0.1 GET /static/css/base.css
+[ info ] gkkblog.com/static/css/base.css [运行时间：0.041097s][吞吐率：24.33req/s] [内存消耗：2,758.23kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'base.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://gkkblog.com/index/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:52+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/js/register.js
+[ info ] gkkblog.com/static/PC/login/js/register.js [运行时间：0.041605s][吞吐率：24.04req/s] [内存消耗：2,758.80kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/index/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'js' => 'register.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:52+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/js/jquery-2.1.3.min.js
+[ info ] gkkblog.com/static/PC/login/js/jquery-2.1.3.min.js [运行时间：0.065590s][吞吐率：15.25req/s] [内存消耗：2,759.17kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/index/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'js' => 'jquery-2.1.3.min.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:52+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/js/reset.js
+[ info ] gkkblog.com/static/PC/login/js/reset.js [运行时间：0.072403s][吞吐率：13.81req/s] [内存消耗：2,758.77kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/index/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'js' => 'reset.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:52+08:00 ] 127.0.0.1 127.0.0.1 GET /static/css/index.css
+[ info ] gkkblog.com/static/css/index.css [运行时间：0.078534s][吞吐率：12.73req/s] [内存消耗：2,758.17kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'index.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://gkkblog.com/index/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:52+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/js/login.js
+[ info ] gkkblog.com/static/PC/login/js/login.js [运行时间：0.088096s][吞吐率：11.35req/s] [内存消耗：2,758.77kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/index/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'js' => 'login.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:52+08:00 ] 127.0.0.1 127.0.0.1 GET /static/js/silder.js
+[ info ] gkkblog.com/static/js/silder.js [运行时间：0.057484s][吞吐率：17.40req/s] [内存消耗：2,758.18kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'silder.js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/index/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:52+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/js/register.js
+[ info ] gkkblog.com/static/PC/login/js/register.js [运行时间：0.053442s][吞吐率：18.71req/s] [内存消耗：2,758.80kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/index/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'js' => 'register.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:52+08:00 ] 127.0.0.1 127.0.0.1 GET /static/uploads/1.jpg
+[ info ] gkkblog.com/static/uploads/1.jpg [运行时间：0.086494s][吞吐率：11.56req/s] [内存消耗：2,758.24kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'uploads',
+    2 => '1.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://gkkblog.com/index/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:52+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/js/reset.js
+[ info ] gkkblog.com/static/PC/login/js/reset.js [运行时间：0.097037s][吞吐率：10.31req/s] [内存消耗：2,758.77kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/index/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'js' => 'reset.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:52+08:00 ] 127.0.0.1 127.0.0.1 GET /static/uploads/3.jpg
+[ info ] gkkblog.com/static/uploads/3.jpg [运行时间：0.099978s][吞吐率：10.00req/s] [内存消耗：2,758.24kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'uploads',
+    2 => '3.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://gkkblog.com/index/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:52+08:00 ] 127.0.0.1 127.0.0.1 GET /static/uploads/2.jpg
+[ info ] gkkblog.com/static/uploads/2.jpg [运行时间：0.190453s][吞吐率：5.25req/s] [内存消耗：2,758.23kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'uploads',
+    2 => '2.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://gkkblog.com/index/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:52+08:00 ] 127.0.0.1 127.0.0.1 GET /static/js/silder.js
+[ info ] gkkblog.com/static/js/silder.js [运行时间：0.078722s][吞吐率：12.70req/s] [内存消耗：2,758.18kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'silder.js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/index/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:54+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php/member/member/login.html
+[ info ] gkkblog.com/index.php/member/member/login.html [运行时间：0.072072s][吞吐率：13.88req/s] [内存消耗：4,674.09kb] [文件加载：57]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'member',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://gkkblog.com/index/index/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\Member->login[ D:\wamp64\www\think\application\member\controller\Member.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/member\view\member\login.html [ array (
+  0 => 'title',
+  1 => 'keywords',
+  2 => 'description',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001099s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_web_config` [ RunTime:0.001284s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_web_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000321s ]
+---------------------------------------------------------------
+[ 2018-05-15T23:08:54+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/css/login.css
+[ info ] gkkblog.com/static/PC/login/css/login.css [运行时间：0.037169s][吞吐率：26.90req/s] [内存消耗：2,758.93kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://gkkblog.com/index.php/member/member/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'css' => 'login.css',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:54+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/js/jquery-2.1.3.min.js
+[ info ] gkkblog.com/static/PC/login/js/jquery-2.1.3.min.js [运行时间：0.038481s][吞吐率：25.99req/s] [内存消耗：2,759.11kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/index.php/member/member/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'js' => 'jquery-2.1.3.min.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:54+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/css/common.css
+[ info ] gkkblog.com/static/PC/login/css/common.css [运行时间：0.073614s][吞吐率：13.58req/s] [内存消耗：2,759.07kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://gkkblog.com/index.php/member/member/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'css' => 'common.css',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:54+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/css/base.css
+[ info ] gkkblog.com/static/PC/login/css/base.css [运行时间：0.099887s][吞吐率：10.01req/s] [内存消耗：2,759.16kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://gkkblog.com/index.php/member/member/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'css' => 'base.css',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:54+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/icon/iconfont.css
+[ info ] gkkblog.com/static/PC/login/icon/iconfont.css [运行时间：0.123509s][吞吐率：8.10req/s] [内存消耗：2,759.09kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://gkkblog.com/index.php/member/member/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'icon' => 'iconfont.css',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:54+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/js/login.js
+[ info ] gkkblog.com/static/PC/login/js/login.js [运行时间：0.138849s][吞吐率：7.20req/s] [内存消耗：2,759.03kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/index.php/member/member/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'js' => 'login.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:54+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/js/login.js
+[ info ] gkkblog.com/static/PC/js/login.js [运行时间：0.129143s][吞吐率：7.74req/s] [内存消耗：2,758.16kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/index.php/member/member/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-15T23:08:54+08:00 ] 127.0.0.1 127.0.0.1 GET /static/PC/login/js/login.js
+[ info ] gkkblog.com/static/PC/login/js/login.js [运行时间：0.050281s][吞吐率：19.89req/s] [内存消耗：2,759.03kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'PC',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/index.php/member/member/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'js' => 'login.js',
+)
+[ info ] [ LOG ] INIT File

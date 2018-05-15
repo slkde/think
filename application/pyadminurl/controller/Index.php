@@ -15,7 +15,7 @@ class Index extends Common
      	// 分配菜单数据
 	    //  $nav_data = Db::name('admin_nav')->order('sort asc')->select(); 
 		//  $nav_data = $this->getTreeData($nav_data,'level');
-		$nav_data = Navs::all()->toArray();
+		$nav_data = Navs::all();
 		// var_dump($nav_data);die;
 
 		//  $nav_data = '';
@@ -83,6 +83,8 @@ class Index extends Common
 		    // $login[] = Db::name('member')->where('last_login_time','between',$first.','.$last)
 			// 								->count();
 											
+			$login[] = User::all()->count();
+
 			$regeister[] = User::all()->count();
 	    }
        

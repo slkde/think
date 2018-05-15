@@ -38,5 +38,16 @@ Route::get('login/captcha','pyadminurl/login/captcha');
 Route::rule('admin/index','pyadminurl/index/index');
 Route::get('admin/index/member','pyadminurl/index/member');
 Route::get('admin/nav','pyadminurl/nav/index');
+
+Route::get('admin/cate/:id','pyadminurl/category/index');
+
+
+
+
+
+
+
+
+
 Route::get('admin/config','pyadminurl/config/index');
 

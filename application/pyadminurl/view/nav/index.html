@@ -4,11 +4,11 @@
 </style>
 
 <!--排序请求链接-->
-<div class="bjui-pageHeader">
+<!-- <div class="bjui-pageHeader">
 	<form id="pagerForm" data-toggle="ajaxsearch" action="{:url('Nav/index')}" method="get">
 	</form>
 	
-</div>
+</div> -->
 
 <div class="bjui-pageContent tableContent">
 	<form name="sortform" data-toggle="ajaxform" action="{:url('Nav/sort')}" method="post">
@@ -19,7 +19,7 @@
 					<th data-order-field="sort" width="50">排序</th>
 					<th >菜单名称</th>
 					<th >菜单链接</th>
-					<th >菜单图标</th>
+					<th >菜单别名</th>
 					<th >操作
                     &nbsp;&nbsp;&nbsp;&nbsp;<a  href="{:url('Nav/add')}" 
 					data-toggle="dialog" class="btn btn-green"
@@ -34,23 +34,23 @@
 
 				{foreach  name ='data' item='v' key='k'}
 				<tr data-id="{$k}">
-					<td>{$v.id}</td>
+					<td>{$v.nav_id}</td>
 					<td>
-						<input type="text" class="ids" name="sort[{$v.id}]" value="{$v.sort}" style="width:100%" />
+						<input type="text" class="ids" name="sort[{$v.nav_id}]" value="{$v.nav_order}" style="width:100%" />
 					</td>
-					<td>{$v._name}</td>
-				    <td>{$v.mca}</td>
-		            <td>{$v.ico}</td>
+					<td>{$v.nav_name}</td>
+				    <td>{$v.nav_url}</td>
+		            <td>{$v.nav_alias}</td>
 					<td>
-						<a href="{:url('Nav/add', ['id' => $v['id']])}" class="btn btn-orange" 
+						<!-- <a href="{:url('Nav/add', ['id' => $v['nav_id']])}" class="btn btn-orange" 
 						data-toggle="dialog"
 						data-id="Nav_add" data-mask="true"
 						data-reload="true" data-width="400"
 						data-height="220" 
 	                    data-on-close="refresh">添加子菜单
-	                    </a>
+	                    </a> -->
 
-					   <a href="{:url('Nav/save',['id' => $v['id']])}" class="btn btn-green" 
+					   <a href="{:url('Nav/save',['id' => $v['nav_id']])}" class="btn btn-green" 
 						data-toggle="dialog"
 						data-id="Nav_save" data-mask="true"
 						data-reload="true" data-width="400"
@@ -59,7 +59,7 @@
 	                   </a>
 
 
-						<a href="{:url('Nav/delete', ['id' => $v['id']])}" class="btn btn-red" data-toggle="doajax" data-confirm-msg="子导航也会永久删除，确定要删除吗？">删除</a>
+						<a href="{:url('Nav/delete', ['id' => $v['nav_id']])}" class="btn btn-red" data-toggle="doajax" data-confirm-msg="子导航也会永久删除，确定要删除吗？">删除</a>
 					</td>
 				</tr>
 				{/foreach}

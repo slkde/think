@@ -8,7 +8,7 @@
 
 <div class="bjui-pageContent">
 	<form action="{:url('Nav/save')}" method="post" data-toggle="ajaxform"  >
-        <input type = "hidden" name = 'id'  value="{$data.id}"/>
+        <input type = "hidden" name = 'nav_id'  value="{$data.nav_id}"/>
 		<table class="table-bordered table-condensed table-hover" width="100%">
 			<tbody>
 				<tr>
@@ -16,7 +16,7 @@
 						<label for="j_custom_number" class="control-label x85">
 								菜单名称：
 							</label>
-						<input type="text" name="name"  value="{$data.name}">
+						<input type="text" name="nav_name"  value="{$data.nav_name}">
 					</td>
 				</tr>
 				<tr>
@@ -24,17 +24,25 @@
 						<label for="j_custom_number" class="control-label x85">
 								菜单链接：
 							</label>
-						<input type="text" name="mca" value="{$data.mca}">
+						<input type="text" name="nav_alias" value="{$data.nav_url}">
 					</td>
 				</tr>
 				<tr>
+					<td>
+						<label for="j_custom_number" class="control-label x85">
+							菜单别名：
+						</label>
+						<input type="text" name="nav_alias" value="{$data.nav_alias}">
+					</td>
+				</tr>
+				<!-- <tr>
 					<td>
 						<label for="j_custom_number" class="control-label x85">
 								菜单图标：
 							</label>
 						<input type="text" name="ico"  value="{$data.ico}"><a target="_blank" href="http://fortawesome.github.io/Font-Awesome/icons/">图标参照</a>
 					</td>
-				</tr>
+				</tr> -->
 
 
  

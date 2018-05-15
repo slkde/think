@@ -161,8 +161,7 @@
                             <ul class="menu-items" data-faicon="" data-tit="分类编辑">
                             
                                 <li>
-                                    <a href="{:url('/admin/nav/')}" data-toggle="navtab" data-options="{ faicon:'caret-right'}" data-fresh="true">分类显示</a>
-                                    <a href="{:url('/admin/nav/')}" data-toggle="navtab" data-options="{ faicon:'caret-right'}" data-fresh="true">分类添加</a>
+                                    <a href="{:url('/admin/nav/')}" data-toggle="navtab" data-options="{ faicon:'caret-right'}" data-fresh="true">分类编辑</a>
                                 </li>
                             
                             </ul>
@@ -171,7 +170,7 @@
                                 {volist name="nav_data" id="vo" }
 
                                     <li>
-                                        <a href="{:url('/admin/index/' .$vo.nav_id)}" data-toggle="navtab" data-options="{ id:'{$vo.nav_id}', faicon:'caret-right'}" data-fresh="true">{$vo.nav_name}</a>
+                                        <a href="{:url('Category/cate', ['nav_id' => $vo.nav_id])}" data-toggle="navtab" data-fresh="true">{$vo.nav_name}</a>
                                     </li>
 
                                 {/volist}

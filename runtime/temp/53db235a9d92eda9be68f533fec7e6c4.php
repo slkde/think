@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:74:"D:\wamp64\www\think\public/../application/pyadminurl\view\index\index.html";i:1526220963;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:74:"D:\wamp64\www\think\public/../application/pyadminurl\view\index\index.html";i:1526389630;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh">
     <head>
@@ -162,8 +162,7 @@
                             <ul class="menu-items" data-faicon="" data-tit="分类编辑">
                             
                                 <li>
-                                    <a href="<?php echo url('/admin/nav/'); ?>" data-toggle="navtab" data-options="{ faicon:'caret-right'}" data-fresh="true">分类显示</a>
-                                    <a href="<?php echo url('/admin/nav/'); ?>" data-toggle="navtab" data-options="{ faicon:'caret-right'}" data-fresh="true">分类添加</a>
+                                    <a href="<?php echo url('/admin/nav/'); ?>" data-toggle="navtab" data-options="{ faicon:'caret-right'}" data-fresh="true">分类编辑</a>
                                 </li>
                             
                             </ul>
@@ -172,7 +171,7 @@
                                 <?php if(is_array($nav_data) || $nav_data instanceof \think\Collection || $nav_data instanceof \think\Paginator): $i = 0; $__LIST__ = $nav_data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
 
                                     <li>
-                                        <a href="<?php echo url('/admin/index/' .$vo['nav_id']); ?>" data-toggle="navtab" data-options="{ id:'<?php echo $vo['nav_id']; ?>', faicon:'caret-right'}" data-fresh="true"><?php echo $vo['nav_name']; ?></a>
+                                        <a href="<?php echo url('Category/cate', ['nav_id' => $vo['nav_id']]); ?>" data-toggle="navtab" data-fresh="true"><?php echo $vo['nav_name']; ?></a>
                                     </li>
 
                                 <?php endforeach; endif; else: echo "" ;endif; ?>

@@ -47,7 +47,8 @@ class Nav extends Common
 			return view();
 		}else{
 			$data = input('post.');
-			if(empty($data['name'])){ $this->errjson('菜单名称不能为空');}
+			unset($data['pid']);
+			if(empty($data['nav_name'])){ $this->errjson('菜单名称不能为空');}
 			$boolean = $this->model->save($data);
 			$boolean ? $this->sucjson('操作成功',1): $this->errjson();
 		}
@@ -61,13 +62,13 @@ class Nav extends Common
 		if(request()->isGet())
 		{
 			$id = input('param.id');
-			$data = $this->model->where('id',$id)->find()->toArray();
+			$data = $this->model->where('nav_id',$id)->find()->toArray();
 			$this->assign('data',$data);
 			return view();
 		}else{
 			$data = input('post.');
-			if(empty($data['name'])){ $this->errjson('菜单名称不能为空');}
-			$boolean = $this->model->data($data)->save($data,['id'=>$data['id']]);
+			if(empty($data['nav_name'])){ $this->errjson('菜单名称不能为空');}
+			$boolean = $this->model->data($data)->save($data,['nav_id'=>$data['id']]);
 			$boolean ? $this->sucjson('操作成功',1): $this->errjson();
 		}
 		
@@ -79,7 +80,7 @@ class Nav extends Common
 	public function delete()
 	{
 			$id = input('param.id');
-			$boolean = $this->model->where('id',$id)->delete();
+			$boolean = $this->model->where('nav_id',$id)->delete();
 			$boolean ? $this->sucjson(): $this->errjson();
 	}
 
@@ -91,8 +92,8 @@ class Nav extends Common
 		$data=input('post.sort/a');
 		$array = [] ;
 		foreach ($data as $k => $v) {
-			$array[$k]['id'] =$k;
-			$array[$k]['sort'] =$v;
+			$array[$k]['nav_id'] =$k;
+			$array[$k]['nav_order'] =$v;
 		}
 		$this->model->saveAll($array);
 		$this->sucjson();

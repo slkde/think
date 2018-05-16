@@ -65,5 +65,9 @@ class Common  extends Controller
 
     }
 
-
+    //返回登陆用户的ID
+    function is_login()
+    { 
+      return  Session::get('user.user_id');
+    }
 }

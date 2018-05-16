@@ -1,0 +1,74 @@
+<style type="text/css">
+	label.control-label {
+		width: 120px;
+	}
+    .bjui-pageFooter > ul > li{ display: inline-block;float:none;text-align:center}
+    .bjui-pageFooter > ul{ text-align: center }
+</style>
+
+<div class="bjui-pageContent">
+	<form action="{:url('Config/switchs')}" method="post" data-toggle="validate">
+       
+		<table class="table-bordered table-condensed table-hover" width="100%">
+			<tbody>
+				{volist name="data" id="v" }
+				<tr>
+					<td>
+						<label for="j_custom_number" class="control-label x85">
+							{$v.conf_title}：
+						</label>
+							<input type="input" name="web"  plaersholder="{$v.conf_title}"	data-toggle="icheck">
+					</td>
+					<td>
+						<label for="j_custom_number" class="control-label x85">
+							{$v.conf_name}：
+						</label>
+						<input type="input" name="web" plaersholder="{$v.conf_name}" data-toggle="icheck">
+					</td>
+					<td>
+						<label for="j_custom_number" class="control-label x85">
+							{$v.conf_content}：
+						</label>
+						<input type="radio" name="web" value='1' {eq name="$data.web" value="1" } checked {/eq} data-toggle="icheck" data-label="开">
+						<input type="radio" name="web" value='0' {eq name="$data.web" value="0" } checked {/eq} data-toggle="icheck" data-label="关">
+					</td>
+					<td>
+						<label for="j_custom_number" class="control-label x85">
+							{$v.conf_order}：
+						</label>
+						<input type="radio" name="web" value='1' {eq name="$data.web" value="1" } checked {/eq} data-toggle="icheck" data-label="开">
+						<input type="radio" name="web" value='0' {eq name="$data.web" value="0" } checked {/eq} data-toggle="icheck" data-label="关">
+					</td>
+					<td>
+						<label for="j_custom_number" class="control-label x85">
+							{$v.conf_tips}：
+						</label>
+						<input type="radio" name="web" value='1' {eq name="$data.web" value="1" } checked {/eq} data-toggle="icheck" data-label="开">
+						<input type="radio" name="web" value='0' {eq name="$data.web" value="0" } checked {/eq} data-toggle="icheck" data-label="关">
+					</td>
+					<td>
+						<label for="j_custom_number" class="control-label x85">
+							{$v.field_type}：
+						</label>
+						<input type="radio" name="web" value='1' {eq name="$data.web" value="1" } checked {/eq} data-toggle="icheck" data-label="开">
+						<input type="radio" name="web" value='0' {eq name="$data.web" value="0" } checked {/eq} data-toggle="icheck" data-label="关">
+					</td>
+					<td>
+						<label for="j_custom_number" class="control-label x85">
+							{$v.field_value}：
+						</label>
+						<input type="radio" name="web" value='1' {eq name="$data.web" value="1" } checked {/eq} data-toggle="icheck" data-label="开">
+						<input type="radio" name="web" value='0' {eq name="$data.web" value="0" } checked {/eq} data-toggle="icheck" data-label="关">
+					</td>
+				</tr>
+				{/volist}
+			</tbody>
+		</table>
+</div>
+<div class="bjui-pageFooter">
+	<ul>
+		<li><button type="submit" class="but btn-blue" data-icon="save">保存</button></li>
+		<li><button type="button" class="btn-close" data-icon="close">取消</button></li>
+	</ul>
+</div>
+</form>

@@ -26,13 +26,13 @@ class Common  extends Controller
       if(empty($this->switchs['web']))
       {
         header("Content-type:text/html;charset=utf8");
-        die("站点暂时关闭！具体开启时间请留意官方QQ群(531563291)");
+        die("站点暂时关闭！具体开启时间请留意官方QQ");
       }
 
       View::share([
-      'title' => config('WEB_NAME').',PUBG饰品交易,CSGO饰品交易,DOTA2饰品交易,购买PUBG饰品，购买DOTA2饰品，购买CSGO饰品，饰品交易，求购PUBG饰品，求购DOTA2饰品，求购CSGO饰品',
-      'keywords' => '绝地求生饰品,csgo饰品,dota2饰品,绝地求生饰品',
-      'description' => config('WEB_NAME').'是全球最大电竞饰品交易平台,提供全球范围DOTA2,CSGO,PUBG饰品交易,机器人自动处理报价,安全快捷高效' ,
+      'title' => config('WEB_NAME'),
+      'keywords' => ' ',
+      'description' => config('WEB_NAME'),
       ]);
 	  
 	  

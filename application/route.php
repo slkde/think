@@ -48,6 +48,6 @@ Route::get('admin/cate/:id','pyadminurl/category/index');
 
 
 
-
+Route::get('admin/links','pyadminurl/links/index');
 Route::get('admin/config','pyadminurl/config/index');
 

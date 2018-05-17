@@ -31226,3 +31226,4637 @@
 [ sql ] [ DB ] CONNECT:[ UseTime:0.001239s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
 [ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.001250s ]
 [ sql ] [ SQL ] SELECT * FROM `blog_config` ORDER BY `conf_order`  asc [ RunTime:0.000573s ]
+---------------------------------------------------------------
+[ 2018-05-16T18:20:38+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/config/?_=1526466038235
+[ info ] gkkblog.com/admin/config/?_=1526466038235 [运行时间：0.094592s][吞吐率：10.57req/s] [内存消耗：5,550.28kb] [文件加载：62]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526466038235',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->index[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002068s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.001300s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` ORDER BY `conf_order`  asc [ RunTime:0.000443s ]
+---------------------------------------------------------------
+[ 2018-05-16T18:20:41+08:00 ] 127.0.0.1 127.0.0.1 GET /pyadminurl/config/save/id/10.html?_=1526466041599
+[ info ] gkkblog.com/pyadminurl/config/save/id/10.html?_=1526466041599 [运行时间：0.077363s][吞吐率：12.93req/s] [内存消耗：5,519.34kb] [文件加载：64]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526466041599',
+  'id' => '10',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\save.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001428s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.001054s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` WHERE  `conf_id` = 10 LIMIT 1 [ RunTime:0.000404s ]
+[ error ] [8]未定义数组索引: ico[D:\wamp64\www\think\runtime\temp\7574213626098149e05b3673f1184175.php:76]
+---------------------------------------------------------------
+[ 2018-05-16T18:20:52+08:00 ] 127.0.0.1 127.0.0.1 POST /pyadminurl/config/save.html
+[ info ] gkkblog.com/pyadminurl/config/save.html [运行时间：0.078130s][吞吐率：12.80req/s] [内存消耗：5,215.13kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'content-length' => '155',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://gkkblog.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0',
+)
+[ info ] [ PARAM ] array (
+  'conf_id' => '10',
+  'conf_name' => '123',
+  'conf_title' => '',
+  'conf_content' => '222',
+  'conf_order' => '0',
+  'field_type' => 'radio',
+  'conf_tips' => '1|开启,2|关闭',
+  'field_value' => '2',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: id[D:\wamp64\www\think\application\pyadminurl\controller\Config.php:76]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001688s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.001135s ]
+[ sql ] [ SQL ] UPDATE `blog_config`  SET `conf_name`='123',`conf_title`='',`conf_content`='222',`conf_order`=0,`field_type`='radio',`conf_tips`='1|开启,2|关闭',`field_value`='2'  WHERE  `conf_id` = 10 [ RunTime:0.003763s ]
+---------------------------------------------------------------
+[ 2018-05-16T18:20:52+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/config/?_=1526466052504
+[ info ] gkkblog.com/admin/config/?_=1526466052504 [运行时间：0.059913s][吞吐率：16.69req/s] [内存消耗：5,285.05kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526466052504',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->index[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001290s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.000840s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` ORDER BY `conf_order`  asc [ RunTime:0.000460s ]
+---------------------------------------------------------------
+[ 2018-05-16T18:20:55+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/config/?_=1526466055687
+[ info ] gkkblog.com/admin/config/?_=1526466055687 [运行时间：0.063734s][吞吐率：15.69req/s] [内存消耗：5,285.05kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526466055687',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->index[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001276s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.000856s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` ORDER BY `conf_order`  asc [ RunTime:0.000452s ]
+---------------------------------------------------------------
+[ 2018-05-16T18:21:00+08:00 ] 127.0.0.1 127.0.0.1 GET /pyadminurl/config/save/id/10.html?_=1526466060715
+[ info ] gkkblog.com/pyadminurl/config/save/id/10.html?_=1526466060715 [运行时间：0.083394s][吞吐率：11.99req/s] [内存消耗：5,266.84kb] [文件加载：62]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526466060715',
+  'id' => '10',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\save.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011172s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.000962s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` WHERE  `conf_id` = 10 LIMIT 1 [ RunTime:0.000470s ]
+[ error ] [8]未定义数组索引: ico[D:\wamp64\www\think\runtime\temp\7574213626098149e05b3673f1184175.php:76]
+---------------------------------------------------------------
+[ 2018-05-16T18:21:04+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/config/?_=1526466064439
+[ info ] gkkblog.com/admin/config/?_=1526466064439 [运行时间：0.077168s][吞吐率：12.96req/s] [内存消耗：5,285.05kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526466064439',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->index[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001555s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.001010s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` ORDER BY `conf_order`  asc [ RunTime:0.000548s ]
+---------------------------------------------------------------
+[ 2018-05-16T18:22:34+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/config/?_=1526466154610
+[ info ] gkkblog.com/admin/config/?_=1526466154610 [运行时间：0.074953s][吞吐率：13.34req/s] [内存消耗：5,550.10kb] [文件加载：62]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526466154610',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->index[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001234s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.000847s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` ORDER BY `conf_order`  asc [ RunTime:0.000432s ]
+---------------------------------------------------------------
+[ 2018-05-16T18:22:39+08:00 ] 127.0.0.1 127.0.0.1 GET /pyadminurl/config/save/id/10.html?_=1526466159196
+[ info ] gkkblog.com/pyadminurl/config/save/id/10.html?_=1526466159196 [运行时间：0.079640s][吞吐率：12.56req/s] [内存消耗：5,266.84kb] [文件加载：62]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526466159196',
+  'id' => '10',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\save.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001343s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.000963s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` WHERE  `conf_id` = 10 LIMIT 1 [ RunTime:0.000358s ]
+[ error ] [8]未定义数组索引: ico[D:\wamp64\www\think\runtime\temp\7574213626098149e05b3673f1184175.php:76]
+---------------------------------------------------------------
+[ 2018-05-16T18:22:43+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/config/?_=1526466163566
+[ info ] gkkblog.com/admin/config/?_=1526466163566 [运行时间：0.066858s][吞吐率：14.96req/s] [内存消耗：5,285.02kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526466163566',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->index[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001300s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.000793s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` ORDER BY `conf_order`  asc [ RunTime:0.000404s ]
+---------------------------------------------------------------
+[ 2018-05-16T18:24:41+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index
+[ info ] gkkblog.com/admin/index [运行时间：0.076901s][吞吐率：13.00req/s] [内存消耗：5,689.68kb] [文件加载：64]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ RUN ] app\pyadminurl\controller\Index->index[ D:\wamp64\www\think\application\pyadminurl\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\index\index.html [ array (
+  0 => 'nav_data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010115s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_navs` [ RunTime:0.000938s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_navs` [ RunTime:0.000342s ]
+---------------------------------------------------------------
+[ 2018-05-16T18:24:41+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/member/.html
+[ info ] gkkblog.com/admin/index/member/.html [运行时间：0.126071s][吞吐率：7.93req/s] [内存消耗：5,285.84kb] [文件加载：58]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'index',
+    2 => 'member',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ RUN ] app\pyadminurl\controller\Index->member[ D:\wamp64\www\think\application\pyadminurl\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001740s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_user` [ RunTime:0.000870s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.000402s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.001441s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.001430s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.000880s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.000397s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.000326s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.000352s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.000326s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.000314s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.000628s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.001353s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.000418s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.000373s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.000328s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.000318s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.000307s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.000314s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.000357s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.000313s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.000303s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.000319s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.000318s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.000315s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.000327s ]
+---------------------------------------------------------------
+[ 2018-05-16T18:24:43+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/config/?_=1526466283739
+[ info ] gkkblog.com/admin/config/?_=1526466283739 [运行时间：0.079049s][吞吐率：12.65req/s] [内存消耗：5,550.14kb] [文件加载：62]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526466283739',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->index[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002869s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.001034s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` ORDER BY `conf_order`  asc [ RunTime:0.000406s ]
+---------------------------------------------------------------
+[ 2018-05-16T18:24:49+08:00 ] 127.0.0.1 127.0.0.1 GET /pyadminurl/config/save/id/10.html?_=1526466289686
+[ info ] gkkblog.com/pyadminurl/config/save/id/10.html?_=1526466289686 [运行时间：0.091306s][吞吐率：10.95req/s] [内存消耗：5,266.84kb] [文件加载：62]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526466289686',
+  'id' => '10',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\save.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012112s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.001042s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` WHERE  `conf_id` = 10 LIMIT 1 [ RunTime:0.000452s ]
+[ error ] [8]未定义数组索引: ico[D:\wamp64\www\think\runtime\temp\7574213626098149e05b3673f1184175.php:76]
+---------------------------------------------------------------
+[ 2018-05-16T18:24:56+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/config/?_=1526466296010
+[ info ] gkkblog.com/admin/config/?_=1526466296010 [运行时间：0.078808s][吞吐率：12.69req/s] [内存消耗：5,285.02kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526466296010',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->index[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001166s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.001024s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` ORDER BY `conf_order`  asc [ RunTime:0.001375s ]
+---------------------------------------------------------------
+[ 2018-05-16T18:25:04+08:00 ] 127.0.0.1 127.0.0.1 GET /pyadminurl/config/add.html?_=1526466304069
+[ info ] gkkblog.com/pyadminurl/config/add.html?_=1526466304069 [运行时间：0.066684s][吞吐率：15.00req/s] [内存消耗：5,386.48kb] [文件加载：61]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526466304069',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->add[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\add.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T18:25:13+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/config/?_=1526466313466
+[ info ] gkkblog.com/admin/config/?_=1526466313466 [运行时间：0.075895s][吞吐率：13.18req/s] [内存消耗：5,285.02kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526466313466',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->index[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011856s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.000873s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` ORDER BY `conf_order`  asc [ RunTime:0.000443s ]
+---------------------------------------------------------------
+[ 2018-05-16T18:25:15+08:00 ] 127.0.0.1 127.0.0.1 GET /pyadminurl/config/save/id/8.html?_=1526466315413
+[ info ] gkkblog.com/pyadminurl/config/save/id/8.html?_=1526466315413 [运行时间：0.077437s][吞吐率：12.91req/s] [内存消耗：5,266.85kb] [文件加载：62]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526466315413',
+  'id' => '8',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\save.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001693s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.003112s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` WHERE  `conf_id` = 8 LIMIT 1 [ RunTime:0.000548s ]
+[ error ] [8]未定义数组索引: ico[D:\wamp64\www\think\runtime\temp\7574213626098149e05b3673f1184175.php:76]
+---------------------------------------------------------------
+[ 2018-05-16T18:25:18+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/config/?_=1526466317972
+[ info ] gkkblog.com/admin/config/?_=1526466317972 [运行时间：0.065804s][吞吐率：15.20req/s] [内存消耗：5,285.02kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526466317972',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->index[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001314s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.001765s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` ORDER BY `conf_order`  asc [ RunTime:0.000483s ]
+---------------------------------------------------------------
+[ 2018-05-16T18:30:59+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ info ] gkkblog.com/ [运行时间：0.083622s][吞吐率：11.96req/s] [内存消耗：5,205.97kb] [文件加载：62]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\wamp64\www\think\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/index\view\index\index.html [ array (
+  0 => 'title',
+  1 => 'keywords',
+  2 => 'description',
+  3 => 'data',
+  4 => 'page',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010377s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_web_config` [ RunTime:0.001444s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_web_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000590s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.001201s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` WHERE  `is_display` = 1 LIMIT 1 [ RunTime:0.000866s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_article` WHERE  `is_display` = 1 LIMIT 0,3 [ RunTime:0.000667s ]
+---------------------------------------------------------------
+[ 2018-05-16T18:30:59+08:00 ] 127.0.0.1 127.0.0.1 GET /static/css/index.css
+[ info ] gkkblog.com/static/css/index.css [运行时间：0.040084s][吞吐率：24.95req/s] [内存消耗：2,768.02kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'index.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://gkkblog.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T18:30:59+08:00 ] 127.0.0.1 127.0.0.1 GET /static/css/base.css
+[ info ] gkkblog.com/static/css/base.css [运行时间：0.040381s][吞吐率：24.76req/s] [内存消耗：2,768.12kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'css',
+    2 => 'base.css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://gkkblog.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T18:30:59+08:00 ] 127.0.0.1 127.0.0.1 GET /static/uploads/1.jpg
+[ info ] gkkblog.com/static/uploads/1.jpg [运行时间：0.042715s][吞吐率：23.41req/s] [内存消耗：2,767.92kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'uploads',
+    2 => '1.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://gkkblog.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T18:30:59+08:00 ] 127.0.0.1 127.0.0.1 GET /static/js/silder.js
+[ info ] gkkblog.com/static/js/silder.js [运行时间：0.048520s][吞吐率：20.61req/s] [内存消耗：2,767.81kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'js',
+    2 => 'silder.js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://gkkblog.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T18:30:59+08:00 ] 127.0.0.1 127.0.0.1 GET /static/uploads/3.jpg
+[ info ] gkkblog.com/static/uploads/3.jpg [运行时间：0.075521s][吞吐率：13.24req/s] [内存消耗：2,767.92kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'uploads',
+    2 => '3.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://gkkblog.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T18:30:59+08:00 ] 127.0.0.1 127.0.0.1 GET /static/uploads/2.jpg
+[ info ] gkkblog.com/static/uploads/2.jpg [运行时间：0.145639s][吞吐率：6.87req/s] [内存消耗：2,767.90kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'uploads',
+    2 => '2.jpg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://gkkblog.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T18:31:04+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index
+[ info ] gkkblog.com/admin/index [运行时间：0.077286s][吞吐率：12.94req/s] [内存消耗：5,409.11kb] [文件加载：62]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ RUN ] app\pyadminurl\controller\Index->index[ D:\wamp64\www\think\application\pyadminurl\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\index\index.html [ array (
+  0 => 'nav_data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001595s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_navs` [ RunTime:0.001108s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_navs` [ RunTime:0.000463s ]
+---------------------------------------------------------------
+[ 2018-05-16T18:31:05+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/member/.html
+[ info ] gkkblog.com/admin/index/member/.html [运行时间：0.102536s][吞吐率：9.75req/s] [内存消耗：5,286.20kb] [文件加载：58]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'index',
+    2 => 'member',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ RUN ] app\pyadminurl\controller\Index->member[ D:\wamp64\www\think\application\pyadminurl\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001276s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_user` [ RunTime:0.000780s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.000285s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.000264s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.000250s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.000245s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.000243s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.000241s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.000294s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.000260s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.000697s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.000409s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.000265s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.000249s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.000247s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.000244s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.000246s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.000240s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.000239s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.000243s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.000238s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.000245s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.000260s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.000242s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.000244s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_user` [ RunTime:0.000250s ]
+---------------------------------------------------------------
+[ 2018-05-16T18:31:07+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/config/?_=1526466667143
+[ info ] gkkblog.com/admin/config/?_=1526466667143 [运行时间：0.079575s][吞吐率：12.57req/s] [内存消耗：5,550.98kb] [文件加载：62]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526466667143',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->index[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001482s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.001120s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` ORDER BY `conf_order`  asc [ RunTime:0.000501s ]
+---------------------------------------------------------------
+[ 2018-05-16T18:31:09+08:00 ] 127.0.0.1 127.0.0.1 GET /pyadminurl/config/save/id/10.html?_=1526466668952
+[ info ] gkkblog.com/pyadminurl/config/save/id/10.html?_=1526466668952 [运行时间：0.081688s][吞吐率：12.24req/s] [内存消耗：5,519.20kb] [文件加载：64]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526466668952',
+  'id' => '10',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\save.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001485s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.000856s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` WHERE  `conf_id` = 10 LIMIT 1 [ RunTime:0.000349s ]
+[ error ] [8]未定义数组索引: ico[D:\wamp64\www\think\runtime\temp\7574213626098149e05b3673f1184175.php:81]
+---------------------------------------------------------------
+[ 2018-05-16T18:31:22+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/config/?_=1526466682027
+[ info ] gkkblog.com/admin/config/?_=1526466682027 [运行时间：0.087537s][吞吐率：11.42req/s] [内存消耗：5,284.95kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526466682027',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->index[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001143s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.000786s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` ORDER BY `conf_order`  asc [ RunTime:0.000363s ]
+---------------------------------------------------------------
+[ 2018-05-16T18:31:23+08:00 ] 127.0.0.1 127.0.0.1 GET /pyadminurl/config/add.html?_=1526466683765
+[ info ] gkkblog.com/pyadminurl/config/add.html?_=1526466683765 [运行时间：0.057407s][吞吐率：17.42req/s] [内存消耗：5,136.57kb] [文件加载：59]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526466683765',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->add[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\add.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T18:31:28+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/config/?_=1526466688601
+[ info ] gkkblog.com/admin/config/?_=1526466688601 [运行时间：0.064506s][吞吐率：15.50req/s] [内存消耗：5,284.95kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526466688601',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->index[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001170s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.000728s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` ORDER BY `conf_order`  asc [ RunTime:0.000355s ]
+---------------------------------------------------------------
+[ 2018-05-16T18:32:07+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/config/?_=1526466727082
+[ info ] gkkblog.com/admin/config/?_=1526466727082 [运行时间：0.082092s][吞吐率：12.18req/s] [内存消耗：5,551.04kb] [文件加载：62]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526466727082',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->index[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001576s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.001186s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` ORDER BY `conf_order`  asc [ RunTime:0.000935s ]
+---------------------------------------------------------------
+[ 2018-05-16T18:32:47+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/config/?_=1526466767649
+[ info ] gkkblog.com/admin/config/?_=1526466767649 [运行时间：0.074758s][吞吐率：13.38req/s] [内存消耗：5,551.04kb] [文件加载：62]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526466767649',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->index[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001317s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.000875s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` ORDER BY `conf_order`  asc [ RunTime:0.000477s ]
+---------------------------------------------------------------
+[ 2018-05-16T18:32:57+08:00 ] 127.0.0.1 127.0.0.1 GET /pyadminurl/config/save/id/10.html?_=1526466777524
+[ info ] gkkblog.com/pyadminurl/config/save/id/10.html?_=1526466777524 [运行时间：0.072816s][吞吐率：13.73req/s] [内存消耗：5,266.76kb] [文件加载：62]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526466777524',
+  'id' => '10',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\save.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002275s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.004056s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` WHERE  `conf_id` = 10 LIMIT 1 [ RunTime:0.000643s ]
+[ error ] [8]未定义数组索引: ico[D:\wamp64\www\think\runtime\temp\7574213626098149e05b3673f1184175.php:81]
+---------------------------------------------------------------
+[ 2018-05-16T18:33:11+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/config/?_=1526466791567
+[ info ] gkkblog.com/admin/config/?_=1526466791567 [运行时间：0.079594s][吞吐率：12.56req/s] [内存消耗：5,284.98kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526466791567',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->index[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001576s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.000849s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` ORDER BY `conf_order`  asc [ RunTime:0.000570s ]
+---------------------------------------------------------------
+[ 2018-05-16T20:32:44+08:00 ] 127.0.0.1 127.0.0.1 GET /pyadminurl/config/save/id/10.html?_=1526473964797
+[ info ] gkkblog.com/pyadminurl/config/save/id/10.html?_=1526473964797 [运行时间：0.136747s][吞吐率：7.31req/s] [内存消耗：5,266.76kb] [文件加载：62]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526473964797',
+  'id' => '10',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\save.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003356s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.002591s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` WHERE  `conf_id` = 10 LIMIT 1 [ RunTime:0.000545s ]
+[ error ] [8]未定义数组索引: ico[D:\wamp64\www\think\runtime\temp\7574213626098149e05b3673f1184175.php:81]
+---------------------------------------------------------------
+[ 2018-05-16T20:32:51+08:00 ] 127.0.0.1 127.0.0.1 POST /pyadminurl/config/save.html
+[ info ] gkkblog.com/pyadminurl/config/save.html [运行时间：0.091639s][吞吐率：10.91req/s] [内存消耗：5,215.73kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'content-length' => '213',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://gkkblog.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'conf_id' => '10',
+  'conf_title' => '',
+  'conf_name' => '123',
+  'conf_content' => '222',
+  'conf_order' => '8',
+  'field_type' => '请选择一个类型',
+  'conf_tips' => '1|开启,2|关闭',
+  'field_value' => '2',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: id[D:\wamp64\www\think\application\pyadminurl\controller\Config.php:76]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001756s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.001481s ]
+[ sql ] [ SQL ] UPDATE `blog_config`  SET `conf_title`='',`conf_name`='123',`conf_content`='222',`conf_order`=8,`field_type`='请选择一个类型',`conf_tips`='1|开启,2|关闭',`field_value`='2'  WHERE  `conf_id` = 10 [ RunTime:0.007108s ]
+---------------------------------------------------------------
+[ 2018-05-16T20:32:52+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/config/?_=1526473972335
+[ info ] gkkblog.com/admin/config/?_=1526473972335 [运行时间：0.081284s][吞吐率：12.30req/s] [内存消耗：5,284.95kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526473972335',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->index[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001545s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.001308s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` ORDER BY `conf_order`  asc [ RunTime:0.001578s ]
+---------------------------------------------------------------
+[ 2018-05-16T20:33:41+08:00 ] 127.0.0.1 127.0.0.1 GET /pyadminurl/config/save/id/10.html?_=1526474021367
+[ info ] gkkblog.com/pyadminurl/config/save/id/10.html?_=1526474021367 [运行时间：0.070296s][吞吐率：14.23req/s] [内存消耗：5,266.76kb] [文件加载：62]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526474021367',
+  'id' => '10',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\save.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003935s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.001023s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` WHERE  `conf_id` = 10 LIMIT 1 [ RunTime:0.000462s ]
+[ error ] [8]未定义数组索引: ico[D:\wamp64\www\think\runtime\temp\7574213626098149e05b3673f1184175.php:81]
+---------------------------------------------------------------
+[ 2018-05-16T20:33:52+08:00 ] 127.0.0.1 127.0.0.1 POST /pyadminurl/config/save.html
+[ info ] gkkblog.com/pyadminurl/config/save.html [运行时间：0.098361s][吞吐率：10.17req/s] [内存消耗：5,215.30kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'content-length' => '155',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://gkkblog.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'conf_id' => '10',
+  'conf_title' => '',
+  'conf_name' => '123',
+  'conf_content' => '222',
+  'conf_order' => '8',
+  'field_type' => 'radio',
+  'conf_tips' => '1|开启,2|关闭',
+  'field_value' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: id[D:\wamp64\www\think\application\pyadminurl\controller\Config.php:76]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001264s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.001009s ]
+[ sql ] [ SQL ] UPDATE `blog_config`  SET `conf_title`='',`conf_name`='123',`conf_content`='222',`conf_order`=8,`field_type`='radio',`conf_tips`='1|开启,2|关闭',`field_value`='1'  WHERE  `conf_id` = 10 [ RunTime:0.005641s ]
+---------------------------------------------------------------
+[ 2018-05-16T20:33:53+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/config/?_=1526474033024
+[ info ] gkkblog.com/admin/config/?_=1526474033024 [运行时间：0.070900s][吞吐率：14.10req/s] [内存消耗：5,284.98kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526474033024',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->index[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010206s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.001143s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` ORDER BY `conf_order`  asc [ RunTime:0.000573s ]
+---------------------------------------------------------------
+[ 2018-05-16T20:34:04+08:00 ] 127.0.0.1 127.0.0.1 GET /pyadminurl/config/save/id/10.html?_=1526474043939
+[ info ] gkkblog.com/pyadminurl/config/save/id/10.html?_=1526474043939 [运行时间：0.070478s][吞吐率：14.19req/s] [内存消耗：5,266.76kb] [文件加载：62]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526474043939',
+  'id' => '10',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\save.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001717s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.001368s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` WHERE  `conf_id` = 10 LIMIT 1 [ RunTime:0.000527s ]
+[ error ] [8]未定义数组索引: ico[D:\wamp64\www\think\runtime\temp\7574213626098149e05b3673f1184175.php:81]
+---------------------------------------------------------------
+[ 2018-05-16T20:34:17+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/config/?_=1526474057296
+[ info ] gkkblog.com/admin/config/?_=1526474057296 [运行时间：0.090416s][吞吐率：11.06req/s] [内存消耗：5,284.98kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526474057296',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->index[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001578s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.001057s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` ORDER BY `conf_order`  asc [ RunTime:0.000501s ]
+---------------------------------------------------------------
+[ 2018-05-16T20:36:33+08:00 ] 127.0.0.1 127.0.0.1 GET /pyadminurl/config/save/id/10.html?_=1526474193413
+[ info ] gkkblog.com/pyadminurl/config/save/id/10.html?_=1526474193413 [运行时间：0.080904s][吞吐率：12.36req/s] [内存消耗：5,267.54kb] [文件加载：62]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526474193413',
+  'id' => '10',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\save.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001742s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.001185s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` WHERE  `conf_id` = 10 LIMIT 1 [ RunTime:0.000512s ]
+[ error ] [8]未定义数组索引: ico[D:\wamp64\www\think\runtime\temp\7574213626098149e05b3673f1184175.php:81]
+---------------------------------------------------------------
+[ 2018-05-16T20:36:41+08:00 ] 127.0.0.1 127.0.0.1 POST /pyadminurl/config/save.html
+[ info ] gkkblog.com/pyadminurl/config/save.html [运行时间：0.058391s][吞吐率：17.13req/s] [内存消耗：4,857.30kb] [文件加载：53]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'content-length' => '216',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://gkkblog.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'conf_id' => '10',
+  'conf_title' => '111',
+  'conf_name' => '123',
+  'conf_content' => '222',
+  'conf_order' => '8',
+  'field_type' => '请选择一个类型',
+  'conf_tips' => '1|开启,2|关闭',
+  'field_value' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T20:37:01+08:00 ] 127.0.0.1 127.0.0.1 POST /pyadminurl/config/save.html
+[ info ] gkkblog.com/pyadminurl/config/save.html [运行时间：0.058802s][吞吐率：17.01req/s] [内存消耗：4,857.30kb] [文件加载：53]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'content-length' => '216',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://gkkblog.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'conf_id' => '10',
+  'conf_title' => '111',
+  'conf_name' => '123',
+  'conf_content' => '222',
+  'conf_order' => '8',
+  'field_type' => '请选择一个类型',
+  'conf_tips' => '1|开启,2|关闭',
+  'field_value' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T20:37:54+08:00 ] 127.0.0.1 127.0.0.1 POST /pyadminurl/config/save.html
+[ info ] gkkblog.com/pyadminurl/config/save.html [运行时间：0.066401s][吞吐率：15.06req/s] [内存消耗：4,857.30kb] [文件加载：53]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'content-length' => '216',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://gkkblog.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'conf_id' => '10',
+  'conf_title' => '111',
+  'conf_name' => '222',
+  'conf_content' => '222',
+  'conf_order' => '8',
+  'field_type' => '请选择一个类型',
+  'conf_tips' => '1|开启,2|关闭',
+  'field_value' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T20:38:00+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/config/?_=1526474280436
+[ info ] gkkblog.com/admin/config/?_=1526474280436 [运行时间：0.077125s][吞吐率：12.97req/s] [内存消耗：5,285.80kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526474280436',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->index[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005602s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.001351s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` ORDER BY `conf_order`  asc [ RunTime:0.000501s ]
+---------------------------------------------------------------
+[ 2018-05-16T20:38:04+08:00 ] 127.0.0.1 127.0.0.1 GET /pyadminurl/config/save/id/10.html?_=1526474284668
+[ info ] gkkblog.com/pyadminurl/config/save/id/10.html?_=1526474284668 [运行时间：0.073894s][吞吐率：13.53req/s] [内存消耗：5,267.54kb] [文件加载：62]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526474284668',
+  'id' => '10',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\save.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002007s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.001524s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` WHERE  `conf_id` = 10 LIMIT 1 [ RunTime:0.000699s ]
+[ error ] [8]未定义数组索引: ico[D:\wamp64\www\think\runtime\temp\7574213626098149e05b3673f1184175.php:81]
+---------------------------------------------------------------
+[ 2018-05-16T20:38:10+08:00 ] 127.0.0.1 127.0.0.1 POST /pyadminurl/config/save.html
+[ info ] gkkblog.com/pyadminurl/config/save.html [运行时间：0.063427s][吞吐率：15.77req/s] [内存消耗：4,857.31kb] [文件加载：53]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'content-length' => '215',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://gkkblog.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'conf_id' => '10',
+  'conf_title' => '22',
+  'conf_name' => '123',
+  'conf_content' => '222',
+  'conf_order' => '8',
+  'field_type' => '请选择一个类型',
+  'conf_tips' => '1|开启,2|关闭',
+  'field_value' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T20:38:13+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/config/?_=1526474293906
+[ info ] gkkblog.com/admin/config/?_=1526474293906 [运行时间：0.067643s][吞吐率：14.78req/s] [内存消耗：5,285.80kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526474293906',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->index[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001557s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.000865s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` ORDER BY `conf_order`  asc [ RunTime:0.000411s ]
+---------------------------------------------------------------
+[ 2018-05-16T20:38:52+08:00 ] 127.0.0.1 127.0.0.1 GET /pyadminurl/config/save/id/10.html?_=1526474332166
+[ info ] gkkblog.com/pyadminurl/config/save/id/10.html?_=1526474332166 [运行时间：0.089575s][吞吐率：11.16req/s] [内存消耗：5,267.54kb] [文件加载：62]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526474332166',
+  'id' => '10',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\save.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011613s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.003916s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` WHERE  `conf_id` = 10 LIMIT 1 [ RunTime:0.000597s ]
+[ error ] [8]未定义数组索引: ico[D:\wamp64\www\think\runtime\temp\7574213626098149e05b3673f1184175.php:81]
+---------------------------------------------------------------
+[ 2018-05-16T20:38:56+08:00 ] 127.0.0.1 127.0.0.1 POST /pyadminurl/config/save.html
+[ info ] gkkblog.com/pyadminurl/config/save.html [运行时间：0.050105s][吞吐率：19.96req/s] [内存消耗：4,857.30kb] [文件加载：53]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'content-length' => '216',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://gkkblog.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'conf_id' => '10',
+  'conf_title' => '111',
+  'conf_name' => '123',
+  'conf_content' => '222',
+  'conf_order' => '8',
+  'field_type' => '请选择一个类型',
+  'conf_tips' => '1|开启,2|关闭',
+  'field_value' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T20:39:00+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/config/?_=1526474340267
+[ info ] gkkblog.com/admin/config/?_=1526474340267 [运行时间：0.071783s][吞吐率：13.93req/s] [内存消耗：5,285.80kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526474340267',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->index[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001799s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.001237s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` ORDER BY `conf_order`  asc [ RunTime:0.001520s ]
+---------------------------------------------------------------
+[ 2018-05-16T20:40:08+08:00 ] 127.0.0.1 127.0.0.1 GET /pyadminurl/config/save/id/10.html?_=1526474408700
+[ info ] gkkblog.com/pyadminurl/config/save/id/10.html?_=1526474408700 [运行时间：0.078845s][吞吐率：12.68req/s] [内存消耗：5,268.14kb] [文件加载：62]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526474408700',
+  'id' => '10',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\save.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009991s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.000888s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` WHERE  `conf_id` = 10 LIMIT 1 [ RunTime:0.000443s ]
+[ error ] [8]未定义数组索引: ico[D:\wamp64\www\think\runtime\temp\7574213626098149e05b3673f1184175.php:81]
+---------------------------------------------------------------
+[ 2018-05-16T20:40:10+08:00 ] 127.0.0.1 127.0.0.1 POST /pyadminurl/config/save.html
+[ info ] gkkblog.com/pyadminurl/config/save.html [运行时间：0.049328s][吞吐率：20.27req/s] [内存消耗：4,858.59kb] [文件加载：53]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'content-length' => '213',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://gkkblog.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'conf_id' => '10',
+  'conf_title' => '',
+  'conf_name' => '123',
+  'conf_content' => '222',
+  'conf_order' => '8',
+  'field_type' => '请选择一个类型',
+  'conf_tips' => '1|开启,2|关闭',
+  'field_value' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T20:40:41+08:00 ] 127.0.0.1 127.0.0.1 POST /pyadminurl/config/save.html
+[ info ] gkkblog.com/pyadminurl/config/save.html [运行时间：0.050494s][吞吐率：19.80req/s] [内存消耗：4,858.68kb] [文件加载：53]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'content-length' => '216',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://gkkblog.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'conf_id' => '10',
+  'conf_title' => '222',
+  'conf_name' => '123',
+  'conf_content' => '222',
+  'conf_order' => '8',
+  'field_type' => '请选择一个类型',
+  'conf_tips' => '1|开启,2|关闭',
+  'field_value' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T20:40:45+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/config/?_=1526474445241
+[ info ] gkkblog.com/admin/config/?_=1526474445241 [运行时间：0.079961s][吞吐率：12.51req/s] [内存消耗：5,286.40kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526474445241',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->index[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011842s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.001129s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` ORDER BY `conf_order`  asc [ RunTime:0.000701s ]
+---------------------------------------------------------------
+[ 2018-05-16T20:40:57+08:00 ] 127.0.0.1 127.0.0.1 GET /pyadminurl/config/save/id/10.html?_=1526474457342
+[ info ] gkkblog.com/pyadminurl/config/save/id/10.html?_=1526474457342 [运行时间：0.070746s][吞吐率：14.14req/s] [内存消耗：5,268.19kb] [文件加载：62]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526474457342',
+  'id' => '10',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\save.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002162s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.001734s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` WHERE  `conf_id` = 10 LIMIT 1 [ RunTime:0.000410s ]
+[ error ] [8]未定义数组索引: ico[D:\wamp64\www\think\runtime\temp\7574213626098149e05b3673f1184175.php:81]
+---------------------------------------------------------------
+[ 2018-05-16T20:41:01+08:00 ] 127.0.0.1 127.0.0.1 POST /pyadminurl/config/save.html
+[ info ] gkkblog.com/pyadminurl/config/save.html [运行时间：0.051416s][吞吐率：19.45req/s] [内存消耗：4,857.48kb] [文件加载：53]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'content-length' => '217',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://gkkblog.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'conf_id' => '10',
+  'conf_title' => '2222',
+  'conf_name' => '123',
+  'conf_content' => '222',
+  'conf_order' => '8',
+  'field_type' => '请选择一个类型',
+  'conf_tips' => '1|开启,2|关闭',
+  'field_value' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T20:41:06+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/config/?_=1526474466865
+[ info ] gkkblog.com/admin/config/?_=1526474466865 [运行时间：0.067178s][吞吐率：14.89req/s] [内存消耗：5,286.30kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526474466865',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->index[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001422s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.000879s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` ORDER BY `conf_order`  asc [ RunTime:0.000543s ]
+---------------------------------------------------------------
+[ 2018-05-16T20:41:39+08:00 ] 127.0.0.1 127.0.0.1 GET /pyadminurl/config/save/id/10.html?_=1526474499388
+[ info ] gkkblog.com/pyadminurl/config/save/id/10.html?_=1526474499388 [运行时间：0.084823s][吞吐率：11.79req/s] [内存消耗：5,268.19kb] [文件加载：62]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526474499388',
+  'id' => '10',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\save.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010593s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.001310s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` WHERE  `conf_id` = 10 LIMIT 1 [ RunTime:0.000551s ]
+[ error ] [8]未定义数组索引: ico[D:\wamp64\www\think\runtime\temp\7574213626098149e05b3673f1184175.php:81]
+---------------------------------------------------------------
+[ 2018-05-16T20:41:42+08:00 ] 127.0.0.1 127.0.0.1 POST /pyadminurl/config/save.html
+[ info ] gkkblog.com/pyadminurl/config/save.html [运行时间：0.054174s][吞吐率：18.46req/s] [内存消耗：4,858.73kb] [文件加载：53]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'content-length' => '216',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://gkkblog.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'conf_id' => '10',
+  'conf_title' => '222',
+  'conf_name' => '123',
+  'conf_content' => '222',
+  'conf_order' => '8',
+  'field_type' => '请选择一个类型',
+  'conf_tips' => '1|开启,2|关闭',
+  'field_value' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T20:41:52+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/config/?_=1526474511947
+[ info ] gkkblog.com/admin/config/?_=1526474511947 [运行时间：0.072436s][吞吐率：13.81req/s] [内存消耗：5,286.30kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526474511947',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->index[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001632s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.001037s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` ORDER BY `conf_order`  asc [ RunTime:0.000592s ]
+---------------------------------------------------------------
+[ 2018-05-16T20:41:53+08:00 ] 127.0.0.1 127.0.0.1 GET /pyadminurl/config/save/id/10.html?_=1526474513206
+[ info ] gkkblog.com/pyadminurl/config/save/id/10.html?_=1526474513206 [运行时间：0.074237s][吞吐率：13.47req/s] [内存消耗：5,268.19kb] [文件加载：62]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526474513206',
+  'id' => '10',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\save.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001159s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.000767s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` WHERE  `conf_id` = 10 LIMIT 1 [ RunTime:0.000340s ]
+[ error ] [8]未定义数组索引: ico[D:\wamp64\www\think\runtime\temp\7574213626098149e05b3673f1184175.php:81]
+---------------------------------------------------------------
+[ 2018-05-16T20:41:54+08:00 ] 127.0.0.1 127.0.0.1 POST /pyadminurl/config/save.html
+[ info ] gkkblog.com/pyadminurl/config/save.html [运行时间：0.056784s][吞吐率：17.61req/s] [内存消耗：4,858.51kb] [文件加载：53]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'content-length' => '213',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://gkkblog.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'conf_id' => '10',
+  'conf_title' => '',
+  'conf_name' => '123',
+  'conf_content' => '222',
+  'conf_order' => '8',
+  'field_type' => '请选择一个类型',
+  'conf_tips' => '1|开启,2|关闭',
+  'field_value' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T20:42:16+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/config/?_=1526474536930
+[ info ] gkkblog.com/admin/config/?_=1526474536930 [运行时间：0.063437s][吞吐率：15.76req/s] [内存消耗：5,286.30kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526474536930',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->index[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001166s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.000771s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` ORDER BY `conf_order`  asc [ RunTime:0.000434s ]
+---------------------------------------------------------------
+[ 2018-05-16T20:42:17+08:00 ] 127.0.0.1 127.0.0.1 GET /pyadminurl/config/save/id/10.html?_=1526474537868
+[ info ] gkkblog.com/pyadminurl/config/save/id/10.html?_=1526474537868 [运行时间：0.078824s][吞吐率：12.69req/s] [内存消耗：5,268.19kb] [文件加载：62]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526474537868',
+  'id' => '10',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\save.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001582s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.000995s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` WHERE  `conf_id` = 10 LIMIT 1 [ RunTime:0.000466s ]
+[ error ] [8]未定义数组索引: ico[D:\wamp64\www\think\runtime\temp\7574213626098149e05b3673f1184175.php:81]
+---------------------------------------------------------------
+[ 2018-05-16T20:42:21+08:00 ] 127.0.0.1 127.0.0.1 POST /pyadminurl/config/save.html
+[ info ] gkkblog.com/pyadminurl/config/save.html [运行时间：0.055225s][吞吐率：18.11req/s] [内存消耗：4,858.73kb] [文件加载：53]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'content-length' => '216',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://gkkblog.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'conf_id' => '10',
+  'conf_title' => '111',
+  'conf_name' => '123',
+  'conf_content' => '222',
+  'conf_order' => '8',
+  'field_type' => '请选择一个类型',
+  'conf_tips' => '1|开启,2|关闭',
+  'field_value' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T20:42:26+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/config/?_=1526474546721
+[ info ] gkkblog.com/admin/config/?_=1526474546721 [运行时间：0.074149s][吞吐率：13.49req/s] [内存消耗：5,286.30kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526474546721',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->index[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001685s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.004733s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` ORDER BY `conf_order`  asc [ RunTime:0.000596s ]
+---------------------------------------------------------------
+[ 2018-05-16T20:42:40+08:00 ] 127.0.0.1 127.0.0.1 GET /pyadminurl/config/save/id/10.html?_=1526474560083
+[ info ] gkkblog.com/pyadminurl/config/save/id/10.html?_=1526474560083 [运行时间：0.076644s][吞吐率：13.05req/s] [内存消耗：5,267.54kb] [文件加载：62]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526474560083',
+  'id' => '10',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\save.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002828s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.001244s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` WHERE  `conf_id` = 10 LIMIT 1 [ RunTime:0.000584s ]
+[ error ] [8]未定义数组索引: ico[D:\wamp64\www\think\runtime\temp\7574213626098149e05b3673f1184175.php:81]
+---------------------------------------------------------------
+[ 2018-05-16T20:42:42+08:00 ] 127.0.0.1 127.0.0.1 POST /pyadminurl/config/save.html
+[ info ] gkkblog.com/pyadminurl/config/save.html [运行时间：0.073346s][吞吐率：13.63req/s] [内存消耗：5,216.57kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'content-length' => '216',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://gkkblog.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'conf_id' => '10',
+  'conf_title' => '111',
+  'conf_name' => '123',
+  'conf_content' => '222',
+  'conf_order' => '8',
+  'field_type' => '请选择一个类型',
+  'conf_tips' => '1|开启,2|关闭',
+  'field_value' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: id[D:\wamp64\www\think\application\pyadminurl\controller\Config.php:82]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001429s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.000774s ]
+[ sql ] [ SQL ] UPDATE `blog_config`  SET `conf_title`='111',`conf_name`='123',`conf_content`='222',`conf_order`=8,`field_type`='请选择一个类型',`conf_tips`='1|开启,2|关闭',`field_value`='1'  WHERE  `conf_id` = 10 [ RunTime:0.003792s ]
+---------------------------------------------------------------
+[ 2018-05-16T20:42:43+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/config/?_=1526474563338
+[ info ] gkkblog.com/admin/config/?_=1526474563338 [运行时间：0.069151s][吞吐率：14.46req/s] [内存消耗：5,285.86kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526474563338',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->index[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001395s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.000803s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` ORDER BY `conf_order`  asc [ RunTime:0.001687s ]
+---------------------------------------------------------------
+[ 2018-05-16T20:42:51+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/config/?_=1526474571695
+[ info ] gkkblog.com/admin/config/?_=1526474571695 [运行时间：0.069451s][吞吐率：14.40req/s] [内存消耗：5,285.86kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526474571695',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->index[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001359s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.000755s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` ORDER BY `conf_order`  asc [ RunTime:0.000416s ]
+---------------------------------------------------------------
+[ 2018-05-16T20:42:53+08:00 ] 127.0.0.1 127.0.0.1 GET /pyadminurl/config/save/id/10.html?_=1526474573388
+[ info ] gkkblog.com/pyadminurl/config/save/id/10.html?_=1526474573388 [运行时间：0.068601s][吞吐率：14.58req/s] [内存消耗：5,267.54kb] [文件加载：62]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526474573388',
+  'id' => '10',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\save.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001506s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.001221s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` WHERE  `conf_id` = 10 LIMIT 1 [ RunTime:0.000648s ]
+[ error ] [8]未定义数组索引: ico[D:\wamp64\www\think\runtime\temp\7574213626098149e05b3673f1184175.php:81]
+---------------------------------------------------------------
+[ 2018-05-16T20:43:01+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/config/?_=1526474581587
+[ info ] gkkblog.com/admin/config/?_=1526474581587 [运行时间：0.076901s][吞吐率：13.00req/s] [内存消耗：5,285.86kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526474581587',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->index[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002593s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.000889s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` ORDER BY `conf_order`  asc [ RunTime:0.000503s ]
+---------------------------------------------------------------
+[ 2018-05-16T20:43:37+08:00 ] 127.0.0.1 127.0.0.1 GET /pyadminurl/config/save/id/10.html?_=1526474617654
+[ info ] gkkblog.com/pyadminurl/config/save/id/10.html?_=1526474617654 [运行时间：0.085628s][吞吐率：11.68req/s] [内存消耗：5,268.20kb] [文件加载：62]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526474617654',
+  'id' => '10',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\save.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001708s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.001163s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` WHERE  `conf_id` = 10 LIMIT 1 [ RunTime:0.001049s ]
+[ error ] [8]未定义数组索引: ico[D:\wamp64\www\think\runtime\temp\7574213626098149e05b3673f1184175.php:81]
+---------------------------------------------------------------
+[ 2018-05-16T20:43:42+08:00 ] 127.0.0.1 127.0.0.1 POST /pyadminurl/config/save.html
+[ info ] gkkblog.com/pyadminurl/config/save.html [运行时间：0.067413s][吞吐率：14.83req/s] [内存消耗：4,858.73kb] [文件加载：53]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'content-length' => '216',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://gkkblog.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'conf_id' => '10',
+  'conf_title' => '111',
+  'conf_name' => '123',
+  'conf_content' => '222',
+  'conf_order' => '8',
+  'field_type' => '请选择一个类型',
+  'conf_tips' => '1|开启,2|关闭',
+  'field_value' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T20:43:51+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/config/?_=1526474631432
+[ info ] gkkblog.com/admin/config/?_=1526474631432 [运行时间：0.076459s][吞吐率：13.08req/s] [内存消耗：5,286.33kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526474631432',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->index[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001168s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.000721s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` ORDER BY `conf_order`  asc [ RunTime:0.000409s ]
+---------------------------------------------------------------
+[ 2018-05-16T20:44:19+08:00 ] 127.0.0.1 127.0.0.1 GET /pyadminurl/config/save/id/10.html?_=1526474659677
+[ info ] gkkblog.com/pyadminurl/config/save/id/10.html?_=1526474659677 [运行时间：0.075830s][吞吐率：13.19req/s] [内存消耗：5,520.88kb] [文件加载：64]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526474659677',
+  'id' => '10',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\save.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001167s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.000755s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` WHERE  `conf_id` = 10 LIMIT 1 [ RunTime:0.000350s ]
+[ error ] [8]未定义数组索引: ico[D:\wamp64\www\think\runtime\temp\7574213626098149e05b3673f1184175.php:81]
+---------------------------------------------------------------
+[ 2018-05-16T20:44:23+08:00 ] 127.0.0.1 127.0.0.1 POST /pyadminurl/config/save.html
+[ info ] gkkblog.com/pyadminurl/config/save.html [运行时间：0.052151s][吞吐率：19.18req/s] [内存消耗：4,858.12kb] [文件加载：53]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'content-length' => '153',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://gkkblog.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'conf_id' => '10',
+  'conf_title' => '111',
+  'conf_name' => '123',
+  'conf_content' => '222',
+  'conf_order' => '8',
+  'field_type' => '',
+  'conf_tips' => '1|开启,2|关闭',
+  'field_value' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-16T20:44:41+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/config/?_=1526474681737
+[ info ] gkkblog.com/admin/config/?_=1526474681737 [运行时间：0.073492s][吞吐率：13.61req/s] [内存消耗：5,286.33kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526474681737',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->index[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001553s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.001151s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` ORDER BY `conf_order`  asc [ RunTime:0.000456s ]
+---------------------------------------------------------------
+[ 2018-05-16T20:45:06+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/config/?_=1526474706892
+[ info ] gkkblog.com/admin/config/?_=1526474706892 [运行时间：0.099401s][吞吐率：10.06req/s] [内存消耗：5,285.86kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526474706892',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->index[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002161s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.001285s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` ORDER BY `conf_order`  asc [ RunTime:0.000805s ]
+---------------------------------------------------------------
+[ 2018-05-16T20:45:09+08:00 ] 127.0.0.1 127.0.0.1 GET /pyadminurl/config/save/id/10.html?_=1526474709051
+[ info ] gkkblog.com/pyadminurl/config/save/id/10.html?_=1526474709051 [运行时间：0.069006s][吞吐率：14.49req/s] [内存消耗：5,267.49kb] [文件加载：62]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526474709051',
+  'id' => '10',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\save.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001252s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.004509s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` WHERE  `conf_id` = 10 LIMIT 1 [ RunTime:0.000422s ]
+[ error ] [8]未定义数组索引: ico[D:\wamp64\www\think\runtime\temp\7574213626098149e05b3673f1184175.php:81]
+---------------------------------------------------------------
+[ 2018-05-16T20:45:13+08:00 ] 127.0.0.1 127.0.0.1 POST /pyadminurl/config/save.html
+[ info ] gkkblog.com/pyadminurl/config/save.html [运行时间：0.067883s][吞吐率：14.73req/s] [内存消耗：5,216.22kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'content-length' => '158',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://gkkblog.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'conf_id' => '10',
+  'conf_title' => '111',
+  'conf_name' => '123',
+  'conf_content' => '222',
+  'conf_order' => '8',
+  'field_type' => 'radio',
+  'conf_tips' => '1|开启,2|关闭',
+  'field_value' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: id[D:\wamp64\www\think\application\pyadminurl\controller\Config.php:82]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001494s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.000941s ]
+[ sql ] [ SQL ] UPDATE `blog_config`  SET `conf_title`='111',`conf_name`='123',`conf_content`='222',`conf_order`=8,`field_type`='radio',`conf_tips`='1|开启,2|关闭',`field_value`='1'  WHERE  `conf_id` = 10 [ RunTime:0.006367s ]
+---------------------------------------------------------------
+[ 2018-05-16T20:45:13+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/config/?_=1526474713724
+[ info ] gkkblog.com/admin/config/?_=1526474713724 [运行时间：0.066471s][吞吐率：15.04req/s] [内存消耗：5,285.80kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526474713724',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->index[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001365s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.001034s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` ORDER BY `conf_order`  asc [ RunTime:0.000487s ]
+---------------------------------------------------------------
+[ 2018-05-16T20:45:17+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/config/?_=1526474716927
+[ info ] gkkblog.com/admin/config/?_=1526474716927 [运行时间：0.075775s][吞吐率：13.20req/s] [内存消耗：5,285.80kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526474716927',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->index[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011989s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.000774s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` ORDER BY `conf_order`  asc [ RunTime:0.000412s ]
+---------------------------------------------------------------
+[ 2018-05-16T20:45:18+08:00 ] 127.0.0.1 127.0.0.1 GET /pyadminurl/config/save/id/10.html?_=1526474718642
+[ info ] gkkblog.com/pyadminurl/config/save/id/10.html?_=1526474718642 [运行时间：0.083145s][吞吐率：12.03req/s] [内存消耗：5,267.49kb] [文件加载：62]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526474718642',
+  'id' => '10',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\save.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002928s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.000860s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` WHERE  `conf_id` = 10 LIMIT 1 [ RunTime:0.000472s ]
+[ error ] [8]未定义数组索引: ico[D:\wamp64\www\think\runtime\temp\7574213626098149e05b3673f1184175.php:81]
+---------------------------------------------------------------
+[ 2018-05-16T20:45:24+08:00 ] 127.0.0.1 127.0.0.1 POST /pyadminurl/config/save.html
+[ info ] gkkblog.com/pyadminurl/config/save.html [运行时间：0.091808s][吞吐率：10.89req/s] [内存消耗：5,214.77kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'content-length' => '153',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://gkkblog.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'conf_id' => '10',
+  'conf_title' => '111',
+  'conf_name' => '123',
+  'conf_content' => '222',
+  'conf_order' => '8',
+  'field_type' => '',
+  'conf_tips' => '1|开启,2|关闭',
+  'field_value' => '2',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: id[D:\wamp64\www\think\application\pyadminurl\controller\Config.php:82]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012939s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.000737s ]
+[ sql ] [ SQL ] UPDATE `blog_config`  SET `conf_title`='111',`conf_name`='123',`conf_content`='222',`conf_order`=8,`conf_tips`='1|开启,2|关闭',`field_value`='2'  WHERE  `conf_id` = 10 [ RunTime:0.004641s ]
+---------------------------------------------------------------
+[ 2018-05-16T20:45:24+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/config/?_=1526474724705
+[ info ] gkkblog.com/admin/config/?_=1526474724705 [运行时间：0.065397s][吞吐率：15.29req/s] [内存消耗：5,285.80kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526474724705',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->index[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001485s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.001003s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` ORDER BY `conf_order`  asc [ RunTime:0.000398s ]
+---------------------------------------------------------------
+[ 2018-05-16T20:45:28+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/config/?_=1526474728279
+[ info ] gkkblog.com/admin/config/?_=1526474728279 [运行时间：0.070193s][吞吐率：14.25req/s] [内存消耗：5,285.80kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526474728279',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->index[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001708s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.001182s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` ORDER BY `conf_order`  asc [ RunTime:0.000485s ]
+---------------------------------------------------------------
+[ 2018-05-16T20:45:31+08:00 ] 127.0.0.1 127.0.0.1 GET /pyadminurl/config/save/id/3.html?_=1526474731204
+[ info ] gkkblog.com/pyadminurl/config/save/id/3.html?_=1526474731204 [运行时间：0.072186s][吞吐率：13.85req/s] [内存消耗：5,267.53kb] [文件加载：62]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526474731204',
+  'id' => '3',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\save.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001136s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.000719s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` WHERE  `conf_id` = 3 LIMIT 1 [ RunTime:0.000432s ]
+[ error ] [8]未定义数组索引: ico[D:\wamp64\www\think\runtime\temp\7574213626098149e05b3673f1184175.php:81]
+---------------------------------------------------------------
+[ 2018-05-16T20:45:39+08:00 ] 127.0.0.1 127.0.0.1 POST /pyadminurl/config/save.html
+[ info ] gkkblog.com/pyadminurl/config/save.html [运行时间：0.077688s][吞吐率：12.87req/s] [内存消耗：5,215.41kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'content-length' => '216',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://gkkblog.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'conf_id' => '3',
+  'conf_title' => '网站状态',
+  'conf_name' => 'web_status',
+  'conf_content' => '奥不好',
+  'conf_order' => '2',
+  'field_type' => '',
+  'conf_tips' => '1|开启,0|关闭',
+  'field_value' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: id[D:\wamp64\www\think\application\pyadminurl\controller\Config.php:82]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003117s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.001897s ]
+[ sql ] [ SQL ] UPDATE `blog_config`  SET `conf_title`='网站状态',`conf_name`='web_status',`conf_content`='奥不好',`conf_order`=2,`conf_tips`='1|开启,0|关闭',`field_value`='1'  WHERE  `conf_id` = 3 [ RunTime:0.002082s ]
+---------------------------------------------------------------
+[ 2018-05-16T20:45:40+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/config/?_=1526474739988
+[ info ] gkkblog.com/admin/config/?_=1526474739988 [运行时间：0.076174s][吞吐率：13.13req/s] [内存消耗：5,285.80kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526474739988',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->index[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001493s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.002641s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` ORDER BY `conf_order`  asc [ RunTime:0.000620s ]
+---------------------------------------------------------------
+[ 2018-05-16T20:45:43+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/config/?_=1526474743502
+[ info ] gkkblog.com/admin/config/?_=1526474743502 [运行时间：0.075687s][吞吐率：13.21req/s] [内存消耗：5,285.80kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526474743502',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->index[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010631s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.001189s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` ORDER BY `conf_order`  asc [ RunTime:0.000622s ]
+---------------------------------------------------------------
+[ 2018-05-16T20:45:45+08:00 ] 127.0.0.1 127.0.0.1 GET /pyadminurl/config/save/id/3.html?_=1526474745502
+[ info ] gkkblog.com/pyadminurl/config/save/id/3.html?_=1526474745502 [运行时间：0.082684s][吞吐率：12.09req/s] [内存消耗：5,267.53kb] [文件加载：62]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526474745502',
+  'id' => '3',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\save.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011507s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.001584s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` WHERE  `conf_id` = 3 LIMIT 1 [ RunTime:0.000437s ]
+[ error ] [8]未定义数组索引: ico[D:\wamp64\www\think\runtime\temp\7574213626098149e05b3673f1184175.php:81]
+---------------------------------------------------------------
+[ 2018-05-16T20:45:48+08:00 ] 127.0.0.1 127.0.0.1 POST /pyadminurl/config/save.html
+[ info ] gkkblog.com/pyadminurl/config/save.html [运行时间：0.066245s][吞吐率：15.10req/s] [内存消耗：5,213.92kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'content-length' => '216',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://gkkblog.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'conf_id' => '3',
+  'conf_title' => '网站状态',
+  'conf_name' => 'web_status',
+  'conf_content' => '奥不好',
+  'conf_order' => '2',
+  'field_type' => '',
+  'conf_tips' => '1|开启,0|关闭',
+  'field_value' => '0',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: id[D:\wamp64\www\think\application\pyadminurl\controller\Config.php:82]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001174s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.000774s ]
+[ sql ] [ SQL ] UPDATE `blog_config`  SET `conf_title`='网站状态',`conf_name`='web_status',`conf_content`='奥不好',`conf_order`=2,`conf_tips`='1|开启,0|关闭'  WHERE  `conf_id` = 3 [ RunTime:0.003062s ]
+---------------------------------------------------------------
+[ 2018-05-16T20:46:09+08:00 ] 127.0.0.1 127.0.0.1 POST /pyadminurl/config/save.html
+[ info ] gkkblog.com/pyadminurl/config/save.html [运行时间：0.078158s][吞吐率：12.79req/s] [内存消耗：5,215.41kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'save',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'content-length' => '216',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://gkkblog.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'conf_id' => '3',
+  'conf_title' => '网站状态',
+  'conf_name' => 'web_status',
+  'conf_content' => '奥不好',
+  'conf_order' => '2',
+  'field_type' => '',
+  'conf_tips' => '1|开启,2|关闭',
+  'field_value' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->save[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: id[D:\wamp64\www\think\application\pyadminurl\controller\Config.php:82]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001604s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.001035s ]
+[ sql ] [ SQL ] UPDATE `blog_config`  SET `conf_title`='网站状态',`conf_name`='web_status',`conf_content`='奥不好',`conf_order`=2,`conf_tips`='1|开启,2|关闭',`field_value`='1'  WHERE  `conf_id` = 3 [ RunTime:0.004452s ]
+---------------------------------------------------------------
+[ 2018-05-16T20:46:09+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/config/?_=1526474769534
+[ info ] gkkblog.com/admin/config/?_=1526474769534 [运行时间：0.064089s][吞吐率：15.60req/s] [内存消耗：5,285.80kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526474769534',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->index[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001434s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.000854s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` ORDER BY `conf_order`  asc [ RunTime:0.000373s ]
+---------------------------------------------------------------
+[ 2018-05-16T20:55:26+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/config/?_=1526475326712
+[ info ] gkkblog.com/admin/config/?_=1526475326712 [运行时间：0.066701s][吞吐率：14.99req/s] [内存消耗：5,285.80kb] [文件加载：60]
+[ info ] [ LANG ] D:\wamp64\www\think\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'pyadminurl',
+    1 => 'config',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'gkkblog.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36',
+  'referer' => 'http://gkkblog.com/admin/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; bdshare_firstime=1526123551445; PHPSESSID=f9dlkp7vkeh721cnism929l3a0; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1526475326712',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 518400,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\pyadminurl\controller\Config->index[ D:\wamp64\www\think\application\pyadminurl\controller\Config.php ]
+[ info ] [ VIEW ] D:\wamp64\www\think\public/../application/pyadminurl\view\config\index.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001546s ] mysql:host=127.0.0.1;port=3306;dbname=blog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_config` [ RunTime:0.001091s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_config` ORDER BY `conf_order`  asc [ RunTime:0.000491s ]

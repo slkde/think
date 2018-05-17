@@ -18,6 +18,7 @@
 					<th width="50">ID</th>
 					<th data-order-field="sort" width="50">排序</th>
 					<th >配置名称</th>
+					<th >配置名称</th>
 					<th >配置内容</th>
 					<th >规则描述</th>
 					<th >配置类型</th>
@@ -41,19 +42,22 @@
 						<input type="text" class="ids" name="conf_id" value="{$v.conf_id}" style="width:100%" disabled />
 					</td>
 					<td>
-						<input type="text" class="ids" name="conf_order" placeholder="{$v.conf_order}" style="width:100%" />
+						<input type="text" class="ids" name="conf_order" value="{$v.conf_order}" style="width:100%" />
 					</td>
 					<td>
-						<input type="text" class="ids" name="conf_name" placeholder="{$v.conf_name}" style="width:100%" />
+						<input type="text" class="ids" name="conf_title" value="{$v.conf_title}" style="width:100%" />
 					</td>
 					<td>
-						<input type="text" class="ids" name="conf_content" placeholder="{$v.conf_content}" style="width:100%" />
+						<input type="text" class="ids" name="conf_name" value="{$v.conf_name}" style="width:100%" />
 					</td>
 					<td>
-						<input type="text" class="ids" name="conf_tips" placeholder="{$v.conf_tips}" style="width:100%" />
+						<input type="text" class="ids" name="conf_content" value="{$v.conf_content}" style="width:100%" />
 					</td>
 					<td>
-						<input type="text" class="ids" name="field_type" placeholder="{$v.field_type}" style="width:100%" />
+						<input type="text" class="ids" name="conf_tips" value="{$v.conf_tips}" style="width:100%" />
+					</td>
+					<td>
+						<input type="text" class="ids" name="field_type" value="{$v.field_type}" style="width:100%" />
 					</td>
 					<td class="changetype" type="{$v.field_type}" v="{$v.field_value}" t="{$v.conf_tips}">
 						<!-- <input type="text" class="ids" name="field_value" placeholder="{$v.field_value}" style="width:100%" /> -->
@@ -93,7 +97,7 @@
 				var inp = '';
 				for (var a = 0; a < s.length; a++) {
 					var m = s[a].split('|');
-					if (m[a] == ip.attr('v')) {
+					if (m['0'] == ip.attr('v')) {
 						inp += '<input type="radio" checked  value=' + m['0'] + '>' + m['1'];
 					} else {
 						inp += '<input type="radio"  value=' + m['0'] + '>' + m['1'];

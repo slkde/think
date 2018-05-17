@@ -70,9 +70,15 @@ class Config extends Common
 			$this->assign('data',$data);
 			return view();
 		}else{
-			$data = input('post.');
-            if(empty($data['conf_name'])){ $this->errjson('配置名称不能为空');}
+            $data = input('post.');
+            foreach ($data as $k => $v) {
+                if(empty($data[$k])){
+                    unset($data[$k]);
+                }
+            }
+            // var_dump($data);die;
             if(empty($data['conf_id'])){ $this->errjson('配置ID不能为空');}
+            if(empty($data['conf_name'])){ $this->errjson('配置名称不能为空');}
 			$boolean = $this->model->data($data)->save($data,['conf_id'=>$data['id']]);
 			$boolean ? $this->sucjson('操作成功',1): $this->errjson();
 		}

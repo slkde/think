@@ -1,16 +1,27 @@
 <?php
 namespace app\pyadminurl\controller;
 use think\Db;
+use app\pyadminurl\model\Links as LinksModel;
 
 	class Links extends Common
 	{
+		public $model = '';
  
-        /** 
+       
+		public function __construct(){
+			parent::__construct();
+			$this->model = new LinksModel();
+		}
+
+
+ 		/** 
 	   	 * 友情链接列表
 	     */
 		public function index()
 		{
-		    $data = Db::name('links')->order('sort asc')->select();
+			// $data = $this->model->order('sort','asc');
+			$data = LinksModel::find();
+			// echo '<pre>';var_dump($data);die;
             $this->assign('data',$data);
             return view();
 		}
@@ -25,7 +36,7 @@ use think\Db;
               return view();
 			}else{
                $data = input('post.');
-               $boolean = Db::name('links')->insert($data);
+               $boolean = $this->model->insert($data);
                $boolean ? $this->sucjson('操作成功',1): $this->errjson();
 			}
 		}
@@ -38,12 +49,12 @@ use think\Db;
 			if(request()->isGet())
 			{
 			   $id = input('param.id');
-			   $data = Db::name('links')->where('id',$id)->find();
+			   $data = $this->model->where('id',$id)->find();
                $this->assign('data',$data);
                return view();
 			}else{
                $data = input('post.');
-               $boolean = Db::name('links')->where('id',$data['id'])->update($data);
+               $boolean = $this->model->where('id',$data['id'])->update($data);
                $boolean ? $this->sucjson('操作成功',1): $this->errjson();
 			}
 			
@@ -55,7 +66,7 @@ use think\Db;
 		public function delete()
 		{
 			 $id = input('param.id');
-			 $boolean = Db::name('links')->where('id',$id)->delete();
+			 $boolean = $this->model->where('id',$id)->delete();
              $boolean ? $this->sucjson(): $this->errjson();
 		}
 
@@ -69,7 +80,7 @@ use think\Db;
 			foreach ($data as $k => $v) 
 			{
 			 $array['sort'] =$v;
-			 Db::name('links')->where('id',$k)->update($array);
+			 $this->model->where('id',$k)->update($array);
 			}
            
 	        $this->sucjson();

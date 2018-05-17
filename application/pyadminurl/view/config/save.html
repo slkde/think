@@ -16,15 +16,15 @@
 						<label for="j_custom_number" class="control-label x85">
 								菜单名称：
 							</label>
-						<input type="text" name="conf_name"  value="{$data.conf_name}">
+						<input type="text" name="conf_title"  value="{$data.conf_title}">
 					</td>
 				</tr>
 				<tr>
 					<td>
 						<label for="j_custom_number" class="control-label x85">
-								菜单链接：
-							</label>
-						<input type="text" name="conf_title" value="{$data.conf_title}">
+							菜单名称：
+						</label>
+						<input type="text" name="conf_name" value="{$data.conf_name}">
 					</td>
 				</tr>
 				<tr>
@@ -46,9 +46,14 @@
 				<tr>
 					<td>
 						<label for="j_custom_number" class="control-label x85">
-							菜单别名：
+							配置类型：
 						</label>
-						<input type="text" name="field_type" value="{$data.field_type}">
+						<select name="field_type" class="field">
+							<option value="">请选择一个类型</option>
+							<option value="text">TEXT</option>
+							<option value="radio">单选</option>
+							<option value="textarea">文本域</option>
+						</select>
 					</td>
 				</tr>
 				<tr>
